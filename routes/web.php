@@ -16,3 +16,6 @@ Route::get('/','HomeController@home');
 Route::get('/allseller','SellerController@allseller');
 Route::get('/sellersignup','SellerController@getSellerSignup');
 Route::post('/sellersignup','SellerController@postSellerSignup');
+
+Route::get('/buyer-signup','BuyerController@getbuyer');
+Route::post('/buyer-signup','BuyerController@postBuyerSignup');

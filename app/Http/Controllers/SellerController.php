@@ -21,7 +21,16 @@ class SellerController extends Controller
 
     public function postSellerSignup(Request $request)
     {
-        dd($request) ;
+       
+        Seller::create(['SellerEmail'=>$request->input('Email'),
+        'SellerPW'=>$request->input('Password'),
+        'SellerName'=>$request->input('Name'),
+        'SellerSurname'=>$request->input('Surname'),
+        'SellerAddress'=>$request->input('Address'),
+        'SellerTel'=>$request->input('Tel'),
+        'SellerImg'=>$request->input('IMGURL'),
+        'SellerGender'=>$request->input('Gender')]) ;
+        //dd($request.parameters) ;
         return view('index');
     }
 }

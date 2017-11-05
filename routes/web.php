@@ -22,3 +22,6 @@ Route::post('/buyer-signup','BuyerController@postBuyerSignup');
 
 Route::get('/slipform','SlipController@getSlipForm');
 Route::post('/slipform','SlipController@postSlipForm');
+
+Route::get('/addproduct','ProductController@getNewProduct');
+Route::post('/addproduct','ProductController@postNewProduct');

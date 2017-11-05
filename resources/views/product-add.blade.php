@@ -1,5 +1,5 @@
 @extends('_headerfooter') 
-@section('page_title','Seller Registration') 
+@section('page_title','New Product ') 
 @section('content')
 <!-- body header -->
 <div>
@@ -9,7 +9,7 @@ padding-top: 3%;">New Product</h1>
 </div>
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/sellersignup" method="POST">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/addproduct" method="POST">
     <div class="form-group row">
         <label id="form" for=pname class="col-sm-2 col-form-label">Product Name</label>
         <div class="col-sm-10">
@@ -60,7 +60,7 @@ padding-top: 3%;">New Product</h1>
     width: 100%;
     border-radius: 0px;
     background-color: #fda30e;
-    color:white;">SIGN UP</button>
+    color:white;">ADD PRODUCT</button>
         </div>
     </div>
 </form>

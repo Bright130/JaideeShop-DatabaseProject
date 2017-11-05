@@ -28,6 +28,7 @@ class SlipController extends Controller
         'amountmoney'=>$request->input('Amount'),
         'transfertype'=>$request->input('Type'),
         'transferfrom'=>$request->input('accFrom'),
+        'transferto'=>$request->input('accTo'),
         'sliptime'=>$request->input('Slip')]) ;
         //dd($request.parameters) ;
         return redirect('/');

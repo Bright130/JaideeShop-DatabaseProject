@@ -36,13 +36,7 @@ padding-top: 3%;">Slip Confirmation</h1>
         </div>
     </div>
     </div>
-    <div class="form-group row">
-        <label id="form" for="accFrom" class="col-sm-2 col-form-label">To</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="accTo" placeholder="Transfer to name" name="accTo" required>
-
-        </div>
-    </div>
+    
     <div class="form-group row">
         <label id="form" for="Amount" class="col-sm-2 col-form-label">Amount money</label>
         <div class="col-sm-10">

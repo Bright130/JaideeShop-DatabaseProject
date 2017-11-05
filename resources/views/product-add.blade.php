@@ -10,6 +10,8 @@ padding-top: 3%;">New Product</h1>
 <!-- //body header -->
 <!-- form -->
 <form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/addproduct" method="POST">
+    <!-- need csrf -->
+    {{ csrf_field() }}
     <div class="form-group row">
         <label id="form" for=pname class="col-sm-2 col-form-label">Product Name</label>
         <div class="col-sm-10">
@@ -20,10 +22,9 @@ padding-top: 3%;">New Product</h1>
         <label id="form" for=ptype class="col-sm-2 col-form-label">Product Type</label>
         <div class="col-sm-10">
             <select name="ptype">
-              <option value="1">Electronics</option>
-              <option value="2">Clothes</option>
-              <option value="3">Accessories</option>
-              <option value="4">Shoes</option>
+              @foreach($producttypes as $producttype)
+              <option value={{$producttype->producttypeid}}>{{$producttype->producttypename}}</option>
+              @endforeach
             </select>
         </div>
     </div>

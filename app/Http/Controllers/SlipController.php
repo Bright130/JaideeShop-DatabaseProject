@@ -13,13 +13,13 @@ class SlipController extends Controller
     //     return view('seller',compact('sellers'));
     // }
 
-    // get signup page
+    // get page
     public function getSlipForm()
     {
         return view('slip-form');
     }
 
-    // insert info into db in signup page
+    // insert info into db in page
     public function postSlipForm(Request $request)
     {
       
@@ -27,8 +27,7 @@ class SlipController extends Controller
         'accountno'=>$request->input('AccountNo'),
         'amountmoney'=>$request->input('Amount'),
         'transfertype'=>$request->input('Type'),
-        'transferfrom'=>$request->input('accFrom'),
-        'transferto'=>$request->input('accTo'),
+        'transferfrom'=>$request->input('accFrom'),        
         'sliptime'=>$request->input('Slip')]) ;
         //dd($request.parameters) ;
         return redirect('/');

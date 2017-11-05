@@ -25,3 +25,6 @@ Route::post('/slipform','SlipController@postSlipForm');
 
 Route::get('/addproduct','ProductController@getNewProduct');
 Route::post('/addproduct','ProductController@postNewProduct');
+
+Route::get('/shopcreate','ShopController@getNewShop');
+Route::post('/shopcreate','ShopController@postNewShop');

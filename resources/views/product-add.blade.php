@@ -60,7 +60,7 @@ padding-top: 3%;">New Product</h1>
     width: 100%;
     border-radius: 0px;
     background-color: #fda30e;
-    color:white;">ADD PRODUCT</button>
+    color:white;">SIGN UP</button>
         </div>
     </div>
 </form>

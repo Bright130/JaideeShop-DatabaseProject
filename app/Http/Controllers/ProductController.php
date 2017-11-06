@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Producttype;
-
+use App\Productimage;
 class ProductController extends Controller
 {
 
@@ -20,15 +20,24 @@ class ProductController extends Controller
     public function postNewProduct(Request $request)
     {
         
-        Product::create(['Productname'=>$request->input('pname'),
-        'ProductTypeID'=>$request->input('ptype'),
-        'ProductDesc'=>$request->input('desc'),
-        'ProductPrice'=>$request->input('price'),
-        'ShopID'=>$request->input('name','1'),
-        'Productview'=>$request->input('name','0'),
-        'Quantity'=>$request->input('quantity')]);
+       // dd($request);
+        Product::create(['productname'=>$request->input('pname'),
+        'producttypeid'=>$request->input('ptype'),
+        'productdesc'=>$request->input('desc'),
+        'productprice'=>$request->input('price'),
+        'shopid'=>$request->input('name','1'),
+        'productview'=>$request->input('name','0'),
+        'quantity'=>$request->input('quantity')]);
 
-        
+        $product = Product::orderBy('productid', 'DESC')->first();
+
+
+         foreach($request->input('IMGURL') as $img ){
+           ProductImage::create(['ProductID'=>$product->productid,
+            'urlimage'=>$img]);
+         }
+         
+
         return redirect('/');
     }
 }

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Shop;
+use App\Shoptype;
+use App\Account;
 
 class ShopController extends Controller
 {
@@ -11,7 +13,8 @@ class ShopController extends Controller
     // get signup page
     public function getNewShop()
     {
-        return view('shopcreate');
+        $shoptypes = Shoptype::get();
+        return view('shopcreate',compact('shoptypes'));
     }
 
     // insert info into db in signup page

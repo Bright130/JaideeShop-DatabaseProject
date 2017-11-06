@@ -24,6 +24,8 @@ class ProductController extends Controller
         'ProductTypeID'=>$request->input('ptype'),
         'ProductDesc'=>$request->input('desc'),
         'ProductPrice'=>$request->input('price'),
+        'ShopID'=>$request->input('name','1'),
+        'Productview'=>$request->input('name','0'),
         'Quantity'=>$request->input('quantity')]);
 
         

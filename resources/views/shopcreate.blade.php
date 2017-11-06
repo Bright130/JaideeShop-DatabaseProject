@@ -22,10 +22,9 @@ padding-top: 3%;">Shop Registration</h1>
         <label id="form" for=ptype class="col-sm-2 col-form-label">Shop Type</label>
         <div class="col-sm-10">
             <select name="shoptype">
-              <option value="1">Electronics</option>
-              <option value="2">Clothes</option>
-              <option value="3">Accessories</option>
-              <option value="4">Shoes</option>
+              @foreach($shoptypes as $shoptype)
+              <option value={{$shoptype->shoptypeid}}>{{$shoptype->shoptypename}}</option>
+              @endforeach
             </select>
         </div>
     </div>

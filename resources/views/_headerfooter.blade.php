@@ -11,7 +11,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -43,7 +43,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     font-weight: 400;
     }
     .form-control {
-        border-radius: 0px; 
+        border-radius: 0px;
     }
 </style>
 <body>
@@ -72,11 +72,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="section_room">
 					<select id="country" onchange="change_country(this.value)" class="frm-field required">
 						<option value="null">All categories</option>
-						<option value="null">Electronics</option>     
-						<option value="AX">kids Wear</option>
-						<option value="AX">Men's Wear</option>
-						<option value="AX">Women's Wear</option>
-						<option value="AX">Watches</option>
+						<option value="null">Electronics</option>
+						<option value="AX">Clothing</option>
+						<option value="AX">Accessories</option>
+						<option value="AX">Consumable</option>
+						<option value="AX">Voucher & E-Books</option>
 					</select>
 				</div>
 				<div class="sear-sub">
@@ -88,12 +88,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-3 header-right footer-bottom">
 			<ul>
 				<li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
-					
+
 				</li>
 				<li><a class="fb" href="#"></a></li>
-				<li><a class="twi" href="#"></a></li>
-				<li><a class="insta" href="#"></a></li>
-				<li><a class="you" href="#"></a></li>
 			</ul>
 		</div>
 		<div class="clearfix"></div>
@@ -120,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
 					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">men's wear <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Clothing<span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 									<div class="col-sm-6 multi-gd-img1 multi-gd-text ">
@@ -153,7 +150,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							</ul>
 					</li>
 					<li class="dropdown menu__item">
-						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">women's wear <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Electronics <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 									<div class="col-sm-3 multi-gd-img">
@@ -185,13 +182,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								</div>
 							</ul>
 					</li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Short Codes</a></li>
-					<li class=" menu__item"><a class="menu__link" href="contact.html">contact</a></li>
+					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accrssories</a></li>
+					<li class=" menu__item"><a class="menu__link" href="codes.html">Consumables</a></li>
+					<li class=" menu__item"><a class="menu__link" href="contact.html">Voucher & E-Books</a></li>
 				  </ul>
 				</div>
 			  </div>
-			</nav>	
+			</nav>
 		</div>
 		<div class="top_nav_right">
 			<div class="cart box_1">
@@ -199,12 +196,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h3> <div class="total">
 								<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
 								<span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)</div>
-								
+
 							</h3>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-						
-			</div>	
+
+			</div>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -219,8 +216,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-3 footer-left">
 			<h2><a href="index.html"><img src="images/logo3.jpg" alt=" " /></a></h2>
 			<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-			sit amet, consectetur, adipisci velit, sed quia non 
-			numquam eius modi tempora incidunt ut labore 
+			sit amet, consectetur, adipisci velit, sed quia non
+			numquam eius modi tempora incidunt ut labore
 			et dolore magnam aliquam quaerat voluptatem.</p>
 		</div>
 		<div class="col-md-9 footer-right">
@@ -246,7 +243,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
-				
+
 				<div class="col-md-4 sign-gd-two">
 					<h4>Store Information</h4>
 					<ul>
@@ -282,7 +279,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-dialog" role="document">
 					<div class="modal-content modal-info">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						</div>
 						<div class="modal-body modal-spa">
 							<div class="login-grids">
@@ -292,22 +289,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<form>
 											<div class="sign-up">
 												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
+												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
 											</div>
 											<div class="sign-up">
 												<h4>Password :</h4>
 												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
+
 											</div>
 											<div class="sign-up">
 												<h4>Re-type Password :</h4>
 												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
+
 											</div>
 											<div class="sign-up">
 												<input type="submit" value="REGISTER NOW" >
 											</div>
-											
+
 										</form>
 									</div>
 									<div class="login-right">
@@ -315,7 +312,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<form>
 											<div class="sign-in">
 												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
+												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
 											</div>
 											<div class="sign-in">
 												<h4>Password :</h4>

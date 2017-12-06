@@ -33,6 +33,6 @@ class HomeController extends Controller
     {
       Auth::logout();
       Session::flush();
-      return redirect()->intended(route('index'));
+      return redirect()->intended(route('/'));
     }
 }

@@ -52,7 +52,7 @@ Route::post('/addproduct','ProductController@postNewProduct');
 
 Route::get('/shopcreate','ShopController@getNewShop');
 Route::post('/shopcreate','ShopController@postNewShop');
-
+Route::get('/table','TempleteTableController@getTable');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

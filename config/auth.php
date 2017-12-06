@@ -40,7 +40,22 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-
+        'buyer' => [
+            'driver' => 'session',
+            'provider' => 'buyers',
+        ],
+        'newBuyer' => [
+            'driver' => 'session',
+            'provider' => 'newBuyers',
+        ],
+        'newSeller' => [
+            'driver' => 'session',
+            'provider' => 'newSellers',
+        ],
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
         'api' => [
             'driver' => 'token',
             'provider' => 'users',
@@ -68,6 +83,22 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\User::class,
+        ],
+        'buyers' => [
+            'driver' => 'eloquent',
+            'model' => App\Buyer::class,
+        ],
+        'newBuyers' => [
+            'driver' => 'eloquent',
+            'model' => App\newBuyer::class,
+        ],
+        'newSellers' => [
+            'driver' => 'eloquent',
+            'model' => App\newSeller::class,
+        ],
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Admin::class,
         ],
 
         // 'users' => [

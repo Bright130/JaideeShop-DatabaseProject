@@ -3,10 +3,12 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-
-class Buyer extends Model
+use Illuminate\Foundation\Auth\User as Authenticatable;
+class Buyer extends Authenticatable
 {
+    protected $guard = 'buyer';
+
     public $timestamps = false;
     protected $table = 'Buyer';
-    protected $guarded = ['BuyerID'];
+    protected $fillable = ['password','email'] ;
 }

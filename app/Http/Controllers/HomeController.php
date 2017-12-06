@@ -26,13 +26,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('index');
     }
 
     public function logout()
     {
       Auth::logout();
       Session::flush();
-      return redirect()->intended(route('home'));
+      return redirect()->intended(route('index'));
     }
 }

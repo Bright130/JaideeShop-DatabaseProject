@@ -87,7 +87,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-3 header-right footer-bottom">
 			<ul>
-				<li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
+				<li><a class="keylogin" href="#"></a></li>
+
+				<li><a href="{{ route('profile.view') }}" class="use1" action="{{ route('profile.view') }}"></a>
 
 				</li>
 				<li><a class="fb" href="#"></a></li>

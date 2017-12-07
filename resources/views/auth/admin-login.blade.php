@@ -1,6 +1,21 @@
 @extends('layouts.app')
 
 @section('content')
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- pignose css -->
+<link href="../css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+
+
+<!-- //pignose css -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="../text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- cart -->
+	<script src="../js/simpleCart.min.js"></script>
+<!-- cart -->
+<!-- for bootstrap working -->
+	<script type="../text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">

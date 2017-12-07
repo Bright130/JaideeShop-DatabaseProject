@@ -59,3 +59,4 @@ Route::get('/table','TempleteTableController@getTable');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/profile', 'ProfileController@profile')->name('profile');

@@ -43,6 +43,9 @@ Route::post('/login','Auth\SellerAuthController@login')->name('seller.login.subm
 //  Route::get('/','BuyerController@index')->name('admin.dashboard');
 
 });
+Route::get('/imageupload','ImageUploaderController@upload') ;
+Route::post('/imageupload','ImageUploaderController@uploadpost')->name('uploadimage.submit') ;
+
 
 Route::get('/slipform','SlipController@getSlipForm');
 Route::post('/slipform','SlipController@postSlipForm');

@@ -25,20 +25,20 @@ padding-top: 3%;">Seller Login</h1>
 </div>
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/login" method="POST">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action= {{ route('seller.login.submit') }} method="POST">
     {{ csrf_field() }}
 
     <div class="form-group row">
         <label id="form" for="Email" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
-            <input type="email" class="form-control" id="Email" placeholder="Email" name="Email" required>
+            <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
 
         </div>
     </div>
     <div class="form-group row">
         <label id="form" for="Password" class="col-sm-2 col-form-label">Password</label>
         <div class="col-sm-10">
-            <input type="password" class="form-control" id="Password" placeholder="Password" required name="Password">
+            <input type="password" class="form-control" id="password" placeholder="Password" required name="password">
 
         </div>
     </div>

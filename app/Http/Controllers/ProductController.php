@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Product;
 use App\Producttype;
 use App\Productimage;
+use Auth;
 class ProductController extends Controller
 {
 
@@ -19,8 +20,9 @@ class ProductController extends Controller
     // insert info into db in signup page
     public function postNewProduct(Request $request)
     {
-        
+
        // dd($request);
+       
         Product::create(['productname'=>$request->input('pname'),
         'producttypeid'=>$request->input('ptype'),
         'productdesc'=>$request->input('desc'),
@@ -36,7 +38,7 @@ class ProductController extends Controller
            ProductImage::create(['ProductID'=>$product->productid,
             'urlimage'=>$img]);
          }
-         
+
 
         return redirect('/');
     }

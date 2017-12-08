@@ -12,7 +12,7 @@
 */
 
 Route::get('/','HomeController@index');
-Route::get('/logout','HomeController@logout');
+Route::get('/logout','HomeController@logout')->name('logout');
 
 //Route::get('/allseller','SellerController@allseller');
 
@@ -60,3 +60,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/profile', 'ProfileController@profile')->name('profile.view');
+Route::get('/mainsignup', 'SignupController@index')->name('mainsignup');

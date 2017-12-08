@@ -20,7 +20,7 @@ class ShopController extends Controller
     // insert info into db in signup page
     public function postNewShop(Request $request)
     {
-       
+       //ดึง seller ID มา
         Shop::create(['ShopName'=>$request->input('shopname'),
         'SellerId'=>$request->input('name','1'),
         'ShoptypeId'=>$request->input('shoptype'),
@@ -28,6 +28,7 @@ class ShopController extends Controller
         'ShopImg'=>$request->input('IMGURL'),
         'ShopView'=>$request->input('name','0')]);
 
+        //ดึง shop ID มา
         Account::create(['accountno'=>$request->input('bankacc'),
         'accountname'=>$request->input('name','Peat'),
         'bankname'=>$request->input('bankname'),

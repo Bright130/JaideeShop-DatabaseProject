@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Auth;
 use Session ;
 
-class HomeController extends Controller
+class SignupController extends Controller
 {
     // /**
     //  * Create a new controller instance.
@@ -26,10 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('index');
-    }
-    public function signup()
-    {
         return view('mainsignup');
     }
 
@@ -37,6 +33,6 @@ class HomeController extends Controller
     {
       Auth::logout();
       Session::flush();
-      return redirect()->intended(route('home'));
+      return redirect()->intended(route('/'));
     }
 }

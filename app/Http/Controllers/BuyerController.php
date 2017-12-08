@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\newBuyer;
+use Auth;
 
 class BuyerController extends Controller
 {
@@ -16,7 +17,9 @@ class BuyerController extends Controller
 
     public function index()
     {
-      $buyerinfo = newBuyer::get();
+      $thisEmail2 = Auth::User()->email ;
+
+      $buyerinfo = newBuyer::where('email','LIKE',$thisEmail2)->get();
       return view('buyer.index',compact('buyerinfo')) ;
     }
     // // get signup page

@@ -101,14 +101,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li>SELLER: </li>
 				<li><a class="keylogin" href="{{ route('seller.login') }}"></a></li>
 
-				<li><a href="{{ route('buyer.dashboard') }}" class="use1" action="{{ route('seller.dashboard') }}"></a>
+				<li><a href="{{ route('seller.dashboard') }}" class="use1" action="{{ route('seller.dashboard') }}"></a>
 
 				</li>
 				<li><a class="fb" href="#"></a></li>
 
 				<div class="col-md-5" >
-				 <a href="#" class="btn btn-danger square-btn-adjust">Logout</a>
+				 <a href="{{ route('mainsignup') }}" class="btn btn-danger square-btn-adjust">Signup Now</a>
 			 </div>
+			 <a href="{{ route('logout') }}" class="btn btn-danger square-btn-adjust">Logout</a>
 			</ul>
 		</div>
 		<div class="clearfix"></div>

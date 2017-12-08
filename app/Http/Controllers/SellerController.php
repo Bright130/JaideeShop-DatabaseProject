@@ -18,12 +18,8 @@ class SellerController extends Controller
       public function index()
       {
         $thisEmail = Auth::User()->email ;
-        $thisEmail.= Auth::User()->sellergender ;
-        $thisEmail.= Auth::User()->selleraddress ;
 
-
-        dd( $thisEmail);
-        $sellerinfo = newSeller::get();
+        $sellerinfo = newSeller::where('email','LIKE',$thisEmail)->get();
         return view('seller.index',compact('sellerinfo')) ;
       }
 }

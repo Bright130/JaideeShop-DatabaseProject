@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/','HomeController@index')->name('home');
+Route::get('/','HomeController@index');
 Route::get('/logout','HomeController@logout');
 
 //Route::get('/allseller','SellerController@allseller');

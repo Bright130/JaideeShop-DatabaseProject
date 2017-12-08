@@ -96,6 +96,8 @@ label{
 .header-right ul li{
 	display:inline-block;
 	margin:0 3px;
+	vertical-align: middle;
+
 }
 .header-right ul li a{
 	width:32px;

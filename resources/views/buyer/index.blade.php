@@ -1,8 +1,12 @@
 @extends('_headerfooter')
 @section('page_title','Index')
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<h1>Login as Buyer</h1>
+	<h1 style="color: #FDA30E;
+float: left;
+font-size: 20px;
+font-weight: bold;">Login as Buyer</h1>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free Bootstrap Admin Template : Binary Admin</title>
@@ -31,22 +35,18 @@
                 </button>
                 <a class="navbar-brand" href="index.html">My Profile</a>
             </div>
-  <div style="color: white;
-padding: 15px 50px 5px 50px;
-float: right;
-font-size: 16px;"> Last access : 12 December 2017 &nbsp; <a href="#" class="btn btn-danger square-btn-adjust">Logout</a> </div>
         </nav>
            <!-- /. NAV TOP  -->
                 <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
 				<li class="text-center">
-                    <img src="assets/img/find_user.png" class="user-image img-responsive"/>
+                    <img src="images/men3.jpg" class="user-image img-responsive"/>
 					</li>
 
 
                     <li>
-                        <a class="active-menu"  href="index.html"><i class="fa fa-dashboard fa-3x"></i> Personal information</a>
+                        <a class="active-menu"  href="#"><i class="fa fa-dashboard fa-3x"></i> Personal information</a>
                     </li>
 
                 </ul>
@@ -54,14 +54,17 @@ font-size: 16px;"> Last access : 12 December 2017 &nbsp; <a href="#" class="btn 
             </div>
 
         </nav>
-
+@foreach($buyerinfo as $buyer)
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
                      <h2>Welcome Back</h2>
-                        <h5>Welcome Jhon Deo , Love to see you back. </h5>
+                        <div style="color: #FDA30E;
+											float: left;
+											font-size: 16px;
+											font-weight: bold;">Welcome <b>{{$buyer->buyername}}</b> , Love to see you back. </div>
                     </div>
                 </div>
                  <!-- /. ROW  -->
@@ -116,38 +119,50 @@ font-size: 16px;"> Last access : 12 December 2017 &nbsp; <a href="#" class="btn 
 
          <div>
             <div>
-                  <table class="table table-hover table-dark">
-                      <thead>
-                        <h2>Recently</h2>
-                        <tr>
-                          <th scope="col">#</th>
-                          <th scope="col">Shop</th>
-                          <th scope="col">Product</th>
-                          <th scope="col">Date</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">1</th>
-                          <td>Mark</td>
-                          <td>Otto</td>
-                          <td>@mdo</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">2</th>
-                          <td>Jacob</td>
-                          <td>Thornton</td>
-                          <td>@fat</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">3</th>
-                          <td colspan="2">Larry the Bird</td>
-                          <td>@twitter</td>
-                        </tr>
-                      </tbody>
-                    </table>
                     <h2>Profile</h2>
-
+										<table class="table">
+											<thead>
+												<tr> <th>Firstname</th>
+													<th> Lastname</th>
+													<th> Address</th>
+													<th> TelNo.</th>
+													<th> Email</th>
+													 </tr>
+												</thead>
+												<tbody>
+													<tr> <th scope="row">{{$buyer->buyername}}</th> <td>{{$buyer->buyersurname}}</td>  <td>{{$buyer->buyeraddress}}</td>
+													 <td>{{$buyer->buyertel}}  <td>{{$buyer->email}}</td></td>  </tr>
+													 </tbody> </table> </div> </div>
+											  <table class="table table-hover table-dark">
+		 		                      <thead>
+		 		                        <h2>Recently</h2>
+		 		                        <tr>
+		 		                          <th scope="col">#</th>
+		 		                          <th scope="col">Shop</th>
+		 		                          <th scope="col">Product</th>
+		 		                          <th scope="col">Date</th>
+		 		                        </tr>
+		 		                      </thead>
+		 		                      <tbody>
+		 		                        <tr>
+		 		                          <th scope="row">1</th>
+		 		                          <td>Mark</td>
+		 		                          <td>Otto</td>
+		 		                          <td>@mdo</td>
+		 		                        </tr>
+		 		                        <tr>
+		 		                          <th scope="row">2</th>
+		 		                          <td>Jacob</td>
+		 		                          <td>Thornton</td>
+		 		                          <td>@fat</td>
+		 		                        </tr>
+		 		                        <tr>
+		 		                          <th scope="row">3</th>
+		 		                          <td colspan="2">Larry the Bird</td>
+		 		                          <td>@twitter</td>
+		 		                        </tr>
+		 		                      </tbody>
+		 		                    </table>
              </div>
              </div>
 
@@ -161,6 +176,7 @@ font-size: 16px;"> Last access : 12 December 2017 &nbsp; <a href="#" class="btn 
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
+@endforeach
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->

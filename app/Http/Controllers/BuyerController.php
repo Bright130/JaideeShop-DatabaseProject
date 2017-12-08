@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Buyer;
+use App\newBuyer;
 
 class BuyerController extends Controller
 {
@@ -16,7 +16,8 @@ class BuyerController extends Controller
 
     public function index()
     {
-      return view('buyer.index') ;
+      $buyerinfo = newBuyer::get();
+      return view('buyer.index',compact('buyerinfo')) ;
     }
     // // get signup page
     // public function signup()

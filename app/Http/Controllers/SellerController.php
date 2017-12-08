@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Seller;
+use App\newSeller;
 
 class SellerController extends Controller
 {
@@ -16,6 +16,8 @@ class SellerController extends Controller
 
       public function index()
       {
-        return view('seller.index') ;
+        $thisEmail = Auth::User()->email ;
+        $sellerinfo = newSeller::get();
+        return view('seller.index',compact('sellerinfo')) ;
       }
 }

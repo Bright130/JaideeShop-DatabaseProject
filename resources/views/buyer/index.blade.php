@@ -136,11 +136,13 @@ font-weight: bold;">Login as Buyer</h1>
 													 </tbody> </table> </div> </div>
 											  <table class="table table-hover table-dark">
 		 		                      <thead>
-		 		                         <h2 style="color: #FDA30E;">Recently</h2>
+		 		                         <h2 style="color: #FDA30E;">Recently Sell</h2>
 		 		                        <tr>
 		 		                          <th scope="col">#</th>
 		 		                          <th scope="col">Shop</th>
 		 		                          <th scope="col">Product</th>
+																	<th scope="col">Amount</th>
+																	<th scope="col">Price</th>
 		 		                          <th scope="col">Date</th>
 		 		                        </tr>
 		 		                      </thead>

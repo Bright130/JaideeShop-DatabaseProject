@@ -127,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
 					<li class=" menu__item"><a class="menu__link" href="electronics.html">Clothing</a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.elec') }}">Electronics</a></li>
 					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accessories</a></li>
 					<li class=" menu__item"><a class="menu__link" href="codes.html">Consumables</a></li>
 					<li class=" menu__item"><a class="menu__link" href="codes.html">Voucher & E-Books</a></li>

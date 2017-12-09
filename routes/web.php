@@ -59,5 +59,6 @@ Route::get('/table','TempleteTableController@getTable');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/elec', 'HomeController@showElect')->name('show.elec');
 Route::get('/profile', 'ProfileController@profile')->name('profile.view');
 Route::get('/mainsignup', 'SignupController@index')->name('mainsignup');

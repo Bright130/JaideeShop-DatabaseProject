@@ -12,6 +12,7 @@
 */
 
 Route::get('/','HomeController@index');
+Route::get('/electronics','HomeController@showElect');
 Route::get('/logout','HomeController@logout')->name('logout');
 
 //Route::get('/allseller','SellerController@allseller');

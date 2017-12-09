@@ -28,6 +28,10 @@ class HomeController extends Controller
     {
         return view('index');
     }
+    public function showElect()
+    {
+        return view('electronics');
+    }
     public function signup()
     {
         return view('mainsignup');

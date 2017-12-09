@@ -9,7 +9,11 @@ use App\Productimage;
 use Auth;
 class ProductController extends Controller
 {
+  public function __construct()
+  {
 
+      $this->middleware('auth:newSeller');
+  }
     // get signup page
     public function getNewProduct()
     {
@@ -22,7 +26,7 @@ class ProductController extends Controller
     {
 
        // dd($request);
-       
+
         Product::create(['productname'=>$request->input('pname'),
         'producttypeid'=>$request->input('ptype'),
         'productdesc'=>$request->input('desc'),

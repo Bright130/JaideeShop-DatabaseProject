@@ -32,6 +32,10 @@ class HomeController extends Controller
     {
         return view('electronics');
     }
+    public function checkout()
+    {
+        return view('checkout');
+    }
     public function signup()
     {
         return view('mainsignup');

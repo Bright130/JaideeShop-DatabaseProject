@@ -6,13 +6,20 @@ use Illuminate\Http\Request;
 use App\Shop;
 use App\Shoptype;
 use App\Account;
+use App\newSeller;
+use Auth;
 
 class ShopController extends Controller
 {
+    public function __construct()
+    {
 
+        $this->middleware('auth:newSeller');
+    }
     // get signup page
     public function getNewShop()
     {
+        $id = Auth::User()->id;
         $shoptypes = Shoptype::get();
         return view('shopcreate',compact('shoptypes'));
     }
@@ -21,18 +28,22 @@ class ShopController extends Controller
     public function postNewShop(Request $request)
     {
        //ดึง seller ID มา
+       $uid = Auth::User()->id;
         Shop::create(['ShopName'=>$request->input('shopname'),
-        'SellerId'=>$request->input('name','1'),
+        'SellerId'=>$uid,
         'ShoptypeId'=>$request->input('shoptype'),
         'ShopDesc'=>$request->input('desc'),
         'ShopImg'=>$request->input('IMGURL'),
-        'ShopView'=>$request->input('name','0')]);
+        'ShopView'=>0]);
 
         //ดึง shop ID มา
+
+        $sid = Shop::select('shopid')->where('shopname','LIKE',$request->input('shopname'))->first()->shopid;
+
         Account::create(['accountno'=>$request->input('bankacc'),
         'accountname'=>$request->input('name','Peat'),
         'bankname'=>$request->input('bankname'),
-        'ShopID'=>$request->input('name','1')]);
+        'ShopID'=>$sid]);
         //dd($request.parameters) ;
         return redirect('/');
     }

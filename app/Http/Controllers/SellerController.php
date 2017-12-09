@@ -17,9 +17,9 @@ class SellerController extends Controller
 
       public function index()
       {
+        $id = Auth::User()->id;
         $thisEmail = Auth::User()->email ;
-
         $sellerinfo = newSeller::where('email','LIKE',$thisEmail)->get();
-        return view('seller.index',compact('sellerinfo')) ;
+        return view('seller.index',compact('sellerinfo'),compact('id')) ;
       }
 }

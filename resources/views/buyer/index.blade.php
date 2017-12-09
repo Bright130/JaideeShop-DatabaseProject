@@ -23,6 +23,7 @@ font-weight: bold;">Login as Buyer</h1>
 
 </head>
 @section('content')
+@foreach($buyerinfo as $buyer)
 <body>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
@@ -43,7 +44,7 @@ font-weight: bold;">Login as Buyer</h1>
                 <ul class="nav" id="main-menu">
 
 									<li class="text-center"  style = "top: 60px;">
-										<img src="images/user.png" class="user-image img-responsive"/>
+										<img src="{{'urlimage/'.'/'.$buyer->buyerimg}}" class="user-image img-responsive"/>
 									</li>
                   <li style = "top: 60px;">
                     <a class="active-menu"  href="#" style="font-size: 20px;"><img src="images/notepad.png"></i> Personal information</a>
@@ -52,7 +53,7 @@ font-weight: bold;">Login as Buyer</h1>
             </div>
 
         </nav>
-@foreach($buyerinfo as $buyer)
+
         <!-- /. NAV SIDE  -->
 				<div id="page-wrapper" >
             <div id="page-inner">

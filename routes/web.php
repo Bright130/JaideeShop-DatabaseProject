@@ -51,7 +51,7 @@ Route::post('/imageupload','ImageUploaderController@uploadpost')->name('uploadim
 Route::get('/slipform','SlipController@getSlipForm');
 Route::post('/slipform','SlipController@postSlipForm');
 
-Route::get('/addproduct','ProductController@getNewProduct');
+Route::get('/addproduct','ProductController@getNewProduct')->name('product.add');
 Route::post('/addproduct','ProductController@postNewProduct');
 
 Route::get('/shopcreate','ShopController@getNewShop')->name('shop.create');

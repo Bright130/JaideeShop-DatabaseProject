@@ -89,8 +89,8 @@ padding-top: 3%;">Seller Registration</h1>
     </div>
     <div class="form-group row">
         <label id="form" for="IMGURL" class="col-sm-2 col-form-label">Image URL</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL">
+        <div class="col-sm-10 container1">
+            <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
 
         </div>
     </div>

@@ -53,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header-bot">
 	<div class="container">
 		<div class="col-md-3 header-left">
-			<h1><a href="index.html"><img src="images/logo3.jpg"></a></h1>
+			<h1><a href="index.html"><img src="images/JAIDEE.jpg"></a></h1>
 		</div>
 		<div class="col-md-6 header-middle">
 			<form>
@@ -132,14 +132,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  </button>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
+
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
 					<li class=" menu__item"><a class="menu__link" href="electronics.html">Clothing</a></li>
 					<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accrssories</a></li>
+					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accessories</a></li>
 					<li class=" menu__item"><a class="menu__link" href="codes.html">Consumables</a></li>
-					<li class=" menu__item"><a class="menu__link" href="contact.html">Voucher & E-Books</a></li>
+					<li class="dropdown menu__item">
+						<a href="#" class="dropdown-toggle menu__link"  data-toggle="dropdown"   role="button" aria-haspopup="true" aria-expanded="false">MORE <span class="caret"></span></a>
+							<ul class="dropdown-menu multi-column columns-3">
+								<div class="row">
+									<div class="col-sm-3 multi-gd-img">
+										<ul class="multi-column-dropdown">
+											<li><a href="womens.html">Voucher & E-Books</a></li>
+											<li><a href="womens.html">Beauty Items</a></li>
+											<li><a href="womens.html">Child & Baby</a></li>
+											<li><a href="womens.html">Furniture</a></li>
+											<li><a href="womens.html">Sport & Recreation</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3 multi-gd-img">
+										<ul class="multi-column-dropdown">
+											<li><a href="womens.html">Food</a></li>
+											<li><a href="womens.html">Gadgets</a></li>
+											<li><a href="womens.html">Entertainment</a></li>
+											<li><a href="womens.html">Stationay</a></li>
+											<li><a href="womens.html">Office Equipment</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-6 multi-gd-img multi-gd-text ">
+										<a href="womens.html"><img src="images/woo.jpg" alt=" "></a>
+									</div>
+									<div class="clearfix"></div>
+								</div>
+							</ul>
+					</li>
 				  </ul>
 				</div>
 			  </div>

@@ -1,5 +1,5 @@
-@extends('_headerfooter') 
-@section('page_title','New Product ') 
+@extends('_headerfooter')
+@section('page_title','New Product ')
 @section('content')
 <!-- body header -->
 <style>
@@ -46,23 +46,23 @@ input{
 <script>
 $(document).ready(function() {
     var max_fields      = 5;
-    var wrapper         = $(".container1"); 
-    var add_button      = $(".add_form_field"); 
-    
-    var x = 1; 
-    $(add_button).click(function(e){ 
+    var wrapper         = $(".container1");
+    var add_button      = $(".add_form_field");
+
+    var x = 1;
+    $(add_button).click(function(e){
         e.preventDefault();
-        if(x < max_fields){ 
-            x++; 
-            $(wrapper).append('<div class="col-sm-10" style="padding-left:0px;width:78.5%;"><input type="text" class="form-control col-sm-10" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width:65%;"><a href="#" class="delete">Delete</a></div>'); //add input box
+        if(x < max_fields){
+            x++;
+            $(wrapper).append('<div class="col-sm-10" style="padding-left:0px;width:78.5%;"> <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">  <a href="#" class="delete">Delete</a></div>'); //add input box
         }
         else
         {
         alert('You Reached the limits')
         }
     });
-    
-    $(wrapper).on("click",".delete", function(e){ 
+
+    $(wrapper).on("click",".delete", function(e){
         e.preventDefault(); $(this).parent('div').remove(); x--;
     })
 });
@@ -74,7 +74,7 @@ padding-top: 3%;">New Product</h1>
 </div>
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/addproduct" method="POST">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/addproduct" method="POST" enctype="multipart/form-data">
     <!-- need csrf -->
     {{ csrf_field() }}
     <div class="form-group row">
@@ -84,9 +84,20 @@ padding-top: 3%;">New Product</h1>
         </div>
     </div>
     <div class="form-group row">
-        <label id="form" for=ptype class="col-sm-2 col-form-label">Product Type</label>
+        <label id="form" for=ptype class="col-sm-2 col-form-label">Shop name</label>
         <div class="col-sm-10">
-            <select name="ptype">
+          <select name="sid" class="form-control">
+
+              @foreach($shops as $shop)
+              <option value={{$shop->ShopID}}>{{$shop->shopname}}</option>
+              @endforeach
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label id="form" for=ptype class="col-sm-2 col-form-label">Product Type</label>
+        <div class="col-sm-10" >
+            <select name="ptype"  class="form-control">
               @foreach($producttypes as $producttype)
               <option value={{$producttype->producttypeid}}>{{$producttype->producttypename}}</option>
               @endforeach
@@ -116,7 +127,13 @@ padding-top: 3%;">New Product</h1>
     <div class="form-group row">
         <label id="form" for="IMGURL" class="col-sm-2 col-form-label">Image URL</label>
         <div class="col-sm-10 container1">
-            <input type="text" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
+            <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
+
+
+
+
+
+
             <button class="add_form_field">Add New Field <span style="font-size:16px; font-weight:bold;">+ </span></button>
         </div>
     </div>
@@ -131,5 +148,32 @@ padding-top: 3%;">New Product</h1>
     </div>
 </form>
 </div>
+
+<script type="text/javascript">
+  $("body").on("click",".upload-image",function(e){
+    $(this).parents("form").ajaxForm(options);
+  });
+
+  var options = {
+    complete: function(response)
+    {
+    	if($.isEmptyObject(response.responseJSON.error)){
+    		$("input[name='title']").val('');
+    		alert('Image Upload Successfully.');
+    	}else{
+    		printErrorMsg(response.responseJSON.error);
+    	}
+    }
+  };
+
+  function printErrorMsg (msg) {
+	$(".print-error-msg").find("ul").html('');
+	$(".print-error-msg").css('display','block');
+	$.each( msg, function( key, value ) {
+		$(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+	});
+  }
+</script>
+
 <!-- //form -->
 @stop

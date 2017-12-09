@@ -7,6 +7,9 @@ use App\Product;
 use App\Producttype;
 use App\Productimage;
 use Auth;
+use App\Shop;
+use Validator;
+
 class ProductController extends Controller
 {
   public function __construct()
@@ -18,7 +21,8 @@ class ProductController extends Controller
     public function getNewProduct()
     {
         $producttypes = Producttype::get();
-        return view('product-add',compact('producttypes'));
+        $shop = Shop::select('shopname','ShopID')->where('sellerid','=',Auth::User()->id)->orderBy('shopname','ASC')->get();
+        return view('product-add',['producttypes'=>$producttypes,'shops'=>$shop]);
     }
 
     // insert info into db in signup page
@@ -26,21 +30,33 @@ class ProductController extends Controller
     {
 
        // dd($request);
-
+       // $validator = Validator::make($request->all(), [
+       //
+       //   'IMGURL' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+       // ]);
+       //
         Product::create(['productname'=>$request->input('pname'),
         'producttypeid'=>$request->input('ptype'),
         'productdesc'=>$request->input('desc'),
         'productprice'=>$request->input('price'),
-        'shopid'=>$request->input('name','1'),
-        'productview'=>$request->input('name','0'),
+        'shopid'=>$request->input('sid'),
+        'productview'=>0,
         'quantity'=>$request->input('quantity')]);
 
         $product = Product::orderBy('productid', 'DESC')->first();
 
+$i=1;
 
-         foreach($request->input('IMGURL') as $img ){
-           ProductImage::create(['ProductID'=>$product->productid,
-            'urlimage'=>$img]);
+         foreach($request->IMGURL as $img ){
+
+        $input['urlimage'] = $request->input('sid').'_'.time() .'_'.$i .'.' .$img->getClientOriginalExtension();
+
+        $img->move(public_path('urlimage'), $input['urlimage']);
+
+           ProductImage::create(['productid'=>$product->productid,
+            'urlimage'=> $input['urlimage']
+          ]);
+          $i++;
          }
 
 

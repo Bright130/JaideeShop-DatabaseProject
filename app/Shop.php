@@ -8,5 +8,5 @@ class Shop extends Model
 {
     public $timestamps = false;
     protected $table = 'Shop';
-    protected $guarded = ['ShopID'];
+    protected $fillable = ['ShopID','ShopName','ShoptypeID','ShopDesc','shopimg','ShopImg','ShopView'];
 }

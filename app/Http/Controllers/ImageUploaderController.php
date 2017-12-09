@@ -25,6 +25,7 @@ class ImageUploaderController extends Controller
      */
     public function uploadPost(Request $request)
     {
+      //  echo( $request->all());
       $validator = Validator::make($request->all(), [
         'productid' => 'required',
         'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
@@ -34,6 +35,7 @@ class ImageUploaderController extends Controller
 
         $input = $request->all();
         $input['urlimage'] = time().'.'.$request->image->getClientOriginalExtension();
+
         $request->image->move(public_path('urlimage'), $input['urlimage']);
 
         Productimage::create($input);

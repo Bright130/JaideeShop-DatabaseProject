@@ -10,8 +10,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <title>Smart Shop a Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Electronics :: w3layouts</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+<meta name="keywords" content="Smart Shop Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
@@ -30,8 +33,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
 <script src="js/jquery.easing.min.js"></script>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Soft-Tect Free Landing Page</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Soft-Tect Free Landing Page</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+<!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
+<!--For Plugins external css-->
+<link rel="stylesheet" href="assets/css/plugins.css" />
+<link rel="stylesheet" href="assets/css/roboto-webfont.css" />
+
+<!--Theme custom css -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!--Theme Responsive css-->
+<link rel="stylesheet" href="assets/css/responsive.css" />
+
+<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+<!--For Plugins external css-->
+<link rel="stylesheet" href="assets/css/plugins.css" />
+<link rel="stylesheet" href="assets/css/roboto-webfont.css" />
+
+<!--Theme custom css -->
+<link rel="stylesheet" href="assets/css/style.css">
+
+<!--Theme Responsive css-->
+<link rel="stylesheet" href="assets/css/responsive.css" />
+
+<script src="assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+
 </head>
 <body>
+	<!-- oat loading -->
+	<div class='preloader'><div class='loaded'>&nbsp;</div></div>
 <!-- header -->
 <div class="header">
 	<div class="container">
@@ -57,7 +104,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="section_room">
 					<select id="country" onchange="change_country(this.value)" class="frm-field required">
 						<option value="null">All categories</option>
-						<option value="null">Electronics</option>     
+						<option value="null">Electronics</option>
 						<option value="AX">kids Wear</option>
 						<option value="AX">Men's Wear</option>
 						<option value="AX">Women's Wear</option>
@@ -73,11 +120,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-3 header-right footer-bottom">
 			<ul>
 				<li><a href="#" class="use1" data-toggle="modal" data-target="#myModal4"><span>Login</span></a>
-					
+
 				</li>
-				<li><a class="fb" href="#"></a></li>
-				<li><a class="twi" href="#"></a></li>
-				<li><a class="insta" href="#"></a></li>
 				<li><a class="you" href="#"></a></li>
 			</ul>
 		</div>
@@ -176,7 +220,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				  </ul>
 				</div>
 			  </div>
-			</nav>	
+			</nav>
 		</div>
 		<div class="top_nav_right">
 			<div class="cart box_1">
@@ -184,12 +228,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<h3> <div class="total">
 								<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-								
+
 							</h3>
 						</a>
 						<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-						
-			</div>	
+
+			</div>
 		</div>
 		<div class="clearfix"></div>
 	</div>
@@ -198,7 +242,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="page-head">
 	<div class="container">
-		<h3>Electronics</h3>
+		<h3>Electric Area</h3>
 	</div>
 </div>
 <!-- //banner -->
@@ -210,6 +254,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="content-grid-effect slow-zoom vertical">
 					<div class="img-box"><img src="images/watch.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
+
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Branded Watches</h4>
 								<span class="separator"></span>
@@ -217,12 +262,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
+
 						</div>
 				</div>
 			</div>
+
 			<div class="electro-img-btm-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
 					<div class="img-box"><img src="images/e1.jpg" alt="image" class="img-responsive zoom-img"></div>
+
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Mobiles</h4>
@@ -232,6 +280,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
 						</div>
+
 				</div>
 			</div>
 			<div class="electro-img-btm-right mask">
@@ -248,8 +297,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 				</div>
 			</div>
+
 			<div class="clearfix"></div>
 		</div>
+
 		<div class="col-md-4 electro-right text-center">
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
@@ -266,6 +317,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 			</div>
 		</div>
+
 		<div class="clearfix"></div>
 			<div class="ele-bottom-grid">
 				<h3><span>Latest </span>Collections</h3>
@@ -281,7 +333,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
-										
+
 								</div>
 								<div class="item-info-product ">
 									<h4><a href="single.html">Apple Iphone 6</a></h4>
@@ -289,7 +341,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<span class="item_price">$500.99</span>
 										<del>$700.71</del>
 									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
 								</div>
 							</div>
 						</div>
@@ -304,7 +356,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
-										
+
 								</div>
 								<div class="item-info-product ">
 									<h4><a href="single.html">Apple Iphone 6s</a></h4>
@@ -312,7 +364,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<span class="item_price">$799.99</span>
 										<del>$999.71</del>
 									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
 								</div>
 							</div>
 						</div>
@@ -327,7 +379,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
-										
+
 								</div>
 								<div class="item-info-product ">
 									<h4><a href="single.html">Apple Iphone 6</a></h4>
@@ -335,7 +387,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<span class="item_price">$180.99</span>
 										<del>$250.71</del>
 									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
 								</div>
 							</div>
 						</div>
@@ -350,7 +402,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											</div>
 										</div>
 										<span class="product-new-top">New</span>
-										
+
 								</div>
 								<div class="item-info-product ">
 									<h4><a href="single.html">Apple Iphone 6s</a></h4>
@@ -358,198 +410,127 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<span class="item_price">$179.99</span>
 										<del>$200.71</del>
 									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
+									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ep1.png" alt="" class="pro-image-front">
-									<img src="images/ep1.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">Combo Pack</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Watches</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$109.99</span>
-										<del>$150.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ep2.png" alt="" class="pro-image-front">
-									<img src="images/ep2.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Watches</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$129.99</span>
-										<del>$150.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ep3.png" alt="" class="pro-image-front">
-									<img src="images/ep3.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Watches</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$149.99</span>
-										<del>$180.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ep4.png" alt="" class="pro-image-front">
-									<img src="images/ep4.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Watches</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$119.99</span>
-										<del>$150.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>	
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ph1.png" alt="" class="pro-image-front">
-									<img src="images/ph1.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Apple Iphone 6</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$500.99</span>
-										<del>$700.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ph3.png" alt="" class="pro-image-front">
-									<img src="images/ph3.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Apple Iphone 6s</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$799.99</span>
-										<del>$999.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ep4.png" alt="" class="pro-image-front">
-									<img src="images/ep4.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Watches</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$119.99</span>
-										<del>$150.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men yes-marg">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ep1.png" alt="" class="pro-image-front">
-									<img src="images/ep1.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">50% Off</span>
-										
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Watches</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$109.99</span>
-										<del>$150.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>									
-								</div>
-							</div>
-						</div>
+
+
+
+
+
+
 						<div class="clearfix"></div>
 			</div>
 	</div>
 </div>
+
+
+		<!-- oat coupong -->
+		<section id="business" class="portfolio sections">
+				<div class="container">
+						<div class="head_title text-center">
+								<h1>POWER COUPONG!!!</h1>
+			<p>15-50% OFF !</p>
+						</div>
+
+						<div class="row">
+								<div class="portfolio-wrapper text-center">
+										<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="community-edition">
+														<i class="fa fa-mobile"></i>
+														<div class="separator"></div>
+														<h4>Mobile</h4>
+														<button type="button" class="btn btn-danger">15%</button>
+												</div>
+										</div>
+
+										<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="community-edition">
+														<i class="fa fa-tablet"></i>
+														<div class="separator"></div>
+														<h4>Tablet</h4>
+														<button type="button" class="btn btn-danger">5%</button>
+												</div>
+										</div>
+
+										<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="community-edition">
+														<i class="fa fa-headphones"></i>
+														<div class="separator"></div>
+														<h4>Speaker</h4>
+														<button type="button" class="btn btn-danger">20%</button>
+												</div>
+										</div>
+
+										<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="community-edition">
+														<i class="fa fa-pencil"></i>
+														<div class="separator"></div>
+														<h4>Accessories</h4>
+														<button type="button" class="btn btn-danger">50%</button>
+												</div>
+										</div>
+
+								</div>
+						</div>
+
+						<!-- Example row of columns -->
+						<div class="row">
+								<div class="portfolio-wrapper2 text-center">
+										<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="community-edition">
+														<i class="fa fa-camera-retro"></i>
+														<div class="separator"></div>
+														<h4>Photography</h4>
+														<button type="button" class="btn btn-danger">35%</button>
+												</div>
+										</div>
+
+										<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="community-edition">
+														<i class="fa fa-briefcase"></i>
+														<div class="separator"></div>
+														<h4>Home Office</h4>
+														<button type="button" class="btn btn-danger">25%</button>
+												</div>
+										</div>
+
+										<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="community-edition">
+														<i class="fa fa-home"></i>
+														<div class="separator"></div>
+														<h4>Smart Home</h4>
+														<button type="button" class="btn btn-danger">5%</button>
+												</div>
+										</div>
+
+										<div class="col-md-3 col-sm-6 col-xs-12">
+												<div class="community-edition">
+														<i class="fa fa-microphone"></i>
+														<div class="separator"></div>
+														<h4>Entertainment</h4>
+														<button type="button" class="btn btn-danger">45%</button>
+												</div>
+										</div>
+
+								</div>
+						</div>
+				</div> <!-- /container -->
+		</section>
+
+<div class="scrollup">
+	<a href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+
+		<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+		<script src="assets/js/vendor/bootstrap.min.js"></script>
+
+		<script src="assets/js/plugins.js"></script>
+		<script src="assets/js/modernizr.js"></script>
+		<script src="assets/js/main.js"></script>
+
 <!-- //Electronics -->
 <!-- //product-nav -->
 <div class="coupons">
@@ -586,8 +567,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-3 footer-left">
 			<h2><a href="index.html"><img src="images/logo3.jpg" alt=" " /></a></h2>
 			<p>Neque porro quisquam est, qui dolorem ipsum quia dolor
-			sit amet, consectetur, adipisci velit, sed quia non 
-			numquam eius modi tempora incidunt ut labore 
+			sit amet, consectetur, adipisci velit, sed quia non
+			numquam eius modi tempora incidunt ut labore
 			et dolore magnam aliquam quaerat voluptatem.</p>
 		</div>
 		<div class="col-md-9 footer-right">
@@ -613,7 +594,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<li><a href="contact.html">Contact</a></li>
 					</ul>
 				</div>
-				
+
 				<div class="col-md-4 sign-gd-two">
 					<h4>Store Information</h4>
 					<ul>
@@ -649,7 +630,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="modal-dialog" role="document">
 					<div class="modal-content modal-info">
 						<div class="modal-header">
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>						
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 						</div>
 						<div class="modal-body modal-spa">
 							<div class="login-grids">
@@ -659,22 +640,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<form>
 											<div class="sign-up">
 												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
+												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
 											</div>
 											<div class="sign-up">
 												<h4>Password :</h4>
 												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
+
 											</div>
 											<div class="sign-up">
 												<h4>Re-type Password :</h4>
 												<input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-												
+
 											</div>
 											<div class="sign-up">
 												<input type="submit" value="REGISTER NOW" >
 											</div>
-											
+
 										</form>
 									</div>
 									<div class="login-right">
@@ -682,7 +663,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										<form>
 											<div class="sign-in">
 												<h4>Email :</h4>
-												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">	
+												<input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Type here';}" required="">
 											</div>
 											<div class="sign-in">
 												<h4>Password :</h4>

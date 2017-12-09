@@ -49,32 +49,6 @@
 					<p style="color: white"><i>   1000 B  </i> <span class="item_price">500 B</span><a class="item_add hvr-outline-out button2" href="#">add to cart </a></p>
 				</div>
 			</div>
-			<!--
-			<div class="col-md-4 new-gd-middle">
-				<div class="new-levis">
-					<div class="mid-img">
-						<img src="images/levis1.png" alt=" " />
-					</div>
-					<div class="mid-text">
-						<h4>up to 35% <span>off</span></h4>
-						<a class="hvr-outline-out button2" href="product.html">Shop now </a>
-					</div>
-					<div class="clearfix"></div>
-				</div>
-
-				<div class="new-levis">
-					<div class="mid-text">
-						<h4>up to 10% <span>off</span></h4>
-						<a class="hvr-outline-out button2" href="product.html">Shop now </a>
-					</div>
-					<div class="mid-img">
-						<img src="images/dig.jpg" alt=" " />
-					</div>
-					<div class="clearfix"></div>
-				</div>
-				<div class="clearfix"></div>
-			</div>
-			-->
 			<div class="col-md-4 new-gd-left">
 				<img src="images/wed2.jpg" alt=" " />
 				<div class="wed-brandtwo simpleCart_shelfItem">
@@ -233,7 +207,49 @@
  <hr style="border-bottom: 1px solid black;"> </hr>
 
 
-<!-- //content -->
+<!-- //add on -->
+
+<div class='preloader'><div class='loaded'>&nbsp;</div></div>
+
+
+
+<div class="scrollup">
+	<a href="#"><i class="fa fa-chevron-up"></i></a>
+</div>
+
+
+		<script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
+		<script src="assets/js/vendor/bootstrap.min.js"></script>
+
+		<script src="assets/js/plugins.js"></script>
+		<script src="assets/js/modernizr.js"></script>
+		<script src="assets/js/main.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <!-- content-bottom -->
 

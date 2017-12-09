@@ -1,5 +1,5 @@
-@extends('_headerfooter') 
-@section('page_title','Seller Registration') 
+@extends('_headerfooter')
+@section('page_title','Seller Registration')
 @section('content')
 <!-- body header -->
 <div>
@@ -7,6 +7,16 @@
 text-align: center;
 padding-top: 3%;">Seller Registration</h1>
 </div>
+
+
+
+
+
+
+
+
+
+
 <!-- //body header -->
 <!-- form -->
 <form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/sellersignup" method="POST">

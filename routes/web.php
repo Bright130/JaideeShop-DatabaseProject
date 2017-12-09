@@ -12,7 +12,6 @@
 */
 
 Route::get('/','HomeController@index');
-Route::get('/electronics','HomeController@showElect');
 Route::get('/logout','HomeController@logout')->name('logout');
 
 //Route::get('/allseller','SellerController@allseller');
@@ -54,11 +53,12 @@ Route::post('/slipform','SlipController@postSlipForm');
 Route::get('/addproduct','ProductController@getNewProduct');
 Route::post('/addproduct','ProductController@postNewProduct');
 
-Route::get('/shopcreate','ShopController@getNewShop');
+Route::get('/shopcreate','ShopController@getNewShop')->name('shop.create');
 Route::post('/shopcreate','ShopController@postNewShop');
 Route::get('/table','TempleteTableController@getTable');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/elec', 'HomeController@showElect')->name('show.elec');
 Route::get('/profile', 'ProfileController@profile')->name('profile.view');
 Route::get('/mainsignup', 'SignupController@index')->name('mainsignup');

@@ -35,6 +35,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
 <script src="js/jquery.easing.min.js"></script>
+
 </head>
 <style>
     #form{
@@ -53,9 +54,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header-bot">
 	<div class="container">
 		<div class="col-md-3 header-left">
-			<h1><a href="index.html"><img src="images/logo3.jpg"></a></h1>
+			<h1><a href="{{ route('home') }}"><img src="images/JAIDEE.jpg"></a></h1>
 		</div>
-		<div class="col-md-6 header-middle">
+		<div class="col-md-5 header-middle">
 			<form>
 				<div class="search">
 					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
@@ -82,37 +83,29 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="sear-sub">
 					<input type="submit" value=" ">
 				</div>
-				<div class="clearfix"></div>
+			<!-- <div class="clearfix"></div> -->
 			</form>
 		</div>
-		<div class="col-md-3 header-right footer-bottom" style="color: #FDA30E;
+		<div class="col-md-4 header-right footer-bottom" style="color: #FDA30E;
 	padding: 0px 0px 20px 100px;
-	float: left;
 	font-size: 14px;
 	font-weight: bold;">
 			<ul>
-				<li>BUYER: </li>
+				<li><b>BUYER: </b></li>
 				<li><a class="keylogin" href="{{ route('buyer.login') }}"></a></li>
-
-				<li><a href="{{ route('buyer.dashboard') }}" class="use1" action="{{ route('buyer.dashboard') }}"></a>
-
-				</li>
-				<li><a class="fb" href="#"></a></li>
-				<li>SELLER: </li>
+				<li><a href="{{ route('buyer.dashboard') }}" class="use1" action="{{ route('buyer.dashboard') }}"></a></li>
+				<li><img src="images/notepad.png"></li>
+				<li><b>SELLER: </b></li>
 				<li><a class="keylogin" href="{{ route('seller.login') }}"></a></li>
-
-				<li><a href="{{ route('seller.dashboard') }}" class="use1" action="{{ route('seller.dashboard') }}"></a>
-
-				</li>
-				<li><a class="fb" href="#"></a></li>
-
-				<div class="col-md-5" >
-				 <a href="{{ route('mainsignup') }}" class="btn btn-danger square-btn-adjust">Signup Now</a>
-			 </div>
-			 <a href="{{ route('logout') }}" class="btn btn-danger square-btn-adjust">Logout</a>
+				<li><a href="{{ route('seller.dashboard') }}" class="use1" action="{{ route('seller.dashboard') }}"></a></li>
+				<li><img src="images/notepad.png"></li>
+			</ul>
+			<ul>
+				<a href="{{ route('mainsignup') }}" class="btn btn-danger square-btn-adjust">Signup Now</a>
+			  <a href="{{ route('logout') }}" class="btn btn-danger square-btn-adjust">Logout</a>
 			</ul>
 		</div>
-		<div class="clearfix"></div>
+		<!-- <div class="clearfix" style=" width: 1500px;"></div> -->
 	</div>
 </div>
 <!-- //header-bot -->
@@ -126,20 +119,43 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
 				  </button>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
+
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
 					<li class=" menu__item"><a class="menu__link" href="electronics.html">Clothing</a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accrssories</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.elec') }}">Electronics</a></li>
+					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accessories</a></li>
 					<li class=" menu__item"><a class="menu__link" href="codes.html">Consumables</a></li>
-					<li class=" menu__item"><a class="menu__link" href="contact.html">Voucher & E-Books</a></li>
+					<li class=" menu__item"><a class="menu__link" href="codes.html">Voucher & E-Books</a></li>
+					<li class=" menu__item"><a class="menu__link" href="codes.html">Stationay</a></li>
+					<li class="dropdown menu__item">
+						<a href="#" class="dropdown-toggle menu__link"  data-toggle="dropdown"   role="button" aria-haspopup="true" aria-expanded="false">MORE <span class="caret"></span></a>
+							<ul class="dropdown-menu multi-column columns-3">
+								<div class="row">
+									<div class="col-sm-3 multi-gd-img">
+										<ul class="multi-column-dropdown">
+											<li><a href="womens.html">Beauty Items</a></li>
+											<li><a href="womens.html">Child & Baby</a></li>
+											<li><a href="womens.html">Furniture</a></li>
+											<li><a href="womens.html">Sport & Recreation</a></li>
+										</ul>
+									</div>
+									<div class="col-sm-3 multi-gd-img">
+										<ul class="multi-column-dropdown">
+											<li><a href="womens.html">Food</a></li>
+											<li><a href="womens.html">Gadgets</a></li>
+											<li><a href="womens.html">Entertainment</a></li>
+											<li><a href="womens.html">Office Equipment</a></li>
+										</ul>
+									</div>
+									<img src="images/user.png" class="user-image img-responsive text-center"/>
+								</div>
+							</ul>
+					</li>
 				  </ul>
 				</div>
 			  </div>

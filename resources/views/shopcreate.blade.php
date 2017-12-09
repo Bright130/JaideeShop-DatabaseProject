@@ -1,6 +1,71 @@
-@extends('_headerfooter') 
-@section('page_title','Shop Registration') 
+@extends('_headerfooter')
+@section('page_title','Shop Registration')
 @section('content')
+<style>
+
+.add_form_field
+{
+    background-color: #1c97f3;
+    border: none;
+    color: white;
+    padding: 3px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border:1px solid #186dad;
+    margin-top: 3px;
+
+}
+
+input{
+    border: 1px solid #1c97f3;
+    width: 260px;
+    height: 40px;
+    margin-bottom:14px;
+}
+
+.delete{
+    background-color: #fd1200;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+$(document).ready(function() {
+    var max_fields      = 5;
+    var wrapper         = $(".container1");
+    var add_button      = $(".add_form_field");
+
+    var x = 1;
+    $(add_button).click(function(e){
+        e.preventDefault();
+        if(x < max_fields){
+            x++;
+            $(wrapper).append('<div class="col-sm-10" style="padding-left:0px;width:78.5%;"><input type="text" class="form-control col-sm-10" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width:65%;"><a href="#" class="delete">Delete</a></div>'); //add input box
+        }
+        else
+        {
+        alert('You Reached the limits')
+        }
+    });
+
+    $(wrapper).on("click",".delete", function(e){
+        e.preventDefault(); $(this).parent('div').remove(); x--;
+    })
+});
+</script>
 <!-- body header -->
 <div>
     <h1 class="display-4" style="padding-bottom: 2%;

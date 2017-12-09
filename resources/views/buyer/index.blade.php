@@ -33,35 +33,36 @@ font-weight: bold;">Login as Buyer</h1>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">My Profile</a>
+                <a class="navbar-brand" href="index.html"style="color: #ffffff;
+							font-weight: bold;">My Profile</a>
             </div>
         </nav>
            <!-- /. NAV TOP  -->
-                <nav class="navbar-default navbar-side" role="navigation">
+        <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-				<li class="text-center">
-                    <img src="images/men3.jpg" class="user-image img-responsive"/>
-					</li>
 
-
-                    <li>
-                        <a class="active-menu"  href="#"><i class="fa fa-dashboard fa-3x"></i> Personal information</a>
-                    </li>
-
+									<li class="text-center"  style = "top: 60px;">
+										<img src="images/user.png" class="user-image img-responsive"/>
+									</li>
+                  <li style = "top: 60px;">
+                    <a class="active-menu"  href="#" style="font-size: 20px;"><img src="images/notepad.png"></i> Personal information</a>
+                  </li>
                 </ul>
-
             </div>
 
         </nav>
 @foreach($buyerinfo as $buyer)
         <!-- /. NAV SIDE  -->
-        <div id="page-wrapper" >
+				<div id="page-wrapper" >
             <div id="page-inner">
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-12" style="color: #FDA30E;
+									float: left;
+									font-size: 16px;
+									font-weight: bold;">
                      <h2>Welcome Back</h2>
-                        <div style="color: #FDA30E;
+                        <div style="color: #000000;
 											float: left;
 											font-size: 16px;
 											font-weight: bold;">Welcome <b>{{$buyer->buyername}}</b> , Love to see you back. </div>
@@ -72,7 +73,7 @@ font-weight: bold;">Login as Buyer</h1>
                 <div class="row">
                 <div class="col-md-3 col-sm-6 col-xs-6">
 			<div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-red set-icon">
+                <span class="icon-box bg-color-red set-icon" style="margin-bottom: 10px; padding-bottom: 15px; padding-top: 15px;">
                     <i class="fa fa-envelope-o"></i>
                 </span>
                 <div class="text-box" >
@@ -84,7 +85,7 @@ font-weight: bold;">Login as Buyer</h1>
          </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
 			<div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-green set-icon">
+                <span class="icon-box bg-color-green set-icon" style="margin-bottom: 10px; padding-bottom: 15px; padding-top: 15px;">
                     <i class="fa fa-bars"></i>
                 </span>
                 <div class="text-box" >
@@ -95,7 +96,7 @@ font-weight: bold;">Login as Buyer</h1>
 		     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
 			<div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-blue set-icon">
+                <span class="icon-box bg-color-blue set-icon" style="margin-bottom: 10px; padding-bottom: 15px; padding-top: 15px;">
                     <i class="fa fa-bell-o"></i>
                 </span>
                 <div class="text-box" >
@@ -106,7 +107,7 @@ font-weight: bold;">Login as Buyer</h1>
 		     </div>
                     <div class="col-md-3 col-sm-6 col-xs-6">
 			<div class="panel panel-back noti-box">
-                <span class="icon-box bg-color-brown set-icon">
+                <span class="icon-box bg-color-brown set-icon" style="margin-bottom: 10px; padding-bottom: 15px; padding-top: 15px;">
                     <i class="fa fa-rocket"></i>
                 </span>
                 <div class="text-box" >
@@ -119,7 +120,7 @@ font-weight: bold;">Login as Buyer</h1>
 
          <div>
             <div>
-                    <h2>Profile</h2>
+                    <h2 style="color: #FDA30E;">Profile</h2>
 										<table class="table">
 											<thead>
 												<tr> <th>Firstname</th>
@@ -135,11 +136,13 @@ font-weight: bold;">Login as Buyer</h1>
 													 </tbody> </table> </div> </div>
 											  <table class="table table-hover table-dark">
 		 		                      <thead>
-		 		                        <h2>Recently</h2>
+		 		                         <h2 style="color: #FDA30E;">Recently Sell</h2>
 		 		                        <tr>
 		 		                          <th scope="col">#</th>
 		 		                          <th scope="col">Shop</th>
 		 		                          <th scope="col">Product</th>
+																	<th scope="col">Amount</th>
+																	<th scope="col">Price</th>
 		 		                          <th scope="col">Date</th>
 		 		                        </tr>
 		 		                      </thead>

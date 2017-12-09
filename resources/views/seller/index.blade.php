@@ -58,7 +58,7 @@ font-weight: bold;">Login as Seller</h1>
                 <ul class="nav" id="main-menu">
 									@foreach($shops as $shop)
                   <li style = "top: 310px;">
-                    <a class="active-menu"  href="/shop?={{$shop->ShopID}}" style="font-size: 20px;"><img src="images/notepad.png"></i> {{$shop->shopname}}</a>
+                    <a class="active-menu"  href="/shop?={{$shop->ShopID}}" style="font-size: 20px;"><img src="images/shop.png"></i> {{$shop->shopname}}</a>
                   </li>
 									@endforeach
                 </ul>

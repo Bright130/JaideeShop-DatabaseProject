@@ -86,11 +86,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for=ptype class="col-sm-2 col-form-label">Shop Type</label>
         <div class="col-sm-10">
-<<<<<<< HEAD:resources/views/shopcreate.blade.php
           <select class="form-control" name="shoptype">
-=======
-            <select class="form-control" name="shoptype">
->>>>>>> c6f0566d5a2966c0f0b202d3ab73f20af0379a08:resources/views/seller/shopcreate.blade.php
               @foreach($shoptypes as $shoptype)
               <option value={{$shoptype->shoptypeid}}>{{$shoptype->shoptypename}}</option>
               @endforeach
@@ -122,11 +118,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for=bankname class="col-sm-2 col-form-label">Bank name</label>
         <div class="col-sm-10">
-<<<<<<< HEAD:resources/views/shopcreate.blade.php
           <select class="form-control" name="bankname">
-=======
-            <select class="form-control" name="bankname">
->>>>>>> c6f0566d5a2966c0f0b202d3ab73f20af0379a08:resources/views/seller/shopcreate.blade.php
               <option value="1">Bangkok Bank</option>
               <option value="2">Krungsri Ayuthaya Bank</option>
               <option value="3">Kasikorn Bank</option>

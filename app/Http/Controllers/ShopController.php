@@ -29,9 +29,11 @@ class ShopController extends Controller
     {
        //ดึง seller ID มา
        $uid = Auth::User()->id;
+
+
         Shop::create(['ShopName'=>$request->input('shopname'),
-        'SellerId'=>$uid,
-        'ShoptypeId'=>$request->input('shoptype'),
+        'sellerid'=>$uid,
+        'shoptypeid'=>$request->input('shoptype'),
         'ShopDesc'=>$request->input('desc'),
         'ShopImg'=>$request->input('IMGURL'),
         'ShopView'=>0]);

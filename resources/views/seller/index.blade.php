@@ -23,6 +23,7 @@ font-weight: bold;">Login as Seller</h1>
 
 </head>
 @section('content')
+@foreach($sellerinfo as $seller)
 <body>
     <div id="wrapper">
         <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
@@ -43,7 +44,7 @@ font-weight: bold;">Login as Seller</h1>
                 <ul class="nav" id="main-menu">
 
 									<li class="text-center"  style = "top: 60px;">
-										<img src="images/user.png" class="user-image img-responsive"/>
+										<img src="{{'urlimage/'.'/'.$seller->sellerimg}}" class="user-image img-responsive"/>
 									</li>
                   <li style = "top: 60px;">
                     <a class="active-menu"  href="#" style="font-size: 20px;"><img src="images/notepad.png"></i> Personal information</a>
@@ -62,7 +63,7 @@ font-weight: bold;">Login as Seller</h1>
             </div>
 
         </nav>
-@foreach($sellerinfo as $seller)
+
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
@@ -73,10 +74,11 @@ font-weight: bold;">Login as Seller</h1>
 									font-weight: bold;">
 										<div class="col-md-9 col-sm-6 col-xs-6">
                      <h2>Welcome Back</h2>
-                    <div style="color: #000000;float: left;font-size: 16px;font-weight: bold;">Welcome <b>{{$seller->sellername}}</b> , Love to see you back. </div>
+                    <div style="color: #000000;float: left;font-size: 16px;font-weight: bold;">Welcome <b>{{$seller->sellername}} </b> , Love to see you back. </div>
                     </div>
 										<div class="col-md-3 col-sm-6 col-xs-6 header-right  footer-bottom">
-											<a href="{{ route('shop.create') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img src="images/add.png"><i>  ADD SHOP</i></a>
+											<a href="{{ route('shop.create') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="images/add.png"><i>  ADD SHOP</i></a>
+											<a href="{{ route('product.add') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="images/add.png"><i>  ADD PRODUCT</i></a>
 										</div>
 									</div>
 

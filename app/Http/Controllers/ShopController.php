@@ -33,11 +33,24 @@ class ShopController extends Controller
 
 
 if(Hash::check($request->input('pw'), Auth::User()->password))
-      {  Shop::create(['ShopName'=>$request->input('shopname'),
+      {
+        $i=1;
+
+                 foreach($request->IMGURL as $img ){
+
+                $input['urlimage'] = $request->input('sid').'_'.time() .'_'.$i .'.' .$img->getClientOriginalExtension();
+
+                $img->move(public_path('urlimage'), $input['urlimage']);
+
+                  $i++;
+                 }
+
+
+         Shop::create(['ShopName'=>$request->input('shopname'),
         'sellerid'=>$uid,
         'shoptypeid'=>$request->input('shoptype'),
         'ShopDesc'=>$request->input('desc'),
-        'ShopImg'=>$request->input('IMGURL'),
+        'ShopImg'=>$input['urlimage'],
         'ShopView'=>0]);
 
         //ดึง shop ID มา

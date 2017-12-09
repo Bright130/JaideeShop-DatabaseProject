@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Auth;
 use Hash;
 use App\newSeller ;
+use Validator;
 
 class SellerAuthController extends Controller
 {
@@ -29,7 +30,16 @@ class SellerAuthController extends Controller
     // insert info into db in signup page
     public function signup(Request $request)
     {
+      $i=1;
 
+               foreach($request->IMGURL as $img ){
+
+              $input['urlimage'] = $request->input('sid').'_'.time() .'_'.$i .'.' .$img->getClientOriginalExtension();
+
+              $img->move(public_path('urlimage'), $input['urlimage']);
+
+                $i++;
+               }
         $passw = Hash::make($request->input('Password'));
         newSeller::create(['email'=>$request->input('Email'),
         'password'=>$passw,
@@ -37,7 +47,7 @@ class SellerAuthController extends Controller
         'sellersurname'=>$request->input('Surname'),
         'selleraddress'=>$request->input('Address'),
         'sellertel'=>$request->input('Tel'),
-        'sellerimg'=>$request->input('IMGURL'),
+        'sellerimg'=>$input['urlimage'],
         'sellergender'=>$request->input('Gender')]) ;
         //dd($request.parameters) ;
         return redirect('/');

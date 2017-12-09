@@ -17,14 +17,17 @@
 <!-- for bootstrap working -->
 	<script type="../text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
 <!-- body header -->
+
 <div>
     <h1 class="display-4" style="padding-bottom: 2%;
 text-align: center;
 padding-top: 3%;">Buyer Registeration</h1>
+
+
 </div>
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action= {{ route('buyer.signup.submit') }} method="POST">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action= {{ route('buyer.signup.submit') }} method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-row">
         <div class="form-group col-md-6" style="padding-left:0; padding-right:0; ">
@@ -92,11 +95,10 @@ padding-top: 3%;">Buyer Registeration</h1>
 
         </div>
     </div>
-    <div class="form-group row">
+		<div class="form-group row">
         <label id="form" for="IMGURL" class="col-sm-2 col-form-label">Image URL</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL">
-
+        <div class="col-sm-10 container1">
+            <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
         </div>
     </div>
     <div class="form-group">
@@ -115,5 +117,31 @@ padding-top: 3%;">Buyer Registeration</h1>
     </div>
 </form>
 </div>
+<script type="text/javascript">
+  $("body").on("click",".upload-image",function(e){
+    $(this).parents("form").ajaxForm(options);
+  });
+
+  var options = {
+    complete: function(response)
+    {
+    	if($.isEmptyObject(response.responseJSON.error)){
+    		$("input[name='title']").val('');
+    		alert('Image Upload Successfully.');
+    	}else{
+    		printErrorMsg(response.responseJSON.error);
+    	}
+    }
+  };
+
+  function printErrorMsg (msg) {
+	$(".print-error-msg").find("ul").html('');
+	$(".print-error-msg").css('display','block');
+	$.each( msg, function( key, value ) {
+		$(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+	});
+  }
+</script>
+
 <!-- //form -->
 @stop

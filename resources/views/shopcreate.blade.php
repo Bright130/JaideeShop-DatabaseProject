@@ -74,11 +74,11 @@ padding-top: 3%;">Shop Registration</h1>
 </div>
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/shopcreate" method="POST">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/shopcreate" method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-group row">
         <label id="form" for="shop" class="col-sm-2 col-form-label">Shop Name</label>
-        <div class="col-sm-10">
+        <div  class="col-sm-10">
             <input type="text" class="form-control" id="shopname" placeholder="Shop Name" name="shopname" required>
 
         </div>
@@ -86,7 +86,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for=ptype class="col-sm-2 col-form-label">Shop Type</label>
         <div class="col-sm-10">
-            <select name="shoptype">
+          <select class="form-control" name="shoptype">
               @foreach($shoptypes as $shoptype)
               <option value={{$shoptype->shoptypeid}}>{{$shoptype->shoptypename}}</option>
               @endforeach
@@ -103,8 +103,8 @@ padding-top: 3%;">Shop Registration</h1>
     </div>
     <div class="form-group row">
         <label id="form" for="IMGURL" class="col-sm-2 col-form-label">Image URL</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL">
+        <div class="col-sm-10 container1">
+            <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
 
         </div>
     </div>
@@ -118,7 +118,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for=bankname class="col-sm-2 col-form-label">Bank name</label>
         <div class="col-sm-10">
-            <select name="bankname">
+          <select class="form-control" name="bankname">
               <option value="1">Bangkok Bank</option>
               <option value="2">Krungsri Ayuthaya Bank</option>
               <option value="3">Kasikorn Bank</option>
@@ -146,5 +146,30 @@ padding-top: 3%;">Shop Registration</h1>
     </div>
 </form>
 </div>
+<script type="text/javascript">
+  $("body").on("click",".upload-image",function(e){
+    $(this).parents("form").ajaxForm(options);
+  });
+
+  var options = {
+    complete: function(response)
+    {
+    	if($.isEmptyObject(response.responseJSON.error)){
+    		$("input[name='title']").val('');
+    		alert('Image Upload Successfully.');
+    	}else{
+    		printErrorMsg(response.responseJSON.error);
+    	}
+    }
+  };
+
+  function printErrorMsg (msg) {
+	$(".print-error-msg").find("ul").html('');
+	$(".print-error-msg").css('display','block');
+	$.each( msg, function( key, value ) {
+		$(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+	});
+  }
+</script>
 <!-- //form -->
 @stop

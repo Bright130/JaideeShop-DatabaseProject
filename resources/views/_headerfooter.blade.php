@@ -53,7 +53,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header-bot">
 	<div class="container">
 		<div class="col-md-3 header-left">
-			<h1><a href="index.html"><img src="images/JAIDEE.jpg"></a></h1>
+			<h1><a href="{{ route('home') }}"><img src="images/JAIDEE.jpg"></a></h1>
 		</div>
 		<div class="col-md-5 header-middle">
 			<form>
@@ -87,24 +87,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="col-md-4 header-right footer-bottom" style="color: #FDA30E;
 	padding: 0px 0px 20px 100px;
-	float: left;
 	font-size: 14px;
 	font-weight: bold;">
 			<ul>
-				<li>BUYER: </li>
+				<li><b>BUYER: </b></li>
 				<li><a class="keylogin" href="{{ route('buyer.login') }}"></a></li>
-
-				<li><a href="{{ route('buyer.dashboard') }}" class="use1" action="{{ route('buyer.dashboard') }}"></a>
-
-				</li>
-				<li><a class="fb" href="#"></a></li>
-				<li>SELLER: </li>
+				<li><a href="{{ route('buyer.dashboard') }}" class="use1" action="{{ route('buyer.dashboard') }}"></a></li>
+				<li><img src="images/notepad.png"></li>
+				<li><b>SELLER: </b></li>
 				<li><a class="keylogin" href="{{ route('seller.login') }}"></a></li>
-
-				<li><a href="{{ route('seller.dashboard') }}" class="use1" action="{{ route('seller.dashboard') }}"></a>
-
-				</li>
-				<li><a class="fb" href="#"></a></li>
+				<li><a href="{{ route('seller.dashboard') }}" class="use1" action="{{ route('seller.dashboard') }}"></a></li>
+				<li><img src="images/notepad.png"></li>
 			</ul>
 			<ul>
 				<a href="{{ route('mainsignup') }}" class="btn btn-danger square-btn-adjust">Signup Now</a>
@@ -125,9 +118,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="navbar-header">
 				  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
 					<span class="sr-only">Toggle navigation</span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
-					<span class="icon-bar"></span>
 				  </button>
 				</div>
 				<!-- Collect the nav links, forms, and other content for toggling -->
@@ -161,10 +151,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<li><a href="womens.html">Office Equipment</a></li>
 										</ul>
 									</div>
-									<div class="col-sm-6 multi-gd-img multi-gd-text ">
-										<a href="womens.html"><img src="images/woo.jpg" alt=" "></a>
-									</div>
-									<div class="clearfix"></div>
+									<img src="images/user.png" class="user-image img-responsive text-center"/>
 								</div>
 							</ul>
 					</li>

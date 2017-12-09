@@ -18,6 +18,36 @@ class ShopController extends Controller
         $this->middleware('auth:newSeller');
     }
     // get signup page
+    public function index($id=null)
+    {
+      if($id == null)
+      {
+        return redirect()->intended(route('seller.dashboard'));
+      }
+
+      $sid = Auth::User()->id;
+
+      $shops = Shop::select('shopname','ShopID')->where('sellerid','=',Auth::User()->id)->orderBy('shopname','ASC')->get();
+
+      $thisEmail = Auth::User()->email ;
+
+
+      $sellerinfo = newSeller::where('id','LIKE',$id)->get();
+
+
+
+      $detail = Shop::select('shopname')->where([['ShopID','=',$id],['sellerid','=',$sid]])->get();
+if($detail->isEmpty())
+{
+    return redirect()->intended(route('seller.dashboard'));
+}
+
+      return view('seller.shop',['detail'=>$detail,'sellerinfo'=>$sellerinfo,'id'=>$sid,'shops'=>$shops]);
+
+
+
+    }
+
     public function getNewShop()
     {
         $id = Auth::User()->id;

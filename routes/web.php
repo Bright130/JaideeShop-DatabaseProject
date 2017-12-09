@@ -40,6 +40,7 @@ Route::prefix('seller')->group(function(){
  Route::get('/login','Auth\SellerAuthController@loginForm')->name('seller.login');
 Route::post('/login','Auth\SellerAuthController@login')->name('seller.login.submit');
   Route::get('/','SellerController@index')->name('seller.dashboard');
+  Route::get('/shop/{id?}','ShopController@index')->where(['id'=>'[0-9]+']);
 //  Route::get('/','BuyerController@index')->name('admin.dashboard');
 
 });

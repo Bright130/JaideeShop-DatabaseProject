@@ -34,7 +34,7 @@ font-weight: bold;">Login as Seller</h1>
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#"style="color: #ffffff;
-							font-weight: bold;">My Profile</a>
+							font-weight: bold;">My cvbcvxcb  Profile</a>
             </div>
         </nav>
            <!-- /. NAV TOP  -->
@@ -57,7 +57,7 @@ font-weight: bold;">Login as Seller</h1>
                 <ul class="nav" id="main-menu">
 									@foreach($shops as $shop)
                   <li style = "top: 310px;">
-                    <a class="active-menu"  href="/shop?={{$shop->ShopID}}" style="font-size: 20px;"><img src="images/notepad.png"></i> {{$shop->shopname}}</a>
+                    <a class="active-menu"  href="/shop?={{$shop->ShopID}}" style="font-size: 20px;"><img src="images/notepad.png"></i> {{$shop->shopname}}---{{$detail}}</a>
                   </li>
 									@endforeach
                 </ul>
@@ -68,7 +68,8 @@ font-weight: bold;">Login as Seller</h1>
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-        <H1>SHOP</H1> 
+        <H1>SHOP</H1>
+				{{ detail.shopname }}
 
                 </div>
 
@@ -104,7 +105,7 @@ font-weight: bold;">Login as Seller</h1>
                     <i class="fa fa-bell-o"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">240 New</p>
+                    <p class="main-text">240erertre New</p>
                     <p class="text-muted">Notifications</p>
                 </div>
              </div>

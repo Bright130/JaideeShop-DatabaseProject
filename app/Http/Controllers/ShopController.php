@@ -8,6 +8,7 @@ use App\Shoptype;
 use App\Account;
 use App\newSeller;
 use Auth;
+use Hash;
 
 class ShopController extends Controller
 {
@@ -31,7 +32,8 @@ class ShopController extends Controller
        $uid = Auth::User()->id;
 
 
-        Shop::create(['ShopName'=>$request->input('shopname'),
+if(Hash::check($request->input('pw'), Auth::User()->password))
+      {  Shop::create(['ShopName'=>$request->input('shopname'),
         'sellerid'=>$uid,
         'shoptypeid'=>$request->input('shoptype'),
         'ShopDesc'=>$request->input('desc'),
@@ -48,5 +50,7 @@ class ShopController extends Controller
         'ShopID'=>$sid]);
         //dd($request.parameters) ;
         return redirect('/');
+      }
+        return redirect()->back();
     }
 }

@@ -130,7 +130,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for="ConfirmPassword" class="col-sm-2 col-form-label">Confirm password</label>
         <div class="col-sm-10">
-            <input type="password" class="form-control" id="ConfirmPassword" placeholder="Password for Apply changes" required>
+            <input type="password" class="form-control" name="pw" id="ConfirmPassword" placeholder="Password for Apply changes" required>
 
         </div>
     </div>

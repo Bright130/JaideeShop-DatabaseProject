@@ -46,7 +46,7 @@ font-weight: bold;">Login as Buyer</h1>
 										<img src="images/user.png" class="user-image img-responsive"/>
 									</li>
                   <li style = "top: 60px;">
-                    <a class="active-menu"  href="#"><i class="fa fa-dashboard fa-3x"></i> Personal information</a>
+                    <a class="active-menu"  href="#" style="font-size: 20px;"><img src="images/notepad.png"></i> Personal information</a>
                   </li>
                 </ul>
             </div>

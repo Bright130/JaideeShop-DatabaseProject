@@ -46,7 +46,7 @@ font-weight: bold;">Login as Seller</h1>
 										<img src="images/user.png" class="user-image img-responsive"/>
 									</li>
                   <li style = "top: 60px;">
-                    <a class="active-menu"  href="#"><i class="fa fa-dashboard fa-3x"></i> Personal information</a>
+                    <a class="active-menu"  href="#" style="font-size: 20px;"><img src="images/notepad.png"></i> Personal information</a>
                   </li>
                 </ul>
             </div>
@@ -61,13 +61,17 @@ font-weight: bold;">Login as Seller</h1>
 									float: left;
 									font-size: 16px;
 									font-weight: bold;">
+										<div class="col-md-9 col-sm-6 col-xs-6">
                      <h2>Welcome Back</h2>
-                        <div style="color: #000000;
-											float: left;
-											font-size: 16px;
-											font-weight: bold;">Welcome <b>{{$seller->sellername}}</b> , Love to see you back. </div>
+                    <div style="color: #000000;float: left;font-size: 16px;font-weight: bold;">Welcome <b>{{$seller->sellername}}</b> , Love to see you back. </div>
                     </div>
+										<div class="col-md-3 col-sm-6 col-xs-6 header-right  footer-bottom">
+											<a href="{{ route('shop.create') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img src="images/add.png"><i>  ADD SHOP</i></a>
+										</div>
+									</div>
+
                 </div>
+
                  <!-- /. ROW  -->
                   <hr />
                 <div class="row">

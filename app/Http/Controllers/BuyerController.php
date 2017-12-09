@@ -17,9 +17,10 @@ class BuyerController extends Controller
 
     public function index()
     {
+      $uid = Auth::User()->id;
       $thisEmail2 = Auth::User()->email ;
 
-      $buyerinfo = newBuyer::where('email','LIKE',$thisEmail2)->get();
+      $buyerinfo = newBuyer::where('id','=',$uid)->get();
       return view('buyer.index',compact('buyerinfo')) ;
     }
     // // get signup page

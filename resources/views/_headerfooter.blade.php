@@ -55,7 +55,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-3 header-left">
 			<h1><a href="index.html"><img src="images/JAIDEE.jpg"></a></h1>
 		</div>
-		<div class="col-md-6 header-middle">
+		<div class="col-md-5 header-middle">
 			<form>
 				<div class="search">
 					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
@@ -82,10 +82,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="sear-sub">
 					<input type="submit" value=" ">
 				</div>
-				<div class="clearfix"></div>
+			<!-- <div class="clearfix"></div> -->
 			</form>
 		</div>
-		<div class="col-md-3 header-right footer-bottom" style="color: #FDA30E;
+		<div class="col-md-4 header-right footer-bottom" style="color: #FDA30E;
 	padding: 0px 0px 20px 100px;
 	float: left;
 	font-size: 14px;
@@ -105,14 +105,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 				</li>
 				<li><a class="fb" href="#"></a></li>
-
-				<div class="col-md-5" >
-				 <a href="{{ route('mainsignup') }}" class="btn btn-danger square-btn-adjust">Signup Now</a>
-			 </div>
-			 <a href="{{ route('logout') }}" class="btn btn-danger square-btn-adjust">Logout</a>
+			</ul>
+			<ul>
+				<a href="{{ route('mainsignup') }}" class="btn btn-danger square-btn-adjust">Signup Now</a>
+			  <a href="{{ route('logout') }}" class="btn btn-danger square-btn-adjust">Logout</a>
 			</ul>
 		</div>
-		<div class="clearfix"></div>
+		<!-- <div class="clearfix" style=" width: 1500px;"></div> -->
 	</div>
 </div>
 <!-- //header-bot -->
@@ -140,13 +139,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<li class=" menu__item"><a class="menu__link" href="electronics.html">Electronics</a></li>
 					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accessories</a></li>
 					<li class=" menu__item"><a class="menu__link" href="codes.html">Consumables</a></li>
+					<li class=" menu__item"><a class="menu__link" href="codes.html">Voucher & E-Books</a></li>
+					<li class=" menu__item"><a class="menu__link" href="codes.html">Stationay</a></li>
 					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link"  data-toggle="dropdown"   role="button" aria-haspopup="true" aria-expanded="false">MORE <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Voucher & E-Books</a></li>
 											<li><a href="womens.html">Beauty Items</a></li>
 											<li><a href="womens.html">Child & Baby</a></li>
 											<li><a href="womens.html">Furniture</a></li>
@@ -158,7 +158,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 											<li><a href="womens.html">Food</a></li>
 											<li><a href="womens.html">Gadgets</a></li>
 											<li><a href="womens.html">Entertainment</a></li>
-											<li><a href="womens.html">Stationay</a></li>
 											<li><a href="womens.html">Office Equipment</a></li>
 										</ul>
 									</div>

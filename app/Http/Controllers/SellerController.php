@@ -19,7 +19,7 @@ class SellerController extends Controller
       {
         $id = Auth::User()->id;
         $thisEmail = Auth::User()->email ;
-        $sellerinfo = newSeller::where('email','LIKE',$thisEmail)->get();
+        $sellerinfo = newSeller::where('id','LIKE',$id)->get();
         return view('seller.index',compact('sellerinfo'),compact('id')) ;
       }
 }

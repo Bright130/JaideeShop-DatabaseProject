@@ -22,7 +22,7 @@ class ShopController extends Controller
     {
         $id = Auth::User()->id;
         $shoptypes = Shoptype::get();
-        return view('shopcreate',compact('shoptypes'));
+        return view('seller.shopcreate',compact('shoptypes'));
     }
 
     // insert info into db in signup page

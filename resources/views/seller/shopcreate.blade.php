@@ -78,7 +78,7 @@ padding-top: 3%;">Shop Registration</h1>
     {{ csrf_field() }}
     <div class="form-group row">
         <label id="form" for="shop" class="col-sm-2 col-form-label">Shop Name</label>
-        <div class="col-sm-10">
+        <div  class="col-sm-10">
             <input type="text" class="form-control" id="shopname" placeholder="Shop Name" name="shopname" required>
 
         </div>
@@ -86,7 +86,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for=ptype class="col-sm-2 col-form-label">Shop Type</label>
         <div class="col-sm-10">
-            <select name="shoptype">
+            <select class="form-control" name="shoptype">
               @foreach($shoptypes as $shoptype)
               <option value={{$shoptype->shoptypeid}}>{{$shoptype->shoptypename}}</option>
               @endforeach
@@ -118,7 +118,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for=bankname class="col-sm-2 col-form-label">Bank name</label>
         <div class="col-sm-10">
-            <select name="bankname">
+            <select class="form-control" name="bankname">
               <option value="1">Bangkok Bank</option>
               <option value="2">Krungsri Ayuthaya Bank</option>
               <option value="3">Kasikorn Bank</option>

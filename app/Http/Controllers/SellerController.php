@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\newSeller;
 use Auth;
+use App\Shop;
 
 class SellerController extends Controller
 {
@@ -18,8 +19,10 @@ class SellerController extends Controller
       public function index()
       {
         $id = Auth::User()->id;
+        $shops = Shop::select('shopname','ShopID')->where('sellerid','=',Auth::User()->id)->orderBy('shopname','ASC')->get();
+
         $thisEmail = Auth::User()->email ;
         $sellerinfo = newSeller::where('id','LIKE',$id)->get();
-        return view('seller.index',compact('sellerinfo'),compact('id')) ;
+        return view('seller.index',['sellerinfo'=>$sellerinfo,'id'=>$id,'shops'=>$shops]) ;
       }
 }

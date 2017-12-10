@@ -44,22 +44,23 @@
 			<div class="col-md-4 new-gd-left">
 				<img src="images/wed1.jpg" alt=" " />
 				<div class="wed-brand simpleCart_shelfItem">
-					<h4 style="color: white">College Collections</h4>
-					<h5 style="color: white">Flat 50% Discount</h5>
-					<p style="color: white"><i>   1000 B  </i> <span class="item_price">500 B</span><a class="item_add hvr-outline-out button2" href="#">add to cart </a></p>
+					<br>
+					<h4 style="color: orange">College Collections</h4>
+					<h5 style="color: orange">Flat 50% Discount</h5>
+					<p style="color: orange"><i>   1000 B  </i> <span class="item_price">500 B</span><a class="item_add hvr-outline-out button2" href="#">add to cart </a></p>
 				</div>
 			</div>
 			<div class="col-md-4 new-gd-left">
 				<img src="images/wed2.jpg" alt=" " />
 				<div class="wed-brandtwo simpleCart_shelfItem">
-					<h4 style="color: black">HYPE COLLECTIONS </h4>
+					<h1 style="color: RED">SUIT G-Girl COLLECTIONS </h1>
 					<p> </p>
 				</div>
 			</div>
 			<div class="col-md-4 new-gd-left">
 				<img src="images/wed3.jpg" alt=" " />
 				<div class="wed-brandtwo simpleCart_shelfItem">
-					<h4 style="color: black">HYPE COLLECTIONS </h4>
+					<h4 style="color: black"> </h4>
 					<p> </p>
 				</div>
 			</div>
@@ -92,7 +93,7 @@
 						<a class="hvr-outline-out button2" href="product.html">Shop now </a>
 					</div>
 					<div class="mid-img">
-						<img src="images/dig.png" alt=" " />
+						<img src="images/dig.jpg" alt=" " />
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -177,7 +178,7 @@
 			<div class="col-md-4 new-gd-middle">
 				<div class="new-levis">
 					<div class="mid-img">
-						<img src="images/aaa5.jpg" alt=" " />
+						<img src="images/aaa5.png" alt=" " />
 					</div>
 					<div class="mid-text">
 						<h4>up to 35% <span>off</span></h4>
@@ -191,7 +192,7 @@
 						<a class="hvr-outline-out button2" href="product.html">Shop now </a>
 					</div>
 					<div class="mid-img">
-						<img src="images/dig.jpg" alt=" " />
+						<img src="images/aaa6.png" alt=" " />
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -224,32 +225,6 @@
 		<script src="assets/js/plugins.js"></script>
 		<script src="assets/js/modernizr.js"></script>
 		<script src="assets/js/main.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- content-bottom -->
 

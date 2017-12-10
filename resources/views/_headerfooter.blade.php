@@ -28,6 +28,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //js -->
 <!-- cart -->
 	<script src="{{ url('/') }}/js/simpleCart.min.js"></script>
+	<style type="text/css">
+	.simpleCart_items .headerRow div, .simpleCart_items .itemRow div {
+		float:left;
+		width: 20%;
+	}
+	.simpleCart_items .itemRow {
+		clear: both;
+
+	}
+</style>
 <!-- cart -->
 <!-- for bootstrap working -->
 	<script type="text/javascript" src="{{ url('/') }}/js/bootstrap-3.1.1.min.js"></script>
@@ -126,30 +136,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Clothing</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Clothing') }}">Clothing</a></li>
 					<li class=" menu__item"><a class="menu__link" href="{{ route('show.elec') }}">Electronics</a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accessories</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Consumables</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Voucher & E-Books</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Stationay</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Accessories') }}">Accessories</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Consumable') }}">Consumables</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Voucher') }}">Voucher & E-Books</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Stationary') }}">Stationary</a></li>
 					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link"  data-toggle="dropdown"   role="button" aria-haspopup="true" aria-expanded="false">MORE <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">
 								<div class="row">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Beauty Items</a></li>
-											<li><a href="womens.html">Child & Baby</a></li>
-											<li><a href="womens.html">Furniture</a></li>
-											<li><a href="womens.html">Sport & Recreation</a></li>
+											<li><a href="{{ route('show.Beauty') }}">Beauty Items</a></li>
+											<li><a href="{{ route('show.Childbaby') }}">Child & Baby</a></li>
+											<li><a href="{{ route('show.Furniture') }}">Furniture</a></li>
+											<li><a href="{{ route('show.Sport') }}">Sport & Recreation</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Food</a></li>
-											<li><a href="womens.html">Gadgets</a></li>
-											<li><a href="womens.html">Entertainment</a></li>
-											<li><a href="womens.html">Office Equipment</a></li>
+											<li><a href="{{ route('show.Food') }}">Food</a></li>
+											<li><a href="{{ route('show.Gadgets') }}">Gadgets</a></li>
+											<li><a href="{{ route('show.Entertainment') }}">Entertainment</a></li>
+											<li><a href="{{ route('show.Office') }}">Office Equipment</a></li>
 										</ul>
 									</div>
 									<img src="images/user.png" class="user-image img-responsive text-center"/>
@@ -183,6 +193,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!-- //footer -->
+
+
+
+
 <!-- login -->
 
 <!-- //login -->

@@ -126,12 +126,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
 				  <ul class="nav navbar-nav menu__list">
 					<li class="active menu__item menu__item--current"><a class="menu__link" href="{{ route('home') }}">Home <span class="sr-only">(current)</span></a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Clothing</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Clothing') }}">Clothing</a></li>
 					<li class=" menu__item"><a class="menu__link" href="{{ route('show.elec') }}">Electronics</a></li>
-					<li class=" menu__item"><a class="menu__link" href="electronics.html">Accessories</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Consumables</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Voucher & E-Books</a></li>
-					<li class=" menu__item"><a class="menu__link" href="codes.html">Stationay</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Accessories') }}">Accessories</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Consumable') }}">Consumables</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Voucher') }}">Voucher & E-Books</a></li>
+					<li class=" menu__item"><a class="menu__link" href="{{ route('show.Stationary') }}">Stationary</a></li>
 					<li class="dropdown menu__item">
 						<a href="#" class="dropdown-toggle menu__link"  data-toggle="dropdown"   role="button" aria-haspopup="true" aria-expanded="false">MORE <span class="caret"></span></a>
 							<ul class="dropdown-menu multi-column columns-3">

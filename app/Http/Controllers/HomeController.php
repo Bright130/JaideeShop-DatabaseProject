@@ -36,6 +36,36 @@ class HomeController extends Controller
       $pimg = Productimage::get();
         return view('electronics',compact('product'),compact('pimg'));
     }
+    public function showVoucher()
+    {
+      $product = Product::where('producttypeid','=','6')->get();
+      $pimg = Productimage::get();
+        return view('voucher',compact('product'),compact('pimg'));
+    }
+    public function showClothing()
+    {
+      $product = Product::where('producttypeid','=','2')->get();
+      $pimg = Productimage::get();
+        return view('clothing',compact('product'),compact('pimg'));
+    }
+    public function showAccessories()
+    {
+      $product = Product::where('producttypeid','=','10')->get();
+      $pimg = Productimage::get();
+        return view('accessories',compact('product'),compact('pimg'));
+    }
+    public function showConsumable()
+    {
+      $product = Product::where('producttypeid','=','8')->get();
+      $pimg = Productimage::get();
+        return view('consumables',compact('product'),compact('pimg'));
+    }
+    public function showStationary()
+    {
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('stationary',compact('product'),compact('pimg'));
+    }
     public function checkout()
     {
         return view('checkout');

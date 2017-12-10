@@ -167,7 +167,7 @@ font-weight: bold;">Login as Seller</h1>
 													 </tbody> </table> </div> </div>
 											  <table class="table table-hover table-dark">
 		 		                      <thead>
-		 		                        <h2 style="color: #FDA30E;">Recently Buy</h2>
+		 		                        <h2 style="color: #FDA30E;">Recently Sell</h2>
 		 		                        <tr>
 		 		                          <th scope="col">#</th>
 		 		                          <th scope="col">Shop</th>

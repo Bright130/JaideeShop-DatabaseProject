@@ -41,8 +41,8 @@ if($detail->isEmpty())
 {
     return redirect()->intended(route('seller.dashboard'));
 }
-
       return view('seller.shop',['detail'=>$detail,'sellerinfo'=>$sellerinfo,'id'=>$sid,'shops'=>$shops]);
+
 
 
 

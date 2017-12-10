@@ -21,4 +21,8 @@ class CheckoutController extends Controller
   {
       return view('checkout');
   }
+  public function orders()
+  {
+      return view('order');
+  }
 }

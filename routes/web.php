@@ -69,6 +69,16 @@ Route::get('/clothing', 'HomeController@showConsumable')->name('show.Consumable'
 Route::get('/clothing', 'HomeController@showVoucher')->name('show.Voucher');
 Route::get('/clothing', 'HomeController@showStationary')->name('show.Stationary');
 
+Route::get('/elec', 'HomeController@showBeauty')->name('show.Beauty');
+Route::get('/clothing', 'HomeController@showChildbaby')->name('show.Childbaby');
+Route::get('/clothing', 'HomeController@showFurniture')->name('show.Furniture');
+Route::get('/clothing', 'HomeController@showSport')->name('show.Sport');
+Route::get('/clothing', 'HomeController@showFood')->name('show.Food');
+Route::get('/clothing', 'HomeController@showGadgets')->name('show.Gadgets');
+Route::get('/clothing', 'HomeController@showEntertainment')->name('show.Entertainment');
+Route::get('/clothing', 'HomeController@showOffice')->name('show.Office');
+
+
 
 Route::get('/profile', 'ProfileController@profile')->name('profile.view');
 Route::get('/mainsignup', 'SignupController@index')->name('mainsignup');

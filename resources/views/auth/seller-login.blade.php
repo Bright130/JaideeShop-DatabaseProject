@@ -9,14 +9,16 @@
 <!-- //pignose css -->
 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script type="../text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- cart -->
 	<script src="../js/simpleCart.min.js"></script>
 <!-- cart -->
 <!-- for bootstrap working -->
-	<script type="../text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
 <!-- body header -->
+<script src="../js/jquery.easing.min.js"></script>
+
 <!-- body header -->
 <div>
     <h1 class="display-4" style="padding-bottom: 2%;

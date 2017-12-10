@@ -11,13 +11,13 @@ font-weight: bold;">Login as Seller</h1>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Free Bootstrap Admin Template : Binary Admin</title>
 	<!-- BOOTSTRAP STYLES-->
-    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="{{ url('/') }}/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="css/font-awesome.css" rel="stylesheet" />
+    <link href="{{ url('/') }}/css/font-awesome.css" rel="stylesheet" />
      <!-- MORRIS CHART STYLES-->
-    <link href="js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="{{ url('/') }}/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="css/custom.css" rel="stylesheet" />
+    <link href="{{ url('/') }}/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
 
@@ -43,10 +43,10 @@ font-weight: bold;">Login as Seller</h1>
                 <ul class="nav" id="main-menu">
 
 									<li class="text-center"  style = "top: 60px;">
-										<img src="images/user.png" class="user-image img-responsive"/>
+										<img src="{{ url('/') }}/images/user.png" class="user-image img-responsive"/>
 									</li>
                   <li style = "top: 60px;">
-                    <a class="active-menu"  href="#" style="font-size: 20px;"><img src="images/notepad.png"></i> Personal information</a>
+                    <a class="active-menu"  href="#" style="font-size: 20px;"><img src="{{ url('/') }}/images/notepad.png"></i> Personal information</a>
                   </li>
                 </ul>
             </div>
@@ -57,7 +57,7 @@ font-weight: bold;">Login as Seller</h1>
                 <ul class="nav" id="main-menu">
 									@foreach($shops as $shop)
                   <li style = "top: 310px;">
-                    <a class="active-menu"  href="/seller/shop/{{$shop->ShopID}}" style="font-size: 20px;"><img src="images/notepad.png"></i> {{$shop->shopname}}---{{$detail}}</a>
+                    <a class="active-menu"  href="/seller/shop/{{$shop->ShopID}}" style="font-size: 20px;"><img src="{{ url('/') }}/images/notepad.png"></i> {{$shop->shopname}}---{{$detail}}</a>
                   </li>
 									@endforeach
                 </ul>

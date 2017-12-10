@@ -70,6 +70,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 </head>
 <body>
+
 	<!-- oat loading -->
 	<div class='preloader'><div class='loaded'>&nbsp;</div></div>
 <!-- banner -->
@@ -154,12 +155,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="clearfix"></div>
 			<div class="ele-bottom-grid">
 				<h3><span>Latest </span>Collections</h3>
-				<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+						@foreach($product as $prod)
 					<div class="col-md-3 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
 								<div class="men-thumb-item">
-									<img src="images/ph1.png" alt="" class="pro-image-front">
-									<img src="images/ph1.png" alt="" class="pro-image-back">
+									  @php $i = 1 @endphp
+										@foreach($pimg as $img)
+										@if ($prod->productid == $img->productid)
+											@if ($i%2 == 1)
+												<img src="{{'urlimage/'.'/'.$img->urlimage}}" alt="" class="pro-image-front">
+												@php $i= $i+1 @endphp
+											@else
+										 		<img src="{{'urlimage/'.'/'.$img->urlimage}}" alt="" class="pro-image-back">
+												@php $i= $i+1 @endphp
+												@endif
+										@endif
+										@endforeach
 										<div class="men-cart-pro">
 											<div class="inner-men-cart-pro">
 												<a href="single.html" class="link-product-add-cart">Quick View</a>
@@ -169,90 +180,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="single.html">Apple Iphone 6</a></h4>
+									<h4><a href="#">{{$prod->productname}}</a></h4>
 									<div class="info-product-price">
-										<span class="item_price">$500.99</span>
+										@php $num = number_format($prod->productprice, 2, '.', ''); @endphp
+										<span class="item_price">$ {{$num}}</span>
 										<del>$700.71</del>
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
 								</div>
 							</div>
 						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ph3.png" alt="" class="pro-image-front">
-									<img src="images/ph3.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Apple Iphone 6s</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$799.99</span>
-										<del>$999.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ph2.png" alt="" class="pro-image-front">
-									<img src="images/ph2.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Apple Iphone 6</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$180.99</span>
-										<del>$250.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-3 product-men">
-							<div class="men-pro-item simpleCart_shelfItem">
-								<div class="men-thumb-item">
-									<img src="images/ph4.png" alt="" class="pro-image-front">
-									<img src="images/ph4.png" alt="" class="pro-image-back">
-										<div class="men-cart-pro">
-											<div class="inner-men-cart-pro">
-												<a href="single.html" class="link-product-add-cart">Quick View</a>
-											</div>
-										</div>
-										<span class="product-new-top">New</span>
-
-								</div>
-								<div class="item-info-product ">
-									<h4><a href="single.html">Apple Iphone 6s</a></h4>
-									<div class="info-product-price">
-										<span class="item_price">$179.99</span>
-										<del>$200.71</del>
-									</div>
-									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
-								</div>
-							</div>
-						</div>
-
-
-
-
-
-
+						@endforeach
 						<div class="clearfix"></div>
 			</div>
 	</div>

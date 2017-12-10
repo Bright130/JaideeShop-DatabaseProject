@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use Auth;
 use Session ;
+use App\Product;
+use App\Productimage;
 
 class HomeController extends Controller
 {
@@ -30,7 +32,9 @@ class HomeController extends Controller
     }
     public function showElect()
     {
-        return view('electronics');
+      $product = Product::where('producttypeid','=','3')->get();
+      $pimg = Productimage::get();
+        return view('electronics',compact('product'),compact('pimg'));
     }
     public function checkout()
     {

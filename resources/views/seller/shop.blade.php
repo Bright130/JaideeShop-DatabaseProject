@@ -34,7 +34,7 @@ font-weight: bold;">Login as Seller</h1>
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#"style="color: #ffffff;
-							font-weight: bold;">My cvbcvxcb  Profile</a>
+							font-weight: bold;">My Profile</a>
             </div>
         </nav>
            <!-- /. NAV TOP  -->
@@ -43,33 +43,39 @@ font-weight: bold;">Login as Seller</h1>
                 <ul class="nav" id="main-menu">
 
 									<li class="text-center"  style = "top: 60px;">
-										<img src="{{ url('/') }}/images/user.png" class="user-image img-responsive"/>
+										<img src="{{url('/').'/'.'urlimage/'.$detail->shopimg}}" class="user-image img-responsive"/>
 									</li>
                   <li style = "top: 60px;">
                     <a class="active-menu"  href="#" style="font-size: 20px;"><img src="{{ url('/') }}/images/notepad.png"></i> Personal information</a>
                   </li>
-                </ul>
-            </div>
-
-        </nav>
-				<nav class="navbar-default navbar-side" role="navigation">
-            <div class="sidebar-collapse">
-                <ul class="nav" id="main-menu">
 									@foreach($shops as $shop)
-                  <li style = "top: 310px;">
-                    <a class="active-menu"  href="/seller/shop/{{$shop->ShopID}}" style="font-size: 20px;"><img src="{{ url('/') }}/images/notepad.png"></i> {{$shop->shopname}}---{{$detail}}</a>
-                  </li>
+									<li style = "top: 100px;">
+										<a class="active-menu"  href="/seller/shop/{{$shop->ShopID}}" style="font-size: 20px;"><img src="{{ url('/') }}/images/shop.png"></i> {{$shop->shopname}}</a>
+									</li>
 									@endforeach
                 </ul>
             </div>
 
         </nav>
-@foreach($sellerinfo as $seller)
+
+
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper" >
             <div id="page-inner">
-        <H1>SHOP</H1>
-				{{ detail.shopname }}
+							<div class="row">
+									<div class="col-md-12" style="color: #FDA30E;
+								float: left;
+								font-size: 16px;
+								font-weight: bold;">
+									<div class="col-md-9 col-sm-6 col-xs-6">
+									 <h2>Welcome Back</h2>
+									<div style="color: #000000;float: left;font-size: 16px;font-weight: bold;">Welcome <b>{{$sellerinfo->sellername}} </b> , Love to see you back. </div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-6 header-right  footer-bottom">
+										<a href="{{ route('shop.create') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/add.png"><i>  ADD SHOP</i></a>
+										<a href="{{ route('product.add') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/add.png"><i>  ADD PRODUCT</i></a>
+									</div>
+								</div>
 
                 </div>
 
@@ -105,7 +111,7 @@ font-weight: bold;">Login as Seller</h1>
                     <i class="fa fa-bell-o"></i>
                 </span>
                 <div class="text-box" >
-                    <p class="main-text">240erertre New</p>
+                    <p class="main-text">240 New</p>
                     <p class="text-muted">Notifications</p>
                 </div>
              </div>
@@ -126,19 +132,11 @@ font-weight: bold;">Login as Seller</h1>
          <div>
             <div>
                     <h2 style="color: #FDA30E;">Profile</h2>
-										<table class="table">
-											<thead>
-												<tr> <th>Firstname</th>
-													<th> Lastname</th>
-													<th> Address</th>
-													<th> TelNo.</th>
-													<th> Email</th>
-													 </tr>
-												</thead>
-												<tbody>
-													<tr> <th scope="row">{{$seller->sellername}}</th> <td>{{$seller->sellersurname}}</td>  <td>{{$seller->selleraddress}}</td>
-													 <td>{{$seller->sellertel}}  <td>{{$seller->email}}</td></td>  </tr>
-													 </tbody> </table> </div> </div>
+										  <h5 style="color: #333333;">Shop : {{$detail->shopname}}</h5>
+											<h5 style="color: #333333;">view : {{$detail->shopview}}</h5>
+											<h5 style="color: #333333;">Description : {{$detail->shopdesc}}</h5>
+
+									</div> </div>
 											  <table class="table table-hover table-dark">
 		 		                      <thead>
 		 		                        <h2 style="color: #FDA30E;">Recently Buy</h2>
@@ -184,7 +182,7 @@ font-weight: bold;">Login as Seller</h1>
             </div>
          <!-- /. PAGE WRAPPER  -->
         </div>
-@endforeach
+
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->

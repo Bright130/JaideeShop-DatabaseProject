@@ -13,32 +13,30 @@ font-weight: bold;">Login as Seller</h1>
 	<!-- BOOTSTRAP STYLES-->
     <link href="{{ url('/') }}/css/bootstrap.css" rel="stylesheet" />
      <!-- FONTAWESOME STYLES-->
-    <link href="../css/font-awesome.css" rel="stylesheet" />
+    <link href="{{ url('/') }}/css/font-awesome.css" rel="stylesheet" />
      <!-- MORRIS CHART STYLES-->
-    <link href="../js/morris/morris-0.4.3.min.css" rel="stylesheet" />
+    <link href="{{ url('/') }}/js/morris/morris-0.4.3.min.css" rel="stylesheet" />
         <!-- CUSTOM STYLES-->
-    <link href="../css/custom.css" rel="stylesheet" />
+    <link href="{{ url('/') }}/css/custom.css" rel="stylesheet" />
      <!-- GOOGLE FONTS-->
    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
-	 <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	 <link href="{{ url('/') }}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 	 <!-- pignose css -->
-	 <link href="../css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
-
-
+	 <link href="{{ url('/') }}/css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
 	 <!-- //pignose css -->
-	 <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+	 <link href="{{ url('/') }}/css/style.css" rel="stylesheet" type="text/css" media="all" />
 	 <!-- js -->
-	 <script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
+	 <script type="text/javascript" src="{{ url('/') }}/js/jquery-2.1.4.min.js"></script>
 	 <!-- //js -->
 	 <!-- cart -->
-	 	<script src="../js/simpleCart.min.js"></script>
+	 	<script src="{{ url('/') }}/js/simpleCart.min.js"></script>
 	 <!-- cart -->
 	 <!-- for bootstrap working -->
-	 	<script type="text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
+	 	<script type="text/javascript" src="{{ url('/') }}/js/bootstrap-3.1.1.min.js"></script>
 	 <!-- //for bootstrap working -->
 	 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 	 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
-	 <script src="../js/jquery.easing.min.js"></script>
+	 <script src="{{ url('/') }}/js/jquery.easing.min.js"></script>
 
 </head>
 @section('content')
@@ -199,13 +197,6 @@ font-weight: bold;">Login as Seller</h1>
 		 		                    </table>
              </div>
              </div>
-
-
-
-
-
-
-
              <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->
@@ -214,16 +205,16 @@ font-weight: bold;">Login as Seller</h1>
      <!-- /. WRAPPER  -->
     <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
     <!-- JQUERY SCRIPTS -->
-    <script src="../assets/js/jquery-1.10.2.js"></script>
+    <script src="{{ url('/') }}/assets/js/jquery-1.10.2.js"></script>
       <!-- BOOTSTRAP SCRIPTS -->
-    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="{{ url('/') }}/assets/js/bootstrap.min.js"></script>
     <!-- METISMENU SCRIPTS -->
-    <script src="../assets/js/jquery.metisMenu.js"></script>
+    <script src="{{ url('/') }}/assets/js/jquery.metisMenu.js"></script>
      <!-- MORRIS CHART SCRIPTS -->
-     <script src="../assets/js/morris/raphael-2.1.0.min.js"></script>
-    <script src="../assets/js/morris/morris.js"></script>
+     <script src="{{ url('/') }}/assets/js/morris/raphael-2.1.0.min.js"></script>
+    <script src="{{ url('/') }}/assets/js/morris/morris.js"></script>
       <!-- CUSTOM SCRIPTS -->
-    <script src="../assets/js/custom.js"></script>
+    <script src="{{ url('/') }}/assets/js/custom.js"></script>
 
 
 </body>

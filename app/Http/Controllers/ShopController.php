@@ -32,15 +32,17 @@ class ShopController extends Controller
       $thisEmail = Auth::User()->email ;
 
 
-      $sellerinfo = newSeller::where('id','LIKE',$id)->get();
+      $sellerinfo = newSeller::where('id','LIKE',$sid)->get()->first();
 
 
 
-      $detail = Shop::select('shopname')->where([['ShopID','=',$id],['sellerid','=',$sid]])->get();
-if($detail->isEmpty())
-{
-    return redirect()->intended(route('seller.dashboard'));
-}
+      $detail = Shop::where([['ShopID','=',$id],['sellerid','=',$sid]])->get()->first();
+
+
+// if($detail->isEmpty())
+// {
+//     return redirect()->intended(route('seller.dashboard'));
+// }
 
       return view('seller.shop',['detail'=>$detail,'sellerinfo'=>$sellerinfo,'id'=>$sid,'shops'=>$shops]);
 

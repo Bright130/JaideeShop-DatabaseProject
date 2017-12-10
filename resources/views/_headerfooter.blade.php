@@ -19,8 +19,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- pignose css -->
 <link href="css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
-
-
 <!-- //pignose css -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
@@ -192,6 +190,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!-- //footer -->
+
+
+
+
 <!-- login -->
 
 <!-- //login -->

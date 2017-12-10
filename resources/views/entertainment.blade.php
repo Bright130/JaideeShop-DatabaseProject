@@ -86,13 +86,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-8 electro-left text-center">
 			<div class="electro-img-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/watch.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/enn1.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Ralph Raulen Polo Shirts ON FIRE</h4>
+								<h4>ZOMBIE Festival</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">1800 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -103,13 +103,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="electro-img-btm-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e1.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/enn2.jpg" alt="image" class="img-responsive zoom-img"></div>
 
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Suit under 500 Baht</h4>
+								<h4>Fighting Girls </h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">450 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -119,12 +119,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="electro-img-btm-right mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e2.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/enn3.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Want to be HYPE!!!</h4>
+								<h4>HUNGER HEAD</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">800 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -138,12 +138,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-4 electro-right text-center">
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e4.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/enn4.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Rock the WORLD BRO!!!</h4>
+								<h4>Halloween Havol Cruise</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">750 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -180,7 +180,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="#">{{$prod->productname}}</a></h4>
+									<span class="item_id" style="display:none;">{{$prod->productid}}</span>
+									<h4><span class="item_name">{{$prod->productname}}</span></h4>
 									<div class="info-product-price">
 										@php $num = number_format($prod->productprice, 2, '.', ''); @endphp
 										<span class="item_price">$ {{$num}}</span>

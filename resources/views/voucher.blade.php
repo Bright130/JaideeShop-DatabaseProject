@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="page-head">
 	<div class="container">
-		<h3>Electric Area</h3>
+		<h3>Read Book Increase IQ</h3>
 	</div>
 </div>
 <!-- //banner -->
@@ -86,13 +86,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-8 electro-left text-center">
 			<div class="electro-img-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/watch.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/eb1.png" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Branded Watches</h4>
+								<h4>Subscribed per month</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">280 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -103,13 +103,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="electro-img-btm-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e1.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/eb2.jpg" alt="image" class="img-responsive zoom-img"></div>
 
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Mobiles</h4>
+								<h4>Kindle Go</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">4800 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -119,12 +119,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="electro-img-btm-right mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e2.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/eb3.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Branded Watches</h4>
+								<h4> Book Shelf</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">800 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -138,12 +138,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-4 electro-right text-center">
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e4.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/eb4.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Mobiles</h4>
+								<h4>Book of the month</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">350 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -154,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="clearfix"></div>
 			<div class="ele-bottom-grid">
-				<h3><span>Latest </span>Collections</h3>
+				<h3><span> </span></h3>
 						@foreach($product as $prod)
 					<div class="col-md-3 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
@@ -180,6 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								</div>
 								<div class="item-info-product ">
+									<span class="item_id" style="display:none;">{{$prod->productid}}</span>
 									<h4><span class="item_name">{{$prod->productname}}</span></h4>
 									<div class="info-product-price">
 										@php $num = number_format($prod->productprice, 2, '.', ''); @endphp

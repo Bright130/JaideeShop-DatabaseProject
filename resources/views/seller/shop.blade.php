@@ -34,7 +34,7 @@ font-weight: bold;">Login as Seller</h1>
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="#"style="color: #ffffff;
-							font-weight: bold;">My Profile</a>
+							font-weight: bold;"> Profile</a>
             </div>
         </nav>
            <!-- /. NAV TOP  -->
@@ -46,7 +46,7 @@ font-weight: bold;">Login as Seller</h1>
 										<img src="{{url('/').'/'.'urlimage/'.$detail->shopimg}}" class="user-image img-responsive"/>
 									</li>
                   <li style = "top: 60px;">
-                    <a class="active-menu"  href="#" style="font-size: 20px;"><img src="{{ url('/') }}/images/notepad.png"></i> Personal information</a>
+                    <a class="active-menu"  href="#" style="font-size: 20px;"><img src="{{ url('/') }}/images/notepad.png"></i> Shop information</a>
                   </li>
 									@foreach($shops as $shop)
 									<li style = "top: 100px;">

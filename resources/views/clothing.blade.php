@@ -180,7 +180,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 								</div>
 								<div class="item-info-product ">
-									<h4><a href="#">{{$prod->productname}}</a></h4>
+									<h4><span class="item_name">{{$prod->productname}}</span></h4>
 									<div class="info-product-price">
 										@php $num = number_format($prod->productprice, 2, '.', ''); @endphp
 										<span class="item_price">$ {{$num}}</span>

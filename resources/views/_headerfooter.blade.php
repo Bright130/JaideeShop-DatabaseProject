@@ -28,6 +28,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //js -->
 <!-- cart -->
 	<script src="js/simpleCart.min.js"></script>
+	<style type="text/css">
+	.simpleCart_items .headerRow div, .simpleCart_items .itemRow div {
+		float:left;
+		width: 20%;
+	}
+	.simpleCart_items .itemRow {
+		clear: both;
+	}
+</style>
 <!-- cart -->
 <!-- for bootstrap working -->
 	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>

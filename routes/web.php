@@ -73,3 +73,4 @@ Route::get('/sta', 'HomeController@showStationary')->name('show.Stationary');
 Route::get('/profile', 'ProfileController@profile')->name('profile.view');
 Route::get('/mainsignup', 'SignupController@index')->name('mainsignup');
 Route::get('/checkout', 'HomeController@checkout')->name('checkout');
+Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('product.addToCart');

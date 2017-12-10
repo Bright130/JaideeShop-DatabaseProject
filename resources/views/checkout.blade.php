@@ -9,12 +9,12 @@
 </div>
 <!-- //banner -->
 <!-- check out -->
-<div class="checkout">
-	<div class="container">
+<div class="checkout" style="text-">
+	<div class="container" style="text-align: -webkit-center;font-size: x-large;">
 		<h3>My Shopping Bag</h3>
-		<div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s" style="display: block;">
-			<span class="simpleCart_items"></span>
-		</div>
+		<table class="table table-hover" data-wow-delay=".5s" style="display: block;">
+			<table class="simpleCart_items"></table>
+		</table>
 	</div>
 </div>
 <!-- //check out -->

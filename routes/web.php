@@ -60,7 +60,16 @@ Route::get('/table','TempleteTableController@getTable');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
 Route::get('/elec', 'HomeController@showElect')->name('show.elec');
+Route::get('/clothing', 'HomeController@showClothing')->name('show.Clothing');
+Route::get('/clothing', 'HomeController@showAccessories')->name('show.Accessories');
+Route::get('/clothing', 'HomeController@showConsumable')->name('show.Consumable');
+Route::get('/clothing', 'HomeController@showVoucher')->name('show.Voucher');
+Route::get('/clothing', 'HomeController@showStationary')->name('show.Stationary');
+
+
 Route::get('/profile', 'ProfileController@profile')->name('profile.view');
 Route::get('/mainsignup', 'SignupController@index')->name('mainsignup');
 Route::get('/checkout', 'HomeController@checkout')->name('checkout');

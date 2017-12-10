@@ -16,6 +16,9 @@
 			<table class="simpleCart_items"></table>
 		</table>
 	</div>
+	<div class="col-md-9 header-right  footer-bottom">
+		<a href="{{ route('order') }}" class="btn btn-danger square-btn-adjust" style="font-size: 18px;"><img style="vertical-align: bottom;" src="{{ url('/') }}/images/checkout.png"><i><b> CHECKOUT</b></i></a>
+	</div>
 </div>
 <!-- //check out -->
 

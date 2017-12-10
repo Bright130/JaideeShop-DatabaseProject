@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="page-head">
 	<div class="container">
-		<h3>Electric Area</h3>
+		<h3>Eat Area</h3>
 	</div>
 </div>
 <!-- //banner -->
@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-8 electro-left text-center">
 			<div class="electro-img-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/watch.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/con1.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 
 							<div class="info-content electro-text simpleCart_shelfItem">
@@ -103,7 +103,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="electro-img-btm-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e1.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/con2.jpg" alt="image" class="img-responsive zoom-img"></div>
 
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
@@ -119,7 +119,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="electro-img-btm-right mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e2.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/con3.png" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Branded Watches</h4>
@@ -138,7 +138,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-4 electro-right text-center">
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e4.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/con4.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Mobiles</h4>
@@ -154,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="clearfix"></div>
 			<div class="ele-bottom-grid">
-				<h3><span>Latest </span>Collections</h3>
+				<h3><span> </span></h3>
 						@foreach($product as $prod)
 					<div class="col-md-3 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">

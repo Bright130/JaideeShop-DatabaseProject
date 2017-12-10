@@ -11,7 +11,7 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- //for-mobile-apps -->
+<!-- //for-mobile- apps -->
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
@@ -86,7 +86,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-8 electro-left text-center">
 			<div class="electro-img-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/watch.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/eb1.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 
 							<div class="info-content electro-text simpleCart_shelfItem">
@@ -154,7 +154,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="clearfix"></div>
 			<div class="ele-bottom-grid">
-				<h3><span>Latest </span>Collections</h3>
+				<h3><span> </span></h3>
 						@foreach($product as $prod)
 					<div class="col-md-3 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">

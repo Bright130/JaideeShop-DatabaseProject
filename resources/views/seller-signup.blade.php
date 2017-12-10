@@ -1,25 +1,30 @@
 @extends('_headerfooter')
-@section('page_title','Seller Registration')
+@section('page_title','buyer Registration')
 @section('content')
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- pignose css -->
+<link href="../css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+
+
+<!-- //pignose css -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="../text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- cart -->
+	<script src="../js/simpleCart.min.js"></script>
+<!-- cart -->
+<!-- for bootstrap working -->
+	<script type="../text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
 <!-- body header -->
 <div>
     <h1 class="display-4" style="padding-bottom: 2%;
 text-align: center;
-padding-top: 3%;">Seller Registration</h1>
+padding-top: 3%;">Seller Registeration</h1>
 </div>
-
-
-
-
-
-
-
-
-
-
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/sellersignup" method="POST">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action= {{ route('seller.signup.submit') }} method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-row">
         <div class="form-group col-md-6" style="padding-left:0; padding-right:0; ">
@@ -87,10 +92,10 @@ padding-top: 3%;">Seller Registration</h1>
 
         </div>
     </div>
-    <div class="form-group row">
-        <label id="form" for="IMGURL" class="col-sm-2 col-form-label">Image URL</label>
-        <div class="col-sm-10 container1">
-            <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
+		<div class="form-group row">
+				<label id="form" for="IMGURL" class="col-sm-2 col-form-label">Image URL</label>
+				<div class="col-sm-10 container1">
+						<input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
 
         </div>
     </div>
@@ -110,5 +115,30 @@ padding-top: 3%;">Seller Registration</h1>
     </div>
 </form>
 </div>
+<script type="text/javascript">
+  $("body").on("click",".upload-image",function(e){
+    $(this).parents("form").ajaxForm(options);
+  });
+
+  var options = {
+    complete: function(response)
+    {
+    	if($.isEmptyObject(response.responseJSON.error)){
+    		$("input[name='title']").val('');
+    		alert('Image Upload Successfully.');
+    	}else{
+    		printErrorMsg(response.responseJSON.error);
+    	}
+    }
+  };
+
+  function printErrorMsg (msg) {
+	$(".print-error-msg").find("ul").html('');
+	$(".print-error-msg").css('display','block');
+	$.each( msg, function( key, value ) {
+		$(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+	});
+  }
+</script>
 <!-- //form -->
 @stop

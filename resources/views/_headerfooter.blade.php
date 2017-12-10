@@ -16,16 +16,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //for-mobile-apps -->
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url('/') }}/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 <!-- pignose css -->
-<link href="css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url('/') }}/css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
+
+
 <!-- //pignose css -->
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{{ url('/') }}/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <!-- js -->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="{{ url('/') }}/js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <!-- cart -->
-	<script src="js/simpleCart.min.js"></script>
+	<script src="{{ url('/') }}/js/simpleCart.min.js"></script>
 	<style type="text/css">
 	.simpleCart_items .headerRow div, .simpleCart_items .itemRow div {
 		float:left;
@@ -39,7 +41,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </style>
 <!-- cart -->
 <!-- for bootstrap working -->
-	<script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+	<script type="text/javascript" src="{{ url('/') }}/js/bootstrap-3.1.1.min.js"></script>
 <!-- //for bootstrap working -->
 <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
@@ -63,7 +65,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="header-bot">
 	<div class="container">
 		<div class="col-md-3 header-left">
-			<h1><a href="{{ route('home') }}"><img src="images/JAIDEE.jpg"></a></h1>
+			<h1><a href="{{ route('home') }}"><img src="{{ url('/') }}/images/JAIDEE.jpg"></a></h1>
 		</div>
 		<div class="col-md-5 header-middle">
 			<form>
@@ -103,11 +105,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<li><b>BUYER: </b></li>
 				<li><a class="keylogin" href="{{ route('buyer.login') }}"></a></li>
 				<li><a href="{{ route('buyer.dashboard') }}" class="use1" action="{{ route('buyer.dashboard') }}"></a></li>
-				<li><img src="images/notepad.png"></li>
+				<li><img src="{{ url('/') }}/images/notepad.png"></li>
 				<li><b>SELLER: </b></li>
 				<li><a class="keylogin" href="{{ route('seller.login') }}"></a></li>
 				<li><a href="{{ route('seller.dashboard') }}" class="use1" action="{{ route('seller.dashboard') }}"></a></li>
-				<li><img src="images/notepad.png"></li>
+				<li><img src="{{ url('/') }}/images/notepad.png"></li>
 			</ul>
 			<ul>
 				<a href="{{ route('mainsignup') }}" class="btn btn-danger square-btn-adjust">Signup Now</a>

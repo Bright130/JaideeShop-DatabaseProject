@@ -1,205 +1,33 @@
 @extends('_headerfooter')
 @section('page_title','buyer Registration')
 @section('content')
+<link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<!-- pignose css -->
+<link href="../css/pignose.layerslider.css" rel="stylesheet" type="text/css" media="all" />
 
 
-<head>
-<style>
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-@function remy($value) {
-  @return ($value / 16px) * 1rem;
-}
-
-body {
-  font: 100% / 1.414 "Open Sans", "Roboto", arial, sans-serif;
-  background: #e9e9e9;
-}
-a,
-[type="submit"] {transition: all .25s ease-in;}
-.signup__container {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  left: 0;
-  margin-right: auto;
-  margin-left: auto;
-  transform: translateY(-50%);
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: remy(800px);
-  height: remy(480px);
-  border-radius: remy(3px);
-  box-shadow: 0px remy(3px) remy(7px) rgba(0,0,0,.25);
-}
-.signup__overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.76);
-}
-.container__child {
-  width: 50%;
-  height: 100%;
-  color: #fff;
-}
-.signup__thumbnail {
-  position: relative;
-  padding: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  background: url(http://ultraimg.com/images/spectre-login.jpg);
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: cover;
-}
-.thumbnail__logo,
-.thumbnail__content,
-.thumbnail__links {
-  position: relative;
-  z-index: 2;
-}
-.thumbnail__logo {align-self: flex-start;}
-.logo__shape {fill: #fff;}
-.logo__text {
-  display: inline-block;
-  font-size: .8rem;
-  font-weight: 700;
-  vertical-align: bottom;
-}
-.thumbnail__content {align-self: center;}
-h1,
-h2 {
-  font-weight: 300;
-  color: rgba(255,255,255,1);
-}
-.heading--primary {font-size: 1.999rem;}
-.heading--secondary {font-size: 1.414rem;}
-.thumbnail__links {
-  align-self: flex-end;
-  width: 100%;
-}
-.thumbnail__links a {
-  font-size: 1rem;
-  color: #fff;
-  &:focus,
-  &:hover {color: rgba(255,255,255,.5);}
-}
-.signup__form {
-  padding: 2.5rem;
-  background: #fafafa;
-}
-label {
-  font-size: .85rem;
-  text-transform: uppercase;
-  color: #ccc;
-}
-.form-control {
-  background-color: transparent;
-  border-top: 0;
-  border-right: 0;
-  border-left: 0;
-  border-radius: 0;
-  &:focus {border-color: #111;}
-}
-[type="text"] {color: #111;}
-[type="password"] {color: #111;}
-.btn--form {
-  padding: .5rem 2.5rem;
-  font-size: .95rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #fff;
-  background: #111;
-  border-radius: remy(35px);
-  &:focus,
-  &:hover {background: lighten(#111, 13%);}
-}
-.signup__link {
-  font-size: .8rem;
-  font-weight: 600;
-  text-decoration: underline;
-  color: #999;
-  &:focus,
-  &:hover {color: darken(#999, 13%);}
-}
-</style>
-</head>
-
-
-
-
+<!-- //pignose css -->
+<link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="../text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<!-- cart -->
+	<script src="../js/simpleCart.min.js"></script>
+<!-- cart -->
+<!-- for bootstrap working -->
+	<script type="../text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
 <!-- body header -->
+
 <div>
     <h1 class="display-4" style="padding-bottom: 2%;
 text-align: center;
 padding-top: 3%;">Buyer Registeration</h1>
+
+
 </div>
-
-<div class="signup__container">
-  <div class="container__child signup__thumbnail">
-    <div class="thumbnail__logo">
-
-      <h1 class="logo__text">Spectre</h1>
-    </div>
-    <div class="thumbnail__content text-center">
-      <h1 class="heading--primary">Welcome to MI6.</h1>
-      <h2 class="heading--secondary">Are you ready to join the elite?</h2>
-    </div>
-    <div class="thumbnail__links">
-      <ul class="list-inline m-b-0 text-center">
-        <li><a href="http://alexdevero.com/" target="_blank"><i class="fa fa-globe"></i></a></li>
-        <li><a href="https://www.behance.net/alexdevero" target="_blank"><fa class="fa fa-behance"></fa></a></li>
-        <li><a href="https://github.com/alexdevero" target="_blank"><i class="fa fa-github"></i></a></li>
-        <li><a href="https://twitter.com/alexdevero" target="_blank"><i class="fa fa-twitter"></i></a></li>
-      </ul>
-    </div>
-    <div class="signup__overlay"></div>
-  </div>
-  <div class="container__child signup__form">
-    <form action="#">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input class="form-control" type="text" name="username" id="username" placeholder="james.bond" required />
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input class="form-control" type="text" name="email" id="email" placeholder="james.bond@spectre.com" required />
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input class="form-control" type="password" name="password" id="password" placeholder="********" required />
-      </div>
-      <div class="form-group">
-        <label for="passwordRepeat">Repeat Password</label>
-        <input class="form-control" type="password" name="passwordRepeat" id="passwordRepeat" placeholder="********" required />
-      </div>
-      <div class="m-t-lg">
-        <ul class="list-inline">
-          <li>
-            <input class="btn btn--form" type="submit" value="Register" />
-          </li>
-          <li>
-            <a class="signup__link" href="#">I am already a member</a>
-          </li>
-        </ul>
-      </div>
-    </form>
-  </div>
-</div>
-
-
-
-
-
-
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/buyer-signup" method="POST">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action= {{ route('buyer.signup.submit') }} method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-row">
         <div class="form-group col-md-6" style="padding-left:0; padding-right:0; ">
@@ -267,11 +95,10 @@ padding-top: 3%;">Buyer Registeration</h1>
 
         </div>
     </div>
-    <div class="form-group row">
+		<div class="form-group row">
         <label id="form" for="IMGURL" class="col-sm-2 col-form-label">Image URL</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL">
-
+        <div class="col-sm-10 container1">
+            <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
         </div>
     </div>
     <div class="form-group">
@@ -290,5 +117,31 @@ padding-top: 3%;">Buyer Registeration</h1>
     </div>
 </form>
 </div>
+<script type="text/javascript">
+  $("body").on("click",".upload-image",function(e){
+    $(this).parents("form").ajaxForm(options);
+  });
+
+  var options = {
+    complete: function(response)
+    {
+    	if($.isEmptyObject(response.responseJSON.error)){
+    		$("input[name='title']").val('');
+    		alert('Image Upload Successfully.');
+    	}else{
+    		printErrorMsg(response.responseJSON.error);
+    	}
+    }
+  };
+
+  function printErrorMsg (msg) {
+	$(".print-error-msg").find("ul").html('');
+	$(".print-error-msg").css('display','block');
+	$.each( msg, function( key, value ) {
+		$(".print-error-msg").find("ul").append('<li>'+value+'</li>');
+	});
+  }
+</script>
+
 <!-- //form -->
 @stop

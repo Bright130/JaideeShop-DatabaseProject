@@ -12,7 +12,7 @@
 <div class="checkout">
 	<div class="container">
 		<h3>My Shopping Bag</h3>
-		<div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s">
+		<div class="table-responsive checkout-right animated wow slideInUp" data-wow-delay=".5s" style="display: block;">
 			<span class="simpleCart_items"></span>
 		</div>
 	</div>

@@ -33,6 +33,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	}
 	.simpleCart_items .itemRow {
 		clear: both;
+
 	}
 </style>
 <!-- cart -->
@@ -145,18 +146,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="row">
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Beauty Items</a></li>
-											<li><a href="womens.html">Child & Baby</a></li>
-											<li><a href="womens.html">Furniture</a></li>
-											<li><a href="womens.html">Sport & Recreation</a></li>
+											<li><a href="{{ route('show.Beauty') }}">Beauty Items</a></li>
+											<li><a href="{{ route('show.Childbaby') }}">Child & Baby</a></li>
+											<li><a href="{{ route('show.Furniture') }}">Furniture</a></li>
+											<li><a href="{{ route('show.Sport') }}">Sport & Recreation</a></li>
 										</ul>
 									</div>
 									<div class="col-sm-3 multi-gd-img">
 										<ul class="multi-column-dropdown">
-											<li><a href="womens.html">Food</a></li>
-											<li><a href="womens.html">Gadgets</a></li>
-											<li><a href="womens.html">Entertainment</a></li>
-											<li><a href="womens.html">Office Equipment</a></li>
+											<li><a href="{{ route('show.Food') }}">Food</a></li>
+											<li><a href="{{ route('show.Gadgets') }}">Gadgets</a></li>
+											<li><a href="{{ route('show.Entertainment') }}">Entertainment</a></li>
+											<li><a href="{{ route('show.Office') }}">Office Equipment</a></li>
 										</ul>
 									</div>
 									<img src="images/user.png" class="user-image img-responsive text-center"/>

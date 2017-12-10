@@ -66,10 +66,55 @@ class HomeController extends Controller
       $pimg = Productimage::get();
         return view('stationary',compact('product'),compact('pimg'));
     }
-    public function checkout()
+    public function showBeauty()
     {
-        return view('checkout');
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('beauty',compact('product'),compact('pimg'));
     }
+    public function showChildbaby()
+    {
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('childbaby',compact('product'),compact('pimg'));
+    }
+    public function showFurniture()
+    {
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('furniture',compact('product'),compact('pimg'));
+    }
+    public function showSport()
+    {
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('sport',compact('product'),compact('pimg'));
+    }
+    public function showFood()
+    {
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('food',compact('product'),compact('pimg'));
+    }
+    public function showGadgets()
+    {
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('gadgets',compact('product'),compact('pimg'));
+    }
+    public function showEntertainment()
+    {
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('entertainment',compact('product'),compact('pimg'));
+    }
+    public function showOffice()
+    {
+      $product = Product::where('producttypeid','=','13')->get();
+      $pimg = Productimage::get();
+        return view('office',compact('product'),compact('pimg'));
+    }
+
     public function signup()
     {
         return view('mainsignup');

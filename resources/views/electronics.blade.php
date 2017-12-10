@@ -109,7 +109,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Mobiles POS</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">8500</span></p>
+								<p><span class="item_price">8500 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -124,7 +124,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Acrade Gamer</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">5500</span></p>
+								<p><span class="item_price">5500 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -143,7 +143,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							<div class="info-content electro-text simpleCart_shelfItem">
 								<h4>Mobiles</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">$500</span></p>
+								<p><span class="item_price">500 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>

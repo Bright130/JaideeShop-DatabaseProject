@@ -40,9 +40,7 @@ class SellerController extends Controller
         $input['urlimage'] = newSeller::where('id','LIKE',Auth::User()->id)->get()->first()->sellerimg;
 
 
-
-
-
+if($request->IMGURL!=null){
 
                      foreach($request->IMGURL as $img )
                      {
@@ -53,7 +51,7 @@ class SellerController extends Controller
 
                      }
 
-                   
+            }
 
 $passw = Hash::make($request->input('Password'));
 if($request->input('Password')==NULL){

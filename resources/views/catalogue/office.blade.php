@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="page-head14">
 	<div class="container">
-		<h3>High Office Equipments</h3>
+		<h3></h3>
 	</div>
 </div>
 <!-- //banner -->

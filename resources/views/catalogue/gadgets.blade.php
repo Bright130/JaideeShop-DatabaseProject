@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="page-head12">
 	<div class="container">
-		<h3>High Gadgets Area</h3>
+		<h3></h3>
 	</div>
 </div>
 <!-- //banner -->

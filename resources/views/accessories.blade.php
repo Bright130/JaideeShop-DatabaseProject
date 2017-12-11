@@ -29,7 +29,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title></title>
+<title>Soft-Tect Free Landing Page</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -38,7 +38,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!--        <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css">-->
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<title></title>
+<title>Soft-Tect Free Landing Page</title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="page-head">
 	<div class="container">
-		<h3 style="serif";><font color="blue"></font></h3>
+		<h3>You make the Tools We make them Do</h3>
 	</div>
 </div>
 <!-- //banner -->
@@ -86,13 +86,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-8 electro-left text-center">
 			<div class="electro-img-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/watch.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/acc1.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Ralph Raulen Polo Shirts ON FIRE</h4>
+								<h4>Bracelss</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">1500 B</span></p>
+								<p><span class="item_price">350 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -103,13 +103,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 			<div class="electro-img-btm-left mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e1.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/acc2.jpg" alt="image" class="img-responsive zoom-img"></div>
 
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Suit</h4>
+								<h4>Silver Braceless</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">Under 5500 B </span></p>
+								<p><span class="item_price">450 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -119,12 +119,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="electro-img-btm-right mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e2.jpg" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/acc3.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Want to be HYPE!!!</h4>
+								<h4> Ring </h4>
 								<span class="separator"></span>
-								<p><span class="item_price">500 B</span></p>
+								<p><span class="item_price">550 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>
@@ -138,12 +138,12 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-4 electro-right text-center">
 			<div class="electro-img-rt mask">
 				<div class="content-grid-effect slow-zoom vertical">
-					<div class="img-box"><img src="images/e4.png" alt="image" class="img-responsive zoom-img"></div>
+					<div class="img-box"><img src="images/acc4.jpg" alt="image" class="img-responsive zoom-img"></div>
 						<div class="info-box">
 							<div class="info-content electro-text simpleCart_shelfItem">
-								<h4>Rock the WORLD BRO!!!</h4>
+								<h4>Collar</h4>
 								<span class="separator"></span>
-								<p><span class="item_price">3500 B</span></p>
+								<p><span class="item_price">200 B</span></p>
 								<span class="separator"></span>
 								<a class="item_add hvr-outline-out button2" href="#">add to cart </a>
 							</div>

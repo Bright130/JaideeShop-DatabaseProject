@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="page-head2">
 	<div class="container">
-		<h3> Electric Area	</h3>
+		<h3> </h3>
 	</div>
 </div>
 <!-- //banner -->

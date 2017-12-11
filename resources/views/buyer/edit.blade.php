@@ -20,25 +20,25 @@
 <div>
     <h1 class="display-4" style="padding-bottom: 2%;
 text-align: center;
-padding-top: 3%;">Seller Edit</h1>
+padding-top: 3%;">Buyer Edit</h1>
 </div>
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action= {{ route('seller.update') }} method="POST" enctype="multipart/form-data">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action= {{ route('buyer.update') }} method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-row">
         <div class="form-group col-md-6" style="padding-left:0; padding-right:0; ">
 
             <label id="form" for="Name">Name</label>
 
-            <input type="text" class="form-control" id="Name" placeholder="Name" name="Name" required value="{{$sellerinfo->sellername}}"></input>
+            <input type="text" class="form-control" id="Name" placeholder="Name" name="Name" required value="{{$buyerinfo->buyername}}"></input>
 
         </div>
 
         <div class="form-group col-md-6" style="padding-right:0; padding-left:0; ">
             <label id="form" for="Surname">Surname</label>
 
-            <input type="text" class="form-control" id="Surname" placeholder="Surname" name="Surname"  value={{$sellerinfo->sellersurname}} required>
+            <input type="text" class="form-control" id="Surname" placeholder="Surname" name="Surname"  value={{$buyerinfo->buyersurname}} required>
 
         </div>
 
@@ -46,7 +46,7 @@ padding-top: 3%;">Seller Edit</h1>
     <div class="form-group row">
         <label id="form" for="Email" class="col-sm-2 col-form-label">Email</label>
         <div class="col-sm-10">
-            <input type="email" class="form-control" id="Email" placeholder="Email" name="Email" value={{$sellerinfo->email}}  required>
+            <input type="email" class="form-control" id="Email" placeholder="Email" name="Email" value={{$buyerinfo->email}}  required>
 
         </div>
     </div>
@@ -70,15 +70,15 @@ padding-top: 3%;">Seller Edit</h1>
             <div class="col-sm-10">
                 <div class="form-check">
                     <label id="form" class="form-check-label" style="padding-right: 1rem;">
-                        <input class="form-check-input" type="radio" name="Gender" <?php echo ($sellerinfo->sellergender=='M')?'checked':'' ?> id="gridRadios1" value="M" > Male
+                        <input class="form-check-input" type="radio" name="Gender" <?php echo ($buyerinfo->buyergender=='M')?'checked':'' ?> id="gridRadios1" value="M" > Male
                     </label>
 
                     <label id="form" class="form-check-label" style="padding-right: 1rem;">
-                        <input class="form-check-input" type="radio" name="Gender" <?php echo ($sellerinfo->sellergender=='F')?'checked':'' ?>  id="gridRadios2" value="F"> Female
+                        <input class="form-check-input" type="radio" name="Gender" <?php echo ($buyerinfo->buyergender=='F')?'checked':'' ?>  id="gridRadios2" value="F"> Female
                     </label>
 
                     <label id="form" class="form-check-label">
-                        <input class="form-check-input" type="radio" name="Gender"<?php echo ($sellerinfo->sellergender=='O')?'checked':'' ?>   id="gridRadios3" value="O"> Other
+                        <input class="form-check-input" type="radio" name="Gender"<?php echo ($buyerinfo->buyergender=='O')?'checked':'' ?>   id="gridRadios3" value="O"> Other
 
                     </label>
                 </div>
@@ -88,7 +88,7 @@ padding-top: 3%;">Seller Edit</h1>
     <div class="form-group row">
         <label id="form" for="Tel" class="col-sm-2 col-form-label">Telephone</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="Tel" placeholder="Tel" name="Tel" value={{$sellerinfo->sellertel}} required>
+            <input type="text" class="form-control" id="Tel" placeholder="Tel" name="Tel" value={{$buyerinfo->buyertel}} required>
 
         </div>
     </div>
@@ -101,7 +101,7 @@ padding-top: 3%;">Seller Edit</h1>
     </div>
     <div class="form-group">
         <label id="form" for="Address">Address</label>
-        <textarea class="form-control" id="Address" rows="3" name="Address"   required>{{$sellerinfo->selleraddress}}</textarea>
+        <textarea class="form-control" id="Address" rows="3" name="Address"   required>{{$buyerinfo->buyeraddress}}</textarea>
 
     </div>
     <div class="form-group row">

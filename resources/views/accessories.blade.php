@@ -74,9 +74,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- oat loading -->
 	<div class='preloader'><div class='loaded'>&nbsp;</div></div>
 <!-- banner -->
-<div class="page-head">
+<div class="page-head3">
 	<div class="container">
-		<h3>You make the Tools We make them Do</h3>
 	</div>
 </div>
 <!-- //banner -->

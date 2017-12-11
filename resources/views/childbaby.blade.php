@@ -74,9 +74,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- oat loading -->
 	<div class='preloader'><div class='loaded'>&nbsp;</div></div>
 <!-- banner -->
-<div class="page-head">
+<div class="page-head8">
 	<div class="container">
-		<h3> Child and Baby</h3>
 	</div>
 </div>
 <!-- //banner -->

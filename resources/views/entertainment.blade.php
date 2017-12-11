@@ -74,9 +74,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<!-- oat loading -->
 	<div class='preloader'><div class='loaded'>&nbsp;</div></div>
 <!-- banner -->
-<div class="page-head">
+<div class="page-head13">
 	<div class="container">
-		<h3>High Fashion Area</h3>
+		<h3>Festival EDM</h3>
 	</div>
 </div>
 <!-- //banner -->

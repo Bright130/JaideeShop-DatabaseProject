@@ -1680,14 +1680,24 @@ padding-top:110px;
 }
 /*-- //coupons --*/
 /*-- contact --*/
+
+
+
+
+
+
+
+
+
+
 .page-head {
-    background: url(../images/ba2.jpg) no-repeat center;
+    background: url(../images/header1.jpg) no-repeat center;
     background-size: cover;
     -webkit-background-size: cover;
     -o-background-size: cover;
     -ms-background-size: cover;
     -moz-background-size: cover;
-    min-height: 217px;
+    min-height: 220px;
     padding-top: 85px;
 }
 .page-head h3 {
@@ -1696,6 +1706,220 @@ padding-top:110px;
     text-transform: uppercase;
     font-size: 48px;
 }
+
+.page-head2 {
+    background: url(../images/header2.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 220px;
+    padding-top: 85px;
+}
+.page-head2 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+.page-head3 {
+    background: url(../images/header3.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head3 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head4 {
+    background: url(../images/header4.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head4 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head5 {
+    background: url(../images/header5.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head5 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head6 {
+    background: url(../images/header6.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head6 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head7 {
+    background: url(../images/header7.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head7 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head8 {
+    background: url(../images/header8.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head8 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head9 {
+    background: url(../images/header9.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head9 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head10 {
+    background: url(../images/header10.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head10 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head11 {
+    background: url(../images/header11.png) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head11 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head12 {
+    background: url(../images/header12.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head12 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head13 {
+    background: url(../images/header13.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head13 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+.page-head14 {
+    background: url(../images/header14.jpg) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    -moz-background-size: cover;
+    min-height: 225px;
+    padding-top: 80px;
+}
+.page-head14 h3 {
+    color: #FDA30E;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 48px;
+}
+
+
+
+
 h3.tittle {
     color: #FDA30E;
     font-size: 30px;

@@ -67,9 +67,13 @@ font-weight: bold;">Login as Seller</h1>
 								float: left;
 								font-size: 16px;
 								font-weight: bold;">
-									<div class="col-md-9 col-sm-6 col-xs-6">
+									<div class="col-md-6 col-sm-6 col-xs-6">
 									 <h2>Welcome Back</h2>
 									<div style="color: #000000;float: left;font-size: 16px;font-weight: bold;">Welcome <b>{{$sellerinfo->sellername}} </b> , Love to see you back. </div>
+									</div>
+									<div class="col-md-3 col-sm-6 col-xs-6 header-right  footer-bottom">
+										<a href="{{ route('product.add') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/settings.png"><i>  EDIT SHOP</i></a>
+										<a href="{{ route('product.add') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/bin.png"><i>  DELETE SHOP</i></a>
 									</div>
 									<div class="col-md-3 col-sm-6 col-xs-6 header-right  footer-bottom">
 										<a href="{{ route('shop.create') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/add.png"><i>  ADD SHOP</i></a>
@@ -132,9 +136,18 @@ font-weight: bold;">Login as Seller</h1>
          <div>
             <div>
                     <h2 style="color: #FDA30E;">Profile</h2>
-										  <h5 style="color: #333333;">Shop : {{$detail->shopname}}</h5>
-											<h5 style="color: #333333;">view : {{$detail->shopview}}</h5>
-											<h5 style="color: #333333;">Description : {{$detail->shopdesc}}</h5>
+										<table class="table">
+											<thead>
+												<tr> <th>Shopname</th>
+													<th> View</th>
+													<th> Description</th>
+													 </tr>
+												</thead>
+												<tbody>
+													<tr> <th scope="row">{{$detail->shopname}}</th> <td>{{$detail->shopview}}</td>  <td>{{$detail->shopdesc}}</td>
+													 </tr>
+													 </tbody>
+											</table>
 
 									</div> </div>
 											  <table class="table table-hover table-dark">

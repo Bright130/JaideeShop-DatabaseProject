@@ -68,7 +68,7 @@ class HomeController extends Controller
     }
     public function showBeauty()
     {
-      $product = Product::where('producttypeid','=','13')->get();
+      $product = Product::where('producttypeid','=','1')->get();
       $pimg = Productimage::get();
         return view('catalogue.beauty',compact('product'),compact('pimg'));
     }

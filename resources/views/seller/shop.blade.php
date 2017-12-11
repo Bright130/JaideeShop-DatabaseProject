@@ -136,9 +136,18 @@ font-weight: bold;">Login as Seller</h1>
          <div>
             <div>
                     <h2 style="color: #FDA30E;">Profile</h2>
-										  <h5 style="color: #333333;">Shop : {{$detail->shopname}}</h5>
-											<h5 style="color: #333333;">view : {{$detail->shopview}}</h5>
-											<h5 style="color: #333333;">Description : {{$detail->shopdesc}}</h5>
+										<table class="table">
+											<thead>
+												<tr> <th>Shopname</th>
+													<th> View</th>
+													<th> Description</th>
+													 </tr>
+												</thead>
+												<tbody>
+													<tr> <th scope="row">{{$detail->shopname}}</th> <td>{{$detail->shopview}}</td>  <td>{{$detail->shopdesc}}</td>
+													 </tr>
+													 </tbody>
+											</table>
 
 									</div> </div>
 											  <table class="table table-hover table-dark">

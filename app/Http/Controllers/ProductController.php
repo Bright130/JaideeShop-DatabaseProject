@@ -9,6 +9,7 @@ use App\Productimage;
 use Auth;
 use App\Shop;
 use Validator;
+use Session;
 
 class ProductController extends Controller
 {
@@ -20,10 +21,12 @@ class ProductController extends Controller
     // get signup page
     public function getNewProduct()
     {
-        $producttypes = Producttype::get();
-        $shop = Shop::select('shopname','ShopID')->where('sellerid','=',Auth::User()->id)->orderBy('shopname','ASC')->get();
-        return view('product-add',['producttypes'=>$producttypes,'shops'=>$shop]);
+      $producttypes = Producttype::get();
+      $shop = Shop::select('shopname','ShopID')->where('sellerid','=',Auth::User()->id)->orderBy('shopname','ASC')->get();
+      return view('product-add',['producttypes'=>$producttypes,'shops'=>$shop]);
+
     }
+
 
     // insert info into db in signup page
     public function postNewProduct(Request $request)

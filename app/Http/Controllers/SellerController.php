@@ -25,4 +25,20 @@ class SellerController extends Controller
         $sellerinfo = newSeller::where('id','LIKE',$id)->get();
         return view('seller.index',['sellerinfo'=>$sellerinfo,'id'=>$id,'shops'=>$shops]) ;
       }
+
+      public function edit()
+    {
+        $sellerinfo = newSeller::where('id','LIKE',Auth::User()->id)->get()->first();
+          return view('seller.edit',['sellerinfo'=>$sellerinfo]) ;
+
+    }
+
+    public function update(Request $request)
+    {
+      $seller = newSeller::where('id','LIKE',Auth::User()->id)->get()->first()->update($request-all());
+        return redirect('/');
+
+    }
+
+
 }

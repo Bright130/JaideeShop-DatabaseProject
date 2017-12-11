@@ -80,7 +80,6 @@ padding-top: 3%;">Shop Registration</h1>
         <label id="form" for="shop" class="col-sm-2 col-form-label">Shop Name</label>
         <div  class="col-sm-10">
             <input type="text" class="form-control" id="shopname" placeholder="Shop Name" name="shopname" required>
-
         </div>
     </div>
     <div class="form-group row">

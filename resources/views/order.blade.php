@@ -7,5 +7,9 @@
 	</div>
 </div>
 <h3>Order Summary</h3>
+
+@foreach($shiptype as $ship)
+{{$ship->shippingtype}}{{$ship->shipprice + $ship->shipprice }}
+@endforeach
 <h3>Transaction Detail</h3>
 @stop

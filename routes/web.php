@@ -30,6 +30,8 @@ Route::prefix('buyer')->group(function(){
  Route::get('/login','Auth\BuyerAuthController@loginForm')->name('buyer.login');
 Route::post('/login','Auth\BuyerAuthController@login')->name('buyer.login.submit');
   Route::get('/','BuyerController@index')->name('buyer.dashboard');
+  Route::get('/edit','BuyerController@edit')->name('buyer.edit');
+   Route::post('/edit','BuyerController@update')->name('buyer.update');
 //  Route::get('/','BuyerController@index')->name('admin.dashboard');
 
 });

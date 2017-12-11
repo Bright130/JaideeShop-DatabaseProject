@@ -63,10 +63,13 @@ font-weight: bold;">Login as Buyer</h1>
 									font-size: 16px;
 									font-weight: bold;">
                      <h2>Welcome Back</h2>
-                        <div style="color: #000000;
+                        <div class="col-md-9 col-sm-6 col-xs-6" style="color: #000000;
 											float: left;
 											font-size: 16px;
 											font-weight: bold;">Welcome <b>{{$buyer->buyername}}</b> , Love to see you back. </div>
+											<div class="col-md-3 col-sm-6 col-xs-6  header-right footer-bottom">
+												<a href="{{ route('buyer.edit') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/settings.png"><i>  EDIT PROFILE</i></a>
+											</div>
                     </div>
                 </div>
                  <!-- /. ROW  -->

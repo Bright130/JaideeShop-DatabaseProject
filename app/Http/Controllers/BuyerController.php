@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\newBuyer;
 use Auth;
+use Hash;
 
 class BuyerController extends Controller
 {
@@ -39,7 +40,7 @@ class BuyerController extends Controller
 
 
 
-
+if($request->IMGURL!=null){
 
                    foreach($request->IMGURL as $img )
                    {
@@ -50,6 +51,7 @@ class BuyerController extends Controller
 
                    }
 
+                 }
 
 
 $passw = Hash::make($request->input('Password'));

@@ -26,8 +26,9 @@ class CheckoutController extends Controller
   }
   public function postShip(Request $request)
   {
-     $data = $request->json();
-     dd($data);
+     $data = $request->all();
+     
+    dd($request->name);
     $shiptype = Shippingtype::where('shippingtype','LIKE',"{$request->input('shiptype')}%")->get();
     // dd($shiptype);
     return view('order',compact('shiptype'));
@@ -44,7 +45,7 @@ class CheckoutController extends Controller
       $cart->add($product,$product->productid);
 
       $request->session()->put('cart',$cart);
-      dd($request->session()->get('cart'));
+      dd($request->all());
       return redirect()->route('home');
   }
 }

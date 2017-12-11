@@ -37,7 +37,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		clear: both;
 
 	}
-	
+
 </style>
 <!-- cart -->
 <!-- for bootstrap working -->
@@ -174,7 +174,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="top_nav_right">
 			<div class="cart box_1">
-						<a href="{{ route('checkout') }}">
+						<a href="{{ route('checkout') }}" class="simpleCart_checkout" >
 							<h3> <div class="total">
 								<i class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></i>
 								<span class="simpleCart_total">$0.00</span> (<span id="simpleCart_quantity" class="simpleCart_quantity">0</span> items)</div>

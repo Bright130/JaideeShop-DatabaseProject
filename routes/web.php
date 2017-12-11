@@ -84,5 +84,5 @@ Route::get('/profile', 'ProfileController@profile')->name('profile.view');
 Route::get('/mainsignup', 'SignupController@index')->name('mainsignup');
 Route::get('/checkout', 'CheckoutController@checkout')->name('checkout');
 Route::get('/order', 'CheckoutController@orders')->name('order');
-Route::post('/checkout', 'CheckoutController@postShip');
+Route::post('/checkout', 'CheckoutController@postShip')->name('postcart');
 // Route::get('/add-to-cart/{id}', 'ProductController@getAddToCart')->name('product.addToCart');

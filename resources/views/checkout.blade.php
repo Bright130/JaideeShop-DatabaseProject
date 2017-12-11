@@ -1,13 +1,6 @@
 @extends('_headerfooter')
 @section('page_title','Seller Registration')
 @section('content')
-<script>simpleCart({
-checkout: {
-	type: "SendForm" ,
-	url: "/checkout" ,
-	method: "POST" ,
-}
-});</script>
 <!-- banner -->
 <div class="page-head">
 	<div class="container">
@@ -34,10 +27,13 @@ checkout: {
 			</select>
 	</div>
 	<div class="col-md-9 header-right  footer-bottom">
-		<button type="submit" class="btn btn-danger square-btn-adjust simpleCart_checkout" style="font-size: 18px;"><img style="vertical-align: bottom;" src="{{ url('/') }}/images/checkout.png"><i><b> CHECKOUT</b></i></button>
+		<button type="submit" class="btn btn-danger square-btn-adjust" style="font-size: 18px;"><img style="vertical-align: bottom;" src="{{ url('/') }}/images/checkout.png"><i><b> CHECKOUT</b></i></button>
 	</div>
 </form>
 </div>
 <!-- //check out -->
+<script>var cartlist = window.localStorage.getItem("simpleCart_items"); alert(cartlist); console.log(cartlist); var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+
+</script>
 
 @stop

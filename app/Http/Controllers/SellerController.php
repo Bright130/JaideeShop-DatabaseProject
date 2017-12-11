@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\newSeller;
 use Auth;
 use App\Shop;
+use Hash;
 
 class SellerController extends Controller
 {
@@ -35,7 +36,41 @@ class SellerController extends Controller
 
     public function update(Request $request)
     {
-      $seller = newSeller::where('id','LIKE',Auth::User()->id)->get()->first()->update($request-all());
+
+        $input['urlimage'] = newSeller::where('id','LIKE',Auth::User()->id)->get()->first()->sellerimg;
+
+
+
+
+
+
+                     foreach($request->IMGURL as $img )
+                     {
+
+                    $input['urlimage'] = $request->input('sid').'_'.'.' .$img->getClientOriginalExtension();
+
+                    $img->move(public_path('urlimage'), $input['urlimage']);
+
+                     }
+
+                   
+
+$passw = Hash::make($request->input('Password'));
+if($request->input('Password')==NULL){
+ $passw =  newSeller::where('id','LIKE',Auth::User()->id)->get()->first()->password;
+
+}
+      $seller = newSeller::where('id','LIKE',Auth::User()->id)->get()->first()->update([
+        'password'=>$passw,
+        'sellername'=>$request->input('Name'),
+        'sellersurname'=>$request->input('Surname'),
+        'selleraddress'=>$request->input('Address'),
+        'sellertel'=>$request->input('Tel'),
+        'sellerimg'=>$input['urlimage'],
+        'sellergender'=>$request->input('Gender')
+
+
+      ]);
         return redirect('/');
 
     }

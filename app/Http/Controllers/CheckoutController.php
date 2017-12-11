@@ -8,6 +8,8 @@ use Auth;
 use Session ;
 use App\Product;
 use App\Productimage;
+use App\Shippingtype;
+use App\Cart;
 
 class CheckoutController extends Controller
 {
@@ -19,10 +21,29 @@ class CheckoutController extends Controller
 
   public function checkout()
   {
-      return view('checkout');
+      $shippingtypes = Shippingtype::get();
+      return view('checkout',compact('shippingtypes'));
+  }
+  public function postShip(Request $request)
+  {
+    $shiptype = Shippingtype::where('shippingtype','LIKE',"{$request->input('shiptype')}%")->get();
+    // dd($shiptype);
+    dd( $_POST);
+        return view('order',compact('shiptype'));
   }
   public function orders()
   {
       return view('order');
+  }
+  public function toCart(Request $request)
+  {
+      $product = Product::get();
+      $oldCart = Session::has('cart') ? Session::get('cart') : null;
+      $cart = new Cart($oldCart);
+      $cart->add($product,$product->productid);
+
+      $request->session()->put('cart',$cart);
+      dd($request->session()->get('cart'));
+      return redirect()->route('home');
   }
 }

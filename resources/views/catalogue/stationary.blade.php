@@ -153,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="clearfix"></div>
 			<div class="ele-bottom-grid">
-				<h3><span>Ltest </span></h3>
+				<h3><span> </span></h3>
 						@foreach($product as $prod)
 					<div class="col-md-3 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">

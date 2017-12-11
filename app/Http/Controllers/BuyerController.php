@@ -23,6 +23,54 @@ class BuyerController extends Controller
       $buyerinfo = newBuyer::where('id','=',$uid)->get();
       return view('buyer.index',compact('buyerinfo')) ;
     }
+
+    public function edit()
+  {
+      $buyerinfo = newBuyer::where('id','LIKE',Auth::User()->id)->get()->first();
+        return view('buyer.edit',['buyerinfo'=>$buyerinfo]) ;
+
+  }
+
+  public function update(Request $request)
+  {
+
+      $input['urlimage'] = newBuyer::where('id','LIKE',Auth::User()->id)->get()->first()->buyerimg;
+
+
+
+
+
+
+                   foreach($request->IMGURL as $img )
+                   {
+
+                  $input['urlimage'] = $request->input('sid').'_'.'.' .$img->getClientOriginalExtension();
+
+                  $img->move(public_path('urlimage'), $input['urlimage']);
+
+                   }
+
+
+
+$passw = Hash::make($request->input('Password'));
+if($request->input('Password')==NULL){
+$passw =  newBuyer::where('id','LIKE',Auth::User()->id)->get()->first()->password;
+
+}
+    $buyer = newBuyer::where('id','LIKE',Auth::User()->id)->get()->first()->update([
+      'password'=>$passw,
+      'buyername'=>$request->input('Name'),
+      'buyersurname'=>$request->input('Surname'),
+      'buyeraddress'=>$request->input('Address'),
+      'buyertel'=>$request->input('Tel'),
+      'buyerimg'=>$input['urlimage'],
+      'buyergender'=>$request->input('Gender')
+
+
+    ]);
+      return redirect('/');
+
+  }
     // // get signup page
     // public function signup()
     // {

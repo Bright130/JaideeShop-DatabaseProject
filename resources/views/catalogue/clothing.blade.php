@@ -76,7 +76,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- banner -->
 <div class="page-head">
 	<div class="container">
-		<h3 style="serif";><font color="blue">High Fashion Area</font></h3>
+		<h3 style="serif";><font color="blue"></font></h3>
 	</div>
 </div>
 <!-- //banner -->

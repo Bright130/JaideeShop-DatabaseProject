@@ -50,8 +50,9 @@
 <div class="wrapper" style="text-align: center;">
 
 
-  <a href="{{ route('buyer.signup') }}"   <i class="fa fa-user-plus" aria-hidden="true"></i>   <button class="button" style="vertical-align:middle">    <span>Be a Shopper</span>    </button> </a>
-  <a href="{{ route('seller.signup') }}"    <button class="button" style="vertical-align:middle">    <span>Be a Shopper</span>    </button> </a>
+  <a href="{{ route('buyer.signup') }}"   <i class="fa fa-user-plus" aria-hidden="true"></i>   <button class="button" style="vertical-align:middle">    <span>Shopper</span>    </button> </a>
+  <a href="{{ route('seller.signup') }}"    <button class="button" style="vertical-align:middle">   
+   <span>Seller</span>    </button> </a>
 
 </div>
 

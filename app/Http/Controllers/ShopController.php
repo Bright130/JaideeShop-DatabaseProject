@@ -63,6 +63,7 @@ class ShopController extends Controller
     {
        //ดึง seller ID มา
        $uid = Auth::User()->id;
+       $uname = Auth::User()->sellername;
 
 
 if(Hash::check($request->input('pw'), Auth::User()->password))
@@ -91,7 +92,7 @@ if(Hash::check($request->input('pw'), Auth::User()->password))
         $sid = Shop::select('shopid')->where('shopname','LIKE',$request->input('shopname'))->first()->shopid;
 
         Account::create(['accountno'=>$request->input('bankacc'),
-        'accountname'=>$request->input('name','Peat'),
+        'accountname'=>$uname,
         'bankname'=>$request->input('bankname'),
         'ShopID'=>$sid]);
         //dd($request.parameters) ;

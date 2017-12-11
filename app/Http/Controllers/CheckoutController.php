@@ -26,8 +26,9 @@ class CheckoutController extends Controller
   }
   public function postShip(Request $request)
   {
-     $data = $request->json();
-     dd($request->all());
+     $data = $request->all();
+     
+    dd($request->name);
     $shiptype = Shippingtype::where('shippingtype','LIKE',"{$request->input('shiptype')}%")->get();
     // dd($shiptype);
     return view('order',compact('shiptype'));

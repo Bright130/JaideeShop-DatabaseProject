@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\newBuyer;
 use Auth;
 use Hash;
+use App\Orders;
+use DB;
 
 class BuyerController extends Controller
 {
@@ -22,7 +24,10 @@ class BuyerController extends Controller
       $thisEmail2 = Auth::User()->email ;
 
       $buyerinfo = newBuyer::where('id','=',$uid)->get();
-      return view('buyer.index',compact('buyerinfo')) ;
+
+      $buyership =DB::table('orders')->select('shippingtype',DB::raw('count(*) as total'))->groupBy('shippingtype')->get();
+
+      return view('buyer.index',['buyerinfo'=>$buyerinfo,'buyership'=>$buyership]) ;
     }
 
     public function edit()

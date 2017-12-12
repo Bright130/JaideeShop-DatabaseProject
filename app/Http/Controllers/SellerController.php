@@ -7,6 +7,7 @@ use App\newSeller;
 use Auth;
 use App\Shop;
 use Hash;
+use DB;
 
 class SellerController extends Controller
 {
@@ -24,7 +25,10 @@ class SellerController extends Controller
 
         $thisEmail = Auth::User()->email ;
         $sellerinfo = newSeller::where('id','LIKE',$id)->get();
-        return view('seller.index',['sellerinfo'=>$sellerinfo,'id'=>$id,'shops'=>$shops]) ;
+
+
+         $sellergender =DB::table('new_sellers')->select('sellergender',DB::raw('count(*) as total'))->groupBy('sellergender')->get();
+        return view('seller.index',['sellerinfo'=>$sellerinfo,'id'=>$id,'shops'=>$shops,'sellergender'=>$sellergender]) ;
       }
 
       public function edit()

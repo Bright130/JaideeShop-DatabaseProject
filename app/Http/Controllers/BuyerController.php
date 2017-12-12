@@ -25,9 +25,14 @@ class BuyerController extends Controller
 
       $buyerinfo = newBuyer::where('id','=',$uid)->get();
 
-      $buyership =DB::table('orders')->select('shippingtype',DB::raw('count(*) as total'))->groupBy('shippingtype')->get();
+      $buyership =DB::table('orders')->select('shippingtype',DB::raw('count(*) as total'))->where('buyerid',$uid)->groupBy('shippingtype')->get();
 
-      return view('buyer.index',['buyerinfo'=>$buyerinfo,'buyership'=>$buyership]) ;
+       $orders = Orders::where('buyerid',$uid)->get() ;
+
+       $buyergender =DB::table('new_buyers')->select('buyergender',DB::raw('count(*) as total'))->groupBy('buyergender')->get();
+
+
+      return view('buyer.index',['buyerinfo'=>$buyerinfo,'buyership'=>$buyership,'orders'=>$orders]) ;
     }
 
     public function edit()

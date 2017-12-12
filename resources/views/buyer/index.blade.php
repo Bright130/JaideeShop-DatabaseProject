@@ -157,6 +157,43 @@ font-weight: bold;">Login as Buyer</h1>
 																						 </tbody> </table> </div> </div>
 
 
+
+																						 <div>
+																		            <div>
+																		                    <h2 style="color: #FDA30E;">Summary</h2>
+																												<table class="table table-hover table-dark">
+																													<thead>
+																														<tr> <th>OrderID</th>
+																															<th> Price</th>
+
+																															 </tr>
+																														</thead>
+																														<tbody>
+																															@foreach($orders as $b)
+																															<tr> <th scope="row">{{$b->orderid}}</th> <td>{{$b->totalprice}}</td>  </tr>
+																															@endforeach
+																															 </tbody> </table> </div> </div>
+
+
+																															 <div>
+																																	<div>
+																																					<h2 style="color: #FDA30E;">Shipping</h2>
+																																					<table class="table table-hover table-dark">
+																																						<thead>
+																																							<tr> <th>Type</th>
+																																								<th> Total</th>
+
+																																								 </tr>
+																																							</thead>
+																																							<tbody>
+																																								@foreach($buyership as $b)
+																																								<tr> <th scope="row">{{$b->shippingtype}}</th> <td>{{$b->total}}</td>  </tr>
+																																								@endforeach
+																																								 </tbody> </table> </div> </div>
+
+
+
+
              </div>
              </div>
 

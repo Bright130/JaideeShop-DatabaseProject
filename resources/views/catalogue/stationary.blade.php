@@ -153,7 +153,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 		<div class="clearfix"></div>
 			<div class="ele-bottom-grid">
-				<h3><span>Ltest </span></h3>
+				<h3><span> </span></h3>
 						@foreach($product as $prod)
 					<div class="col-md-3 product-men">
 							<div class="men-pro-item simpleCart_shelfItem">
@@ -183,8 +183,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									<h4><span class="item_name">{{$prod->productname}}</span></h4>
 									<div class="info-product-price">
 										@php $num = number_format($prod->productprice, 2, '.', ''); @endphp
-										<span class="item_price">$ {{$num}}</span>
-										<del>$700.71</del>
+										<span class="item_price">B {{$num}}</span>
+
 									</div>
 									<a href="#" class="item_add single-item hvr-outline-out button2">Add to cart</a>
 								</div>

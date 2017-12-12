@@ -54,4 +54,28 @@ $date = date('m/d/Y h:i:s a', time()); @endphp
 @endforeach
 
 <h3>Transaction Detail</h3>
+<div class="col-md-12" style="text-align: center;">
+	@php $i = 0; @endphp
+@foreach($decoded as $lists)
+<table class="table table-hover"  style="text-align: center;">
+	<thead>
+		<tr class="headerRow"  style="text-align: center;">
+			<th class="item-id"  style="text-align: center;">Transaction Amount</th>
+			<th class="item-name" style="text-align: center;">Bank Name</th>
+			<th class="item-price" style="text-align: center;">Account Number</th>
+
+		</tr>
+	</thead>
+	<tbody>
+		<tr class="itemRow"  style="text-align: center;">
+			<td class="item-id">{{($lists["price"]*$lists["quantity"]*0.07)+($lists["price"]*$lists["quantity"])}}</td>
+			<td class="item-name">{{$bkk[$i]}}</td>
+			<td class="item-price">{{$accname[$i]}}</td>
+
+		</tr>
+	</tbody>
+</table>
+	@php $i = $i+1; @endphp
+@endforeach
+</div>
 @stop

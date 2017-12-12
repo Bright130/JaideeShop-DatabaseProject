@@ -12,6 +12,9 @@ use App\Shippingtype;
 use App\Cart;
 use App\newSeller;
 use App\Shop;
+use App\Orders;
+use App\Orderdetail;
+use App\Account;
 
 class CheckoutController extends Controller
 {
@@ -28,6 +31,7 @@ class CheckoutController extends Controller
   }
   public function postShip(Request $request)
   {
+    $bid = Auth::User()->id;
     $bname = Auth::User()->buyername;
     $bsurname = Auth::User()->buyersurname;
     $baddress = Auth::User()->buyeraddress;
@@ -37,20 +41,55 @@ class CheckoutController extends Controller
      $owners = [];
      $owner = [];
      $surname = [];
+     $shopd = [];
+     $shopi = [];
+     $sq = [];
+     $accname = [];
+     $bkk = [];
+
     foreach ($decoded as $decode) { $shopown = Product::select('shopid')->where('productid','=',$decode["id"])->get();
      foreach ($shopown as $shopo) { $sellerown = Shop::where('shopid','=',$shopo->shopid)->get();
-       foreach ($sellerown as $sellero) { $owners[] = newSeller::where('id','=',$sellero->sellerid)->get();
+       foreach ($sellerown as $sellero) { $owners[] = newSeller::where('id','=',$sellero->sellerid)->get(); $shopd[] = $sellero;
          # code...
        }
      }
       // $owner[] = newSeller::where('id','=',$sellerown)->get();
     }
-    foreach ($owners as $ow) { foreach ($ow as $o) { $owner[] = $o->sellername; $surname[] = $o->sellersurname;
+    foreach ($owners as $ow) { foreach ($ow as $o) { $owner[] = $o->sellername; $surname[] = $o->sellersurname; $sid[] = $o->id;
       # code...
     }
       # code...
     }
-    return view('order',['decoded'=>$decoded,'shiptype'=>$shiptype,'bname'=>$bname,'bsurname'=>$bsurname,'baddress'=>$baddress,'owner'=>$owner,'surname'=>$surname]);
+
+    foreach ($shopd as $shd) { $shopi[] = $shd->shopid; $sq[] = Account::where('shopid','=',$shd->shopid)->get();
+      # code...
+    }
+    foreach ($sq as $sw) { foreach ($sw as $se) { $accname[] = $se->accountno; $bankname[] = $se->bankname;
+      # code...
+    }
+      # code...
+    }
+    foreach ($bankname as $bk) { if ($bk == 1) { $bkk[] = "Bangkok Bank" ;}   if ($bk == 2) { $bkk[] = "Krungsri Ayuthaya Bank";}  if ($bk == 3) { $bkk[] = "Kasikorn Bank";}
+      if ($bk == 4) { $bkk[] = "TMB";}   if ($bk == 5) { $bkk[] = "Siam Commercial Bank";}
+      # code...
+    }
+    foreach ($shiptype as $ship) {
+      $i = 0; date_default_timezone_set('Asia/Bangkok');
+      $date = date('Y/m/d h:i:s', time());
+      foreach ($decoded as $lists ) {
+        Orders::create(['totalprice'=>(($lists["price"]*$lists["quantity"]*0.07)+($lists["price"]*$lists["quantity"])),
+        'vat'=>($lists["price"]*$lists["quantity"]*0.07),
+        'shopid'=>$shopi[$i],
+        'buyerid'=>$bid,
+        'shippingtime'=>$date,
+        'shippingaddress'=>$baddress,
+        'shippingtype'=>$ship->shippingtype,
+        'reciepttime'=>$date,
+        'trackingid'=>"0"]);
+         $i = $i+1;
+      }
+    }
+    return view('order',['decoded'=>$decoded,'shiptype'=>$shiptype,'bname'=>$bname,'bsurname'=>$bsurname,'baddress'=>$baddress,'owner'=>$owner,'surname'=>$surname,'accname'=>$accname,'bkk'=>$bkk]);
   }
   public function orders()
   {

@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\newBuyer;
 use Auth;
 use Hash;
+use App\Orders;
+use App\Orderdetail;
 
 class BuyerController extends Controller
 {
@@ -22,7 +24,9 @@ class BuyerController extends Controller
       $thisEmail2 = Auth::User()->email ;
 
       $buyerinfo = newBuyer::where('id','=',$uid)->get();
-      return view('buyer.index',compact('buyerinfo')) ;
+      // $recent = Order::where('buyerid','=',$uid)->get();
+      // $recent2 = Orderdetail::where('orderid','=',$recent->orderid)->get();
+      return view('buyer.index',compact('buyerinfo'),compact('recent'),compact('recent2')) ;
     }
 
     public function edit()

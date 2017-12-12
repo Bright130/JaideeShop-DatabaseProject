@@ -78,6 +78,7 @@ font-weight: bold;">Login as Seller</h1>
 									<div class="col-md-3 col-sm-6 col-xs-6 header-right  footer-bottom">
 										<a href="{{ route('shop.create') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/add.png"><i>  ADD SHOP</i></a>
 										<a href="{{ route('product.add') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/add.png"><i>  ADD PRODUCT</i></a>
+
 									</div>
 								</div>
 

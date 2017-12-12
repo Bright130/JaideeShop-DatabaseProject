@@ -34,7 +34,7 @@ class BuyerAuthController extends Controller
 
                foreach($request->IMGURL as $img ){
 
-                 $input['urlimage'] = $request->input('sid').'_'.'.' .$img->getClientOriginalExtension();
+                 $input['urlimage'] = time().'_buyer'.'.' .$img->getClientOriginalExtension();
 
               $img->move(public_path('urlimage'), $input['urlimage']);
 

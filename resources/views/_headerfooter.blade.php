@@ -67,37 +67,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="col-md-3 header-left">
 			<h1><a href="{{ route('home') }}"><img src="{{ url('/') }}/images/JAIDEE.jpg"></a></h1>
 		</div>
-		<div class="col-md-5 header-middle">
-			<form>
-				<div class="search">
-					<input type="search" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}" required="">
-				</div>
-				<div class="section_room">
-					<select id="country" onchange="change_country(this.value)" class="frm-field required">
-						<option value="null">All categories</option>
-						<option value="null">Beauty Items</option>
-						<option value="AX">Clothes</option>
-						<option value="AX">Electronics</option>
-						<option value="AX">Child and Baby</option>
-						<option value="AX">Furniture</option>
-						<option value="AX">Books</option>
-						<option value="AX">Sport and Recreation</option>
-						<option value="AX">Consumtion</option>
-						<option value="AX">Food</option>
-						<option value="AX">Accessories</option>
-						<option value="AX">Gadgets</option>
-						<option value="AX">Entertainments</option>
-						<option value="AX">Stationary</option>
-						<option value="AX">Office Equipment</option>
-					</select>
-				</div>
-				<div class="sear-sub">
-					<input type="submit" value=" ">
-				</div>
-			<!-- <div class="clearfix"></div> -->
-			</form>
-		</div>
-		<div class="col-md-4 header-right footer-bottom" style="color: #FDA30E;
+
+		<div class="col-md-9 header-right footer-bottom" style="color: #FDA30E;
 	padding: 0px 0px 20px 100px;
 	font-size: 14px;
 	font-weight: bold;">

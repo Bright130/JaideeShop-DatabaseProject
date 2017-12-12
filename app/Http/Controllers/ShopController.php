@@ -58,6 +58,15 @@ class ShopController extends Controller
         return view('seller.shopcreate',compact('shoptypes'));
     }
 
+
+    public function destroy($id)
+    {
+        $id = Auth::findOrfail($id);
+        $shoptypes->delete();
+        return redirect('seller.shopcreate',compact('shoptypes'));
+    }
+
+
     // insert info into db in signup page
     public function postNewShop(Request $request)
     {

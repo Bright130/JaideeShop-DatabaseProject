@@ -70,7 +70,7 @@ $(document).ready(function() {
 <div>
     <h1 class="display-4" style="padding-bottom: 2%;
 text-align: center;
-padding-top: 3%;">Shop Registration</h1>
+padding-top: 3%;">Shop Edit</h1>
 </div>
 <!-- //body header -->
 <!-- form -->

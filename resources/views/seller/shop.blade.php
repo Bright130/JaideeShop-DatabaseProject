@@ -72,13 +72,12 @@ font-weight: bold;">Login as Seller</h1>
 									<div style="color: #000000;float: left;font-size: 16px;font-weight: bold;">Welcome <b>{{$sellerinfo->sellername}} </b> , Love to see you back. </div>
 									</div>
 									<div class="col-md-3 col-sm-6 col-xs-6 header-right  footer-bottom">
-										<a href="{{ route('product.add') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/settings.png"><i>  EDIT SHOP</i></a>
+										<a href="/seller/shop/{{$shop->ShopID}}/edit" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/settings.png"><i>  EDIT SHOP</i></a>
 										<a href="{{ route('product.add') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/bin.png"><i>  DELETE SHOP</i></a>
 									</div>
 									<div class="col-md-3 col-sm-6 col-xs-6 header-right  footer-bottom">
 										<a href="{{ route('shop.create') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/add.png"><i>  ADD SHOP</i></a>
 										<a href="{{ route('product.add') }}" class="btn btn-danger square-btn-adjust" style="font-size: 24px;"><img style="vertical-align: text-top;" src="{{ url('/') }}/images/add.png"><i>  ADD PRODUCT</i></a>
-
 									</div>
 								</div>
 

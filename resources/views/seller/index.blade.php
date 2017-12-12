@@ -167,40 +167,23 @@ font-weight: bold;">Login as Seller</h1>
 													<tr> <th scope="row">{{$seller->sellername}}</th> <td>{{$seller->sellersurname}}</td>  <td>{{$seller->selleraddress}}</td>
 													 <td>{{$seller->sellertel}}  <td>{{$seller->email}}</td></td>  </tr>
 													 </tbody> </table> </div> </div>
-											  <table class="table table-hover table-dark">
-		 		                      <thead>
-		 		                        <h2 style="color: #FDA30E;">Recently Sell</h2>
-		 		                        <tr>
-		 		                          <th scope="col">#</th>
-		 		                          <th scope="col">Shop</th>
-		 		                          <th scope="col">Product</th>
-																	<th scope="col">Amount</th>
-																	<th scope="col">Price</th>
-		 		                          <th scope="col">Date</th>
-		 		                        </tr>
-		 		                      </thead>
-		 		                      <tbody>
-		 		                        <tr>
-		 		                          <th scope="row">1</th>
-		 		                          <td>Mark</td>
-		 		                          <td>Otto</td>
-		 		                          <td>@mdo</td>
-		 		                        </tr>
-		 		                        <tr>
-		 		                          <th scope="row">2</th>
-		 		                          <td>Jacob</td>
-		 		                          <td>Thornton</td>
-		 		                          <td>@fat</td>
-		 		                        </tr>
-		 		                        <tr>
-		 		                          <th scope="row">3</th>
-		 		                          <td colspan="2">Larry the Bird</td>
-		 		                          <td>@twitter</td>
-		 		                        </tr>
-		 		                      </tbody>
-		 		                    </table>
-             </div>
-             </div>
+
+													 <div>
+															<div>
+																			<h2 style="color: #FDA30E;">ALL seller gender</h2>
+																			<table class="table table-hover table-dark">
+																				<thead>
+																					<tr> <th>Gender</th>
+																						<th> Total</th>
+
+																						 </tr>
+																					</thead>
+																					<tbody>
+																						@foreach($sellergender as $b)
+																						<tr> <th scope="row">{{$b->sellergender}}</th> <td>{{$b->total}}</td>  </tr>
+																						@endforeach
+																						 </tbody> </table> </div> </div>
+
              <!-- /. PAGE INNER  -->
             </div>
          <!-- /. PAGE WRAPPER  -->

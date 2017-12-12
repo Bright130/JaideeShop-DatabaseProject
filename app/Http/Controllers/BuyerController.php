@@ -32,7 +32,7 @@ class BuyerController extends Controller
        $buyergender =DB::table('new_buyers')->select('buyergender',DB::raw('count(*) as total'))->groupBy('buyergender')->get();
 
 
-      return view('buyer.index',['buyerinfo'=>$buyerinfo,'buyership'=>$buyership,'orders'=>$orders]) ;
+      return view('buyer.index',['buyerinfo'=>$buyerinfo,'buyership'=>$buyership,'orders'=>$orders,'buyergender'=>$buyergender]) ;
     }
 
     public function edit()

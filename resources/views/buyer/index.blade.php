@@ -177,17 +177,17 @@ font-weight: bold;">Login as Buyer</h1>
 
 																															 <div>
 																																	<div>
-																																					<h2 style="color: #FDA30E;">Shipping</h2>
+																																					<h2 style="color: #FDA30E;">ALL buyer gender</h2>
 																																					<table class="table table-hover table-dark">
 																																						<thead>
-																																							<tr> <th>Type</th>
+																																							<tr> <th>Gender</th>
 																																								<th> Total</th>
 
 																																								 </tr>
 																																							</thead>
 																																							<tbody>
-																																								@foreach($buyership as $b)
-																																								<tr> <th scope="row">{{$b->shippingtype}}</th> <td>{{$b->total}}</td>  </tr>
+																																								@foreach($buyergender as $b)
+																																								<tr> <th scope="row">{{$b->buyergender}}</th> <td>{{$b->total}}</td>  </tr>
 																																								@endforeach
 																																								 </tbody> </table> </div> </div>
 

@@ -74,12 +74,12 @@ padding-top: 3%;">Shop Registration</h1>
 </div>
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/shopcreate" method="POST" enctype="multipart/form-data">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/seller/shop/{{$detail->shopid}}/edit" method="POST" enctype="multipart/form-data">
     {{ csrf_field() }}
     <div class="form-group row">
         <label id="form" for="shop" class="col-sm-2 col-form-label">Shop Name</label>
         <div  class="col-sm-10">
-            <input type="text" class="form-control" id="shopname" placeholder="Shop Name" name="shopname" required>
+            <input type="text" class="form-control" id="shopname" placeholder="Shop Name" name="shopname" value="{{$detail->shopname}}" required>
 
         </div>
     </div>
@@ -88,7 +88,7 @@ padding-top: 3%;">Shop Registration</h1>
         <div class="col-sm-10">
           <select class="form-control" name="shoptype">
               @foreach($shoptypes as $shoptype)
-              <option value={{$shoptype->shoptypeid}}>{{$shoptype->shoptypename}}</option>
+              <option value={{$shoptype->shoptypeid}}  <?php echo ($detail->shoptypeid==$shoptype->shoptypeid)?'selected':'' ?> >{{$shoptype->shoptypename}}</option>
               @endforeach
             </select>
         </div>
@@ -97,7 +97,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for="desc" class="col-sm-2 col-form-label">Description</label>
         <div class="col-sm-10">
-            <textarea type="text" class="form-control" id="desc" placeholder="Description" name="desc" required ></textarea>
+            <textarea type="text" class="form-control" id="desc" placeholder="Description" name="desc" required >{{$detail->shopdesc}}</textarea>
 
         </div>
     </div>
@@ -111,7 +111,7 @@ padding-top: 3%;">Shop Registration</h1>
     <div class="form-group row">
         <label id="form" for="bank" class="col-sm-2 col-form-label">Bank Account</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" id="bank" placeholder="Bank Account" name="bankacc" required>
+            <input type="text" class="form-control" id="bank" placeholder="Bank Account" name="bankacc" value="{{$acc->accountno}}"  required>
 
         </div>
     </div>
@@ -119,11 +119,11 @@ padding-top: 3%;">Shop Registration</h1>
         <label id="form" for=bankname class="col-sm-2 col-form-label">Bank name</label>
         <div class="col-sm-10">
           <select class="form-control" name="bankname">
-              <option value="1">Bangkok Bank</option>
-              <option value="2">Krungsri Ayuthaya Bank</option>
-              <option value="3">Kasikorn Bank</option>
-              <option value="4">TMB</option>
-              <option value="5">Siam Commercial Bank</option>
+              <option value="1"  <?php echo ($acc->bankname=="1")?'selected':'' ?>  >Bangkok Bank</option>
+              <option value="2" <?php echo ($acc->bankname=="2")?'selected':'' ?> >Krungsri Ayuthaya Bank</option>
+              <option value="3" <?php echo ($acc->bankname=="3")?'selected':'' ?> >Kasikorn Bank</option>
+              <option value="4" <?php echo ($acc->bankname=="4")?'selected':'' ?> >TMB</option>
+              <option value="5" <?php echo ($acc->bankname=="5")?'selected':'' ?> >Siam Commercial Bank</option>
             </select>
         </div>
     </div>

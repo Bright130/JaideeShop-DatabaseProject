@@ -125,7 +125,7 @@ font-weight: bold;">Login as Buyer</h1>
          <div>
             <div>
                     <h2 style="color: #FDA30E;">Profile</h2>
-										<table class="table">
+										<table class="table table-hover table-dark">
 											<thead>
 												<tr> <th>Firstname</th>
 													<th> Lastname</th>
@@ -138,38 +138,25 @@ font-weight: bold;">Login as Buyer</h1>
 													<tr> <th scope="row">{{$buyer->buyername}}</th> <td>{{$buyer->buyersurname}}</td>  <td>{{$buyer->buyeraddress}}</td>
 													 <td>{{$buyer->buyertel}}  <td>{{$buyer->email}}</td></td>  </tr>
 													 </tbody> </table> </div> </div>
-											  <table class="table table-hover table-dark">
-		 		                      <thead>
-		 		                         <h2 style="color: #FDA30E;">Recently Buy</h2>
-		 		                        <tr>
-		 		                          <th scope="col">#</th>
-		 		                          <th scope="col">Shop</th>
-		 		                          <th scope="col">Product</th>
-																	<th scope="col">Amount</th>
-																	<th scope="col">Price</th>
-		 		                          <th scope="col">Date</th>
-		 		                        </tr>
-		 		                      </thead>
-		 		                      <tbody>
-		 		                        <tr>
-		 		                          <th scope="row">1</th>
-		 		                          <td>Mark</td>
-		 		                          <td>Otto</td>
-		 		                          <td>@mdo</td>
-		 		                        </tr>
-		 		                        <tr>
-		 		                          <th scope="row">2</th>
-		 		                          <td>Jacob</td>
-		 		                          <td>Thornton</td>
-		 		                          <td>@fat</td>
-		 		                        </tr>
-		 		                        <tr>
-		 		                          <th scope="row">3</th>
-		 		                          <td colspan="2">Larry the Bird</td>
-		 		                          <td>@twitter</td>
-		 		                        </tr>
-		 		                      </tbody>
-		 		                    </table>
+
+
+													 <div>
+									            <div>
+									                    <h2 style="color: #FDA30E;">Shipping</h2>
+																			<table class="table table-hover table-dark">
+																				<thead>
+																					<tr> <th>Type</th>
+																						<th> Total</th>
+
+																						 </tr>
+																					</thead>
+																					<tbody>
+																						@foreach($buyership as $b)
+																						<tr> <th scope="row">{{$b->shippingtype}}</th> <td>{{$b->total}}</td>  </tr>
+																						@endforeach
+																						 </tbody> </table> </div> </div>
+
+
              </div>
              </div>
 

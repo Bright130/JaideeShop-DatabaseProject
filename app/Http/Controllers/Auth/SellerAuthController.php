@@ -30,11 +30,11 @@ class SellerAuthController extends Controller
     // insert info into db in signup page
     public function signup(Request $request)
     {
-  
+
 
                foreach($request->IMGURL as $img ){
 
-              $input['urlimage'] = $request->input('sid').'_'.'.' .$img->getClientOriginalExtension();
+            $input['urlimage'] = time().'_seller'.'.' .$img->getClientOriginalExtension();
 
               $img->move(public_path('urlimage'), $input['urlimage']);
 

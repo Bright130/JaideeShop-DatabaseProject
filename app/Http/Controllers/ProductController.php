@@ -65,4 +65,61 @@ $i=1;
 
         return redirect('/');
     }
+
+    public function edit($id)
+    {
+      $product = Product::where('productid','=',$id)->get()->first();
+//d($product);
+      $producttypes = Producttype::get();
+      $shop = Shop::select('shopname','ShopID')->where('sellerid','=',Auth::User()->id)->orderBy('shopname','ASC')->get();
+      return view('product-edit',['producttypes'=>$producttypes,'shops'=>$shop,'product'=>$product]);
+
+    }
+
+
+    public function update($id,Request $request)
+    {
+
+       // dd($request);
+       // $validator = Validator::make($request->all(), [
+       //
+       //   'IMGURL' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+       // ]);
+
+
+
+
+       //
+        Product::where('productid',$id)->get()->first()->update(['productname'=>$request->input('pname'),
+        'producttypeid'=>$request->input('ptype'),
+        'productdesc'=>$request->input('desc'),
+        'productprice'=>$request->input('price'),
+        'shopid'=>$request->input('sid'),
+        'productview'=>0,
+        'quantity'=>$request->input('quantity')]);
+
+        $product = Product::orderBy('productid', 'DESC')->first();
+
+$i=1;
+
+       if($request->IMGURL!=null)
+       {
+         ProductImage::where('productid', $id)->delete();
+
+         foreach($request->IMGURL as $img ){
+
+        $input['urlimage'] = $id.'_'.time() .'_'.$i .'.' .$img->getClientOriginalExtension();
+
+        $img->move(public_path('urlimage'), $input['urlimage']);
+
+           ProductImage::create(['productid'=>$id,
+            'urlimage'=> $input['urlimage']
+          ]);
+          $i++;
+         }
+        }
+
+
+        return redirect('/');
+    }
 }

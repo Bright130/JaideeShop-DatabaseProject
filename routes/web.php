@@ -45,6 +45,8 @@ Route::post('/login','Auth\SellerAuthController@login')->name('seller.login.subm
   Route::get('/shop/{id?}','ShopController@index')->where(['id'=>'[0-9]+']);
    Route::get('/edit','SellerController@edit')->name('seller.edit');
     Route::post('/edit','SellerController@update')->name('seller.update');
+    Route::get('/shop/{id}/edit','ShopController@edit')->where(['id'=>'[0-9]+']);
+    Route::post('/shop/{id}/edit','ShopController@update')->where(['id'=>'[0-9]+']);
 //  Route::get('/','BuyerController@index')->name('admin.dashboard');
 
 });
@@ -58,8 +60,14 @@ Route::post('/slipform','SlipController@postSlipForm');
 Route::get('/addproduct','ProductController@getNewProduct')->name('product.add');
 Route::post('/addproduct','ProductController@postNewProduct');
 
+Route::get('/product/{id}/edit','ProductController@edit')->where(['id'=>'[0-9]+'])->name('product.edit');
+Route::post('/product/{id}/edit','ProductController@update')->where(['id'=>'[0-9]+']);
+
 Route::get('/shopcreate','ShopController@getNewShop')->name('shop.create');
 Route::post('/shopcreate','ShopController@postNewShop');
+
+
+
 Route::get('/table','TempleteTableController@getTable');
 Auth::routes();
 

@@ -109,4 +109,101 @@ if(Hash::check($request->input('pw'), Auth::User()->password))
       }
         return redirect()->back();
     }
+
+
+
+        public function edit($id)
+        {
+
+            $sid = Auth::User()->id;
+
+            $shops = Shop::select('shopname','ShopID')->where('sellerid','=',Auth::User()->id)->orderBy('shopname','ASC')->get();
+
+            $shoptypes = Shoptype::get();
+
+
+            $sellerinfo = newSeller::where('id','LIKE',$sid)->get()->first();
+
+
+
+            $detail = Shop::where([['ShopID','=',$id],['sellerid','=',$sid]])->get()->first();
+
+      $acc = Account::where([['ShopID','=',$id]])->first();
+
+
+            if($detail==null)
+            {
+                return redirect()->intended(route('seller.dashboard'));
+            }
+
+            return view('seller.shopedit',['detail'=>$detail,'sellerinfo'=>$sellerinfo,'id'=>$sid,'shops'=>$shops,'shoptypes'=>$shoptypes,'acc'=>$acc]);
+
+
+
+        }
+
+        public function update($id , Request $request)
+        {
+
+            $input['urlimage'] = Shop::where('shopid','=',$id)->get()->first()->shopimg;
+
+
+              if($request->IMGURL!=null)
+              {
+
+                  foreach($request->IMGURL as $img )
+                  {
+
+                      $input['urlimage'] = Auth::User()->id.'_seller_'.'.' .$img->getClientOriginalExtension();
+
+                      $img->move(public_path('urlimage'), $input['urlimage']);
+
+                  }
+              }
+
+    $iid =$id;
+          Shop::where('shopid',$iid)->get()->first()->update([
+                            'ShopName'=>$request->input('shopname'),
+
+                            'shoptypeid'=>$request->input('shoptype'),
+                            'ShopDesc'=>$request->input('desc'),
+                            'ShopImg'=>$input['urlimage']
+
+
+                      ]);
+
+    //
+    //
+    // // Create connection
+    // $conn = new mysqli($servername, $username, $password, $dbname);
+    // // Check connection
+    // if ($conn->connect_error) {
+    //     die("Connection failed: " . $conn->connect_error);
+    // }
+    //
+    // $sql = "UPDATE Account SET ShopName="+$request->input('shopname')+" WHERE shopid="+$id;
+    //
+    // if ($conn->query($sql) === TRUE) {
+    //     echo "Record updated successfully";
+    // } else {
+    //     echo "Error updating record: " . $conn->error;
+    // }
+    //
+    // $conn->close();
+    //
+    //
+
+
+
+
+
+
+            Account::where('shopid','=',$iid)->get()->first()->update([
+                      'accountno'=>$request->input('bankacc'),
+                      'accountname'=>$request->input('name','Peat'),
+                      'bankname'=>$request->input('bankname')]);
+            return redirect('/seller');
+
+        }
+
 }

@@ -1,6 +1,7 @@
 @extends('_headerfooter')
-@section('page_title','Shop Registration')
+@section('page_title','New Product ')
 @section('content')
+<!-- body header -->
 <style>
 
 .add_form_field
@@ -53,7 +54,7 @@ $(document).ready(function() {
         e.preventDefault();
         if(x < max_fields){
             x++;
-            $(wrapper).append('<div class="col-sm-10" style="padding-left:0px;width:78.5%;"><input type="text" class="form-control col-sm-10" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width:65%;"><a href="#" class="delete">Delete</a></div>'); //add input box
+            $(wrapper).append('<div class="col-sm-10" style="padding-left:0px;width:78.5%;"> <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">  <a href="#" class="delete">Delete</a></div>'); //add input box
         }
         else
         {
@@ -66,38 +67,60 @@ $(document).ready(function() {
     })
 });
 </script>
-<!-- body header -->
 <div>
     <h1 class="display-4" style="padding-bottom: 2%;
 text-align: center;
-padding-top: 3%;">Shop Registration</h1>
+padding-top: 3%;">New Product</h1>
 </div>
 <!-- //body header -->
 <!-- form -->
-<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/shopcreate" method="POST" enctype="multipart/form-data">
+<form form class="container" id="needs-validation" novalidate style="width:75%; margin:0 auto;" action="/product/{{$product->productid}}/edit" method="POST" enctype="multipart/form-data">
+    <!-- need csrf -->
     {{ csrf_field() }}
     <div class="form-group row">
-        <label id="form" for="shop" class="col-sm-2 col-form-label">Shop Name</label>
-        <div  class="col-sm-10">
-            <input type="text" class="form-control" id="shopname" placeholder="Shop Name" name="shopname" required>
-
+        <label id="form" for=pname class="col-sm-2 col-form-label">Product Name</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="pname" placeholder="- Name of product -" name="pname" required  value="{{$product->productname}}">
         </div>
     </div>
     <div class="form-group row">
-        <label id="form" for=ptype class="col-sm-2 col-form-label">Shop Type</label>
+        <label id="form" for=ptype class="col-sm-2 col-form-label">Shop name</label>
         <div class="col-sm-10">
-          <select class="form-control" name="shoptype">
-              @foreach($shoptypes as $shoptype)
-              <option value={{$shoptype->shoptypeid}}>{{$shoptype->shoptypename}}</option>
+          <select name="sid" class="form-control">
+
+              @foreach($shops as $shop)
+              <option value={{$shop->ShopID}}    <?php echo ($product->shopid== $shop->ShopID)?'selected':'' ?>   >{{$shop->shopname}}</option>
               @endforeach
             </select>
         </div>
     </div>
+    <div class="form-group row">
+        <label id="form" for=ptype class="col-sm-2 col-form-label">Product Type</label>
+        <div class="col-sm-10" >
+            <select name="ptype"  class="form-control">
+              @foreach($producttypes as $producttype)
+              <option value={{$producttype->producttypeid}}   <?php echo ($product->producttypeid== $producttype->producttypeid)?'selected':'' ?> >{{$producttype->producttypename}}   </option>
+              @endforeach
+            </select>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label id="form" for=quantity class="col-sm-2 col-form-label">Quantity</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="quantity" placeholder="At least 1" name="quantity" value="{{$product->quantity}}" required>
+        </div>
+    </div>
+    <div class="form-group row">
+        <label id="form" for="price" class="col-sm-2 col-form-label">Price</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" id="price" placeholder="Price" name="price" value="{{$product->productprice}}" required>
 
+        </div>
+    </div>
     <div class="form-group row">
         <label id="form" for="desc" class="col-sm-2 col-form-label">Description</label>
         <div class="col-sm-10">
-            <textarea type="text" class="form-control" id="desc" placeholder="Description" name="desc" required ></textarea>
+            <textarea type="text" class="form-control" id="desc" placeholder="Description" name="desc" required >{{$product->productdesc}}</textarea>
 
         </div>
     </div>
@@ -106,46 +129,26 @@ padding-top: 3%;">Shop Registration</h1>
         <div class="col-sm-10 container1">
             <input type="file" class="col-sm-5 form-control" id="IMGURL" placeholder="Link URL" required name="IMGURL[]" style="width: 50%;">
 
-        </div>
-    </div>
-    <div class="form-group row">
-        <label id="form" for="bank" class="col-sm-2 col-form-label">Bank Account</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" id="bank" placeholder="Bank Account" name="bankacc" required>
 
-        </div>
-    </div>
-    <div class="form-group row">
-        <label id="form" for=bankname class="col-sm-2 col-form-label">Bank name</label>
-        <div class="col-sm-10">
-          <select class="form-control" name="bankname">
-              <option value="1">Bangkok Bank</option>
-              <option value="2">Krungsri Ayuthaya Bank</option>
-              <option value="3">Kasikorn Bank</option>
-              <option value="4">TMB</option>
-              <option value="5">Siam Commercial Bank</option>
-            </select>
-        </div>
-    </div>
-    <div class="form-group row">
-        <label id="form" for="ConfirmPassword" class="col-sm-2 col-form-label">Confirm password</label>
-        <div class="col-sm-10">
-            <input type="password" class="form-control" name="pw" id="ConfirmPassword" placeholder="Password for Apply changes" required>
 
+
+
+
+            <button class="add_form_field">Add New Field <span style="font-size:16px; font-weight:bold;">+ </span></button>
         </div>
     </div>
-
     <div class="form-group row">
         <div class="col-md-12">
             <button type="submit" class="btn" style="font-size: 1.2rem;
     width: 100%;
     border-radius: 0px;
     background-color: #fda30e;
-    color:white;">CREATE SHOP</button>
+    color:white;">ADD PRODUCT</button>
         </div>
     </div>
 </form>
 </div>
+
 <script type="text/javascript">
   $("body").on("click",".upload-image",function(e){
     $(this).parents("form").ajaxForm(options);
@@ -171,5 +174,6 @@ padding-top: 3%;">Shop Registration</h1>
 	});
   }
 </script>
+
 <!-- //form -->
 @stop

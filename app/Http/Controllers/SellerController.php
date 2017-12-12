@@ -69,7 +69,7 @@ if($request->input('Password')==NULL){
 
 
       ]);
-        return redirect('/');
+        return redirect('/seller');
 
     }
 

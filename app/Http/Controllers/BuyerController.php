@@ -45,7 +45,7 @@ if($request->IMGURL!=null){
                    foreach($request->IMGURL as $img )
                    {
 
-                  $input['urlimage'] = $request->input('sid').'_'.'.' .$img->getClientOriginalExtension();
+                    $input['urlimage'] = Auth::User()->id.'_buyer_'.'.' .$img->getClientOriginalExtension();
 
                   $img->move(public_path('urlimage'), $input['urlimage']);
 
@@ -70,7 +70,7 @@ $passw =  newBuyer::where('id','LIKE',Auth::User()->id)->get()->first()->passwor
 
 
     ]);
-      return redirect('/');
+      return redirect('/buyer');
 
   }
     // // get signup page

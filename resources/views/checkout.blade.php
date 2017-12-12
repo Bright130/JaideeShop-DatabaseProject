@@ -37,7 +37,7 @@
 </form>
 </div>
 <!-- //check out -->
-<script>var cartlist = window.localStorage.getItem("simpleCart_items"); alert(cartlist); console.log(cartlist); var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+<script>var cartlist = window.localStorage.getItem("simpleCart_items");  console.log(cartlist); var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
 document.getElementById("oop").innerHTML = cartlist ;
 </script>
 

@@ -8,5 +8,5 @@ class Orderdetail extends Model
 {
     public $timestamps = false;
     protected $table = 'orderdetail';
-    protected $guarded = ['orderid'];
+    protected $guarded = [];
 }

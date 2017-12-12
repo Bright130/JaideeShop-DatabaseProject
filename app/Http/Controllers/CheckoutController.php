@@ -86,6 +86,12 @@ class CheckoutController extends Controller
         'shippingtype'=>$ship->shippingtype,
         'reciepttime'=>$date,
         'trackingid'=>"0"]);
+        $orderid = Orders::select('orderid')->orderBy('orderid','DESC')->get()->first();
+
+        Orderdetail::create(['productid'=>$lists["id"],
+        'orderamount'=>$lists["quantity"],
+        'orderid'=>$orderid->orderid,
+        'totalpriceorder'=>(($lists["price"]*$lists["quantity"]*0.07)+($lists["price"]*$lists["quantity"]))]);
          $i = $i+1;
       }
     }
